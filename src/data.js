@@ -1,27 +1,5 @@
 
-export const sliderItems = [
-  {
-    id: 1,
-    img: "https://i.ibb.co/XsdmR2c/1.png",
-    title: "SUMMER SALE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "f5fafd",
-  },
-  {
-    id: 2,
-    img: "https://i.ibb.co/DG69bQ4/2.png",
-    title: "AUTUMN COLLECTION",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "fcf1ed",
-  },
-  {
-    id: 3,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
-    title: "LOUNGEWEAR LOVE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "fbf0f4",
-  },
-];
+
 
 export const products = [
     {
@@ -29,9 +7,10 @@ export const products = [
       name: "Winter body",
       description: [
         { support: "گارانتی مادام العمر" },
-        { support: "ارسال رایگان" },
-        { support: "اورجینال" },
+        { support: "Free shipping" },
+        { support: "original" },
       ],
+      combo:"new",
       price: 120,
       offPrice: 120,
       discount: 0,
@@ -41,6 +20,7 @@ export const products = [
       id: 2,
       name: "Adidas",
       description: [{ support: "گارانتی مادام العمر" }, { support: "اورجینال" }],
+      combo:"Special offer",
       price: 110,
       offPrice: 100,
       discount: 8,
@@ -80,6 +60,7 @@ export const products = [
         { support: "اورجینال" },
         { support: "ارسال رایگان" },
       ],
+      combo:"Free shipping",
       price: 150,
       offPrice: 150,
       discount: 0,

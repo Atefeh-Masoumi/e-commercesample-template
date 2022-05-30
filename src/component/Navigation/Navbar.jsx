@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from "../../asset/footer-logo.png";
 import { NavLink } from "react-router-dom";
-import { useCart } from '../../Providers/CartProvider';
+import { useCart ,useCartAction} from '../../Providers/CartProvider';
 import { useAuth } from '../../Providers/AuthProvider';
 import { BsFillPersonFill, BsCart3 ,BsJustify,BsPersonPlusFill} from "react-icons/bs";
 import './navbar.css'
@@ -18,8 +18,10 @@ import {
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
+    const data = useCart();
+    console.log(data);
     const userData = useAuth();
-    
+   
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
     return(
         <header className='bg'>
@@ -97,6 +99,14 @@ const Navbar =()=>{
 
                           ):""}>{userData? <BsFillPersonFill className="profile-icon" />: <BsPersonPlusFill  className='firstseenprofile'/>}
                         </NavLink>
+                        <div className="cart-profile">
+          <div className="cartLinkBadge">
+            <NavLink to="/cart">
+              <BsCart3 className="cart-icon" />
+            </NavLink>
+            <span className="cartCount"></span>
+          </div>
+          </div>
                       </MDBNavbar>
                     </div>
                     <div className='right-topnavbar'>
