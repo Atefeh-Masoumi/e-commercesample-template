@@ -18,8 +18,8 @@ import {
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
-    const data = useCart();
-    console.log(data);
+    const {cart,total} = useCart();
+    
     const userData = useAuth();
    
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
@@ -100,13 +100,13 @@ const Navbar =()=>{
                           ):""}>{userData? <BsFillPersonFill className="profile-icon" />: <BsPersonPlusFill  className='firstseenprofile'/>}
                         </NavLink>
                         <div className="cart-profile">
-          <div className="cartLinkBadge">
-            <NavLink to="/cart">
-              <BsCart3 className="cart-icon" />
-            </NavLink>
-            <span className="cartCount"></span>
-          </div>
-          </div>
+                            <div className="cartLinkBadge">
+                                <NavLink to="/cart">
+                                <BsCart3 className="cart-icon" />
+                                </NavLink>
+                                <span className="cartCount">{cart.length}</span>
+                            </div>
+                            </div>
                       </MDBNavbar>
                     </div>
                     <div className='right-topnavbar'>

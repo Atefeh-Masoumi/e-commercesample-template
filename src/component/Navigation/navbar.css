@@ -15,10 +15,10 @@
     color:black
 }
 .nav-link:hover{
-    color:var(red);
+    color:var(--myred);
 }
 a:hover {
-    color: var(red);
+    color: var(--myred);
 }
 
 .bg{
@@ -62,3 +62,43 @@ a:hover {
     opacity: .6;
     transform: rotate(40deg);
 }
+
+.cart-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .cart-profile a {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    color: #444;
+  }
+  .cart-profile a:hover {
+    color: #ccc;
+  }
+  
+  .cartLinkBadge {
+    position: relative;
+  }
+  .cartCount {
+    top: -10px;
+    right: 1px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--myred);
+    color: #fff;
+  }
+  .cart-icon,
+  .profile-icon {
+    font-size: 1.5rem;
+  }
+  

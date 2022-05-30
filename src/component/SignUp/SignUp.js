@@ -24,7 +24,12 @@ const validationSchema = Yup.object({
     .required("Phone Number is required")
     .matches(/^[0-9]{11}$/, "Invalid Phone Number")
     .nullable(),
-    password:Yup.string().required("password is required"),
+    password: Yup.string()
+    .required("Password is required")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+      "Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character"
+    ),
     passwordconfirm:Yup.string().required("password confirmation required").oneOf([Yup.ref('password'),null], 'Password must match'),
 });
 
@@ -87,7 +92,7 @@ const SignupForm = () => {
                 <Input  formik={formik} name="password" label="Password" type='password' autocomplete="on"/>
                 <Input  formik={formik} name="passwordconfirm" label="Password Confirm" type='password'/>
                 <button type="submit" disabled={!formik.isValid} className="btn primary btnsg" > Sign Up</button>
-                {error&&<p style={{color:"red"}}> {error}</p>}
+                {error&&<p className="error" > {error}</p>}
                 
                 <Link to={`/login?redirect=${redirect}`}>
                     <p className="alreadylogin">Already have an account? Login from here</p>

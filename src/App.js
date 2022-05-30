@@ -18,13 +18,15 @@ import SignUp from './pages/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/ProfilePage';
 import Layout from './Layout/Layout';
+import Navbar from './component/Navigation/Navbar';
 
 function App() {
   return (
     <Router>
-      <Layout/>
+      
       <AuthProvider>
       <CartProvider>
+        <Navbar/>
         <ToastContainer />
         <Routes>
           <Route path='/' element={<Homepage />} />
