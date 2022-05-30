@@ -3,7 +3,7 @@ import logo from "../../asset/footer-logo.png";
 import { NavLink } from "react-router-dom";
 import { useCart } from '../../Providers/CartProvider';
 import { useAuth } from '../../Providers/AuthProvider';
-import { BsFillPersonFill, BsCart3 } from "react-icons/bs";
+import { BsFillPersonFill, BsCart3 ,BsJustify,BsPersonPlusFill} from "react-icons/bs";
 import './navbar.css'
 import { MdOutlineAccountCircle } from "react-icons/md";
 import {
@@ -15,7 +15,6 @@ import {
     MDBNavbarLink,
     MDBCollapse,
     MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBDropdownLink,
-    MDBIcon,
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
@@ -28,7 +27,7 @@ const Navbar =()=>{
                 <div className="top-navbar align-center">
                     <div className="left">
                       <MDBNavbar expand='lg'  className="p-1" >
-                        <MDBContainer fluid className="col-md-7 ">
+                        <MDBContainer fluid className="">
 
                           <MDBNavbarToggler
                             type='button'
@@ -39,7 +38,7 @@ const Navbar =()=>{
                             className=' '
                             onClick={() => setShowNavNoToggler(!showNavNoToggler)}
                           >
-                          <MDBIcon icon='bars' fas />
+                          <BsJustify icon='bars'/>
                           </MDBNavbarToggler>
                           
                           <MDBCollapse navbar show={showNavNoToggler}>
@@ -56,46 +55,48 @@ const Navbar =()=>{
                                     <MDBNavbarLink href='#Productpage' className='' >Product page</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                    <MDBNavbarLink href='' className=''>viki page</MDBNavbarLink>
+                                    <MDBNavbarLink href='/cart' className=''>viki page</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                     <MDBNavbarLink href='#' className=''>Admin panel</MDBNavbarLink>
                               </MDBNavbarItem>
                             </MDBNavbarNav>
                           </MDBCollapse>
-
-                          <MDBNavbarBrand  href='#' className='mt-2'>
-                            <MDBDropdownItem>
-                          
-                          <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?"activelink":""}>{userData? <BsFillPersonFill className="profile-icon" />: "login/Signup"}
-                        </NavLink>
-                        </MDBDropdownItem>
-                           <MDBDropdown>
-                            <MDBDropdownToggle tag='a' className=''>
-                            <MdOutlineAccountCircle width={"40px"} height={"40px"}/> 
-                            </MDBDropdownToggle>
-                            <MDBDropdownMenu>
-                              <MDBDropdownItem>
-                                <MDBDropdownLink href="#">My Account</MDBDropdownLink>
-                              </MDBDropdownItem>
-                              <MDBDropdownItem>
-                                <MDBDropdownLink href="#">Favorite list</MDBDropdownLink>
-                              </MDBDropdownItem>
-                              <MDBDropdownItem>
-                                <MDBDropdownLink href="#">Cart</MDBDropdownLink>
-                              </MDBDropdownItem>
-                              <MDBDropdownItem>
-                                <MDBDropdownLink href="#">log out</MDBDropdownLink>
-                              </MDBDropdownItem>
-                            </MDBDropdownMenu>
-                          </MDBDropdown>
-
                           
                           
-                          </MDBNavbarBrand >
                             
                         
                         </MDBContainer>
+
+                        <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(
+                              <MDBNavbarBrand  href='#' className='mt-2'>
+                            
+                              <MDBDropdown>
+                               <MDBDropdownToggle tag='a' className=''>
+                               <MdOutlineAccountCircle width={"40px"} height={"40px"}/> 
+                               </MDBDropdownToggle>
+                               <MDBDropdownMenu>
+                                 <MDBDropdownItem>
+                                   <MDBDropdownLink href="#">My Account</MDBDropdownLink>
+                                 </MDBDropdownItem>
+                                 <MDBDropdownItem>
+                                   <MDBDropdownLink href="#">Favorite list</MDBDropdownLink>
+                                 </MDBDropdownItem>
+                                 <MDBDropdownItem>
+                                   <MDBDropdownLink href="#">Cart</MDBDropdownLink>
+                                 </MDBDropdownItem>
+                                 <MDBDropdownItem>
+                                   <MDBDropdownLink href="#">log out</MDBDropdownLink>
+                                 </MDBDropdownItem>
+                               </MDBDropdownMenu>
+                             </MDBDropdown>
+   
+                             
+                             
+                             </MDBNavbarBrand >
+
+                          ):""}>{userData? <BsFillPersonFill className="profile-icon" />: <BsPersonPlusFill  className='firstseenprofile'/>}
+                        </NavLink>
                       </MDBNavbar>
                     </div>
                     <div className='right-topnavbar'>
@@ -107,7 +108,7 @@ const Navbar =()=>{
                   <div className='content-inner'>
                     <div className='row align-items-center no-gutters'>
                       <div className='col-8 branding-col'>
-                        <a href='#'>
+                        <a href='/'>
                           <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
 
                         </a>
@@ -120,7 +121,7 @@ const Navbar =()=>{
 
                         </nav>
 
-                        <div className='search ' >
+                        <div className='search'>
                           <div className='d-flex justify-content-start'>
                           <div type="submit" className="sub-search"/>
                           <input name='searchbar' type="text" placeholder='search...'  className="search-text"/>

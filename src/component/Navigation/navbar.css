@@ -1,15 +1,26 @@
 .activelink{
     color: black;
     background-color: #fff;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 5px;
 }
 .activelink :hover{
+    color:red;
+}
+.firstseenprofile{
+    width: 30px;
+    height: 30px;
+}
+.nav-link{
+    color:black
+}
+.nav-link:hover{
     color:var(red);
 }
-li{
-    text-decoration: none;
+a:hover {
+    color: var(red);
 }
+
 .bg{
     background-color: #ededed;
 }
