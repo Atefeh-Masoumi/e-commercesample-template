@@ -1,4 +1,4 @@
-import Layout from "../Layout/Layout";
+
 import * as data from "../data"
 import { useCart, useCartAction } from "../Providers/CartProvider";
 import { checkIncart } from "../utils/checkinCart";

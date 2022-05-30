@@ -7,6 +7,7 @@ import { useState,useEffect } from "react";
 import { loginUser } from "../../Services/LoginService";
 import { useAuthAction,useAuth } from "../../Providers/AuthProvider";
 import {useQuery} from './../../hooks/useQuery'
+import { toast } from "react-toastify";
 
 // inital values for the form
 const initialValues = {
@@ -51,6 +52,7 @@ const LoginForm = () => {
             console.log(error);
             if(error.response && error.response.data.message)
             setError(error.response.data.message);
+            toast.error(error.response.data.message)
         }
     };
 

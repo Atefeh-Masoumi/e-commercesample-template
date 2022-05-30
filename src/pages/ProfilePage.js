@@ -1,8 +1,8 @@
-import Layout from "../Layout/Layout";
+
 import { useAuth } from "../Providers/AuthProvider";
 import styles from "./profilePage.module.css";
 
-const ProfilePage = () => {
+const ProfilePage = ({history}) => {
     const userInfo = useAuth();
 
   const logoutHandler = () => {

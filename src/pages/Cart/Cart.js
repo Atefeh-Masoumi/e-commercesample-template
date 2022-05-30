@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Layout from "../../Layout/Layout";
+
 import { useCart,useCartAction } from "../../Providers/CartProvider";
 import'./cart.css';
 

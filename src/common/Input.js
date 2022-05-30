@@ -7,7 +7,7 @@ const Input = ({formik,name,label, type="text"}) => {
                 <input id={name} type={type}  name={name}
                     {...formik.getFieldProps(name)}/>
                 </div>
-                {formik.errors[name] && formik.touched[name]&&<div style={{color:"red"}}>{formik.errors[name]}</div>}
+                {formik.errors[name] && formik.touched[name]&&<div className='error'>{formik.errors[name]}</div>}
         </div>
      );
 }

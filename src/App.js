@@ -17,7 +17,7 @@ import Login from './pages/LoginPage';
 import SignUp from './pages/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/ProfilePage';
-import Layout from './Layout/Layout';
+
 import Navbar from './component/Navigation/Navbar';
 
 function App() {
@@ -26,8 +26,9 @@ function App() {
       
       <AuthProvider>
       <CartProvider>
-        <Navbar/>
+        
         <ToastContainer />
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/cart' element={<CartPage />} />
