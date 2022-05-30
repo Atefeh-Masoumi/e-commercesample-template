@@ -1,0 +1,53 @@
+.activelink{
+    color: black;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+.activelink :hover{
+    color:var(red);
+}
+li{
+    text-decoration: none;
+}
+.bg{
+    background-color: #ededed;
+}
+
+.search  {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 12px;
+    width: 200px;
+}
+.search-text{
+    width: 100%;
+    height: 57px;
+    padding: 0 35px;
+    border: 1px solid #e4e7eb;
+    border-radius: 6px;
+    transition: .3s;
+    
+    
+}
+.sub-search{
+    
+        position: absolute;
+      
+        border: none;
+        background: url(../../asset/search.svg) no-repeat center;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        margin-top: -20px;
+        border-radius: 100%;
+        transition: .3s;
+        transform: rotate(0deg);
+    
+}
+
+.sub-search:hover{
+    opacity: .6;
+    transform: rotate(40deg);
+}

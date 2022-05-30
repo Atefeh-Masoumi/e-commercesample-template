@@ -1,0 +1,18 @@
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .btnsg{
+    width: 100%;
+    padding-top: 10px;
+    font-size: 16px ;
+  }
+    
+ .alreadylogin{
+    margin-top: 15px;
+    
+  }
+  
+  
