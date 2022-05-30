@@ -49,7 +49,7 @@ const SignupForm = () => {
 // useEffect to check if the user is already logged in
     useEffect(()=>{
         if(userData) history(redirect);
-    },[redirect,userData]);
+    },[redirect,userData,history]);
 
     // submit handler
     const onSubmit= async(values)=>{
@@ -63,7 +63,7 @@ const SignupForm = () => {
         try {
            const {data}= await signupUser(userData);
            setAuth(data);
-        //localStorage.setItem("authState", JSON.stringify(data));
+        localStorage.setItem("auth token", JSON.stringify(data));
            console.log(data);
            setError(null);
            history(redirect);
