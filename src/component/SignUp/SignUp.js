@@ -63,7 +63,7 @@ const SignupForm = () => {
         try {
            const {data}= await signupUser(userData);
            setAuth(data);
-        localStorage.setItem("auth token", JSON.stringify(data));
+            localStorage.setItem("auth token", JSON.stringify(data));
            console.log(data);
            setError(null);
            history(redirect);

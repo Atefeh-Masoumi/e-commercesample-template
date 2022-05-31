@@ -4,7 +4,7 @@ import { useCart, useCartAction } from "../Providers/CartProvider";
 import { checkIncart } from "../utils/checkinCart";
 import { toast } from "react-toastify";
 import Header from "../component/Header/Header";
-import Footer from "../component/Footer/FooterPage.jsx";
+
 import Slider from "../component/Slider/Slider";
 const Homepage = () => {
      const {cart} = useCart();
@@ -70,10 +70,10 @@ const Homepage = () => {
                 </div>
                 </section>
             </main>
-            <div className="position-relative">
+            {/* <div className="position-relative">
             <Slider className=" position-absolute"/>
-            </div>
-            <Footer/>
+            </div> */}
+           
         </>
         
     );

@@ -19,6 +19,7 @@ import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/ProfilePage';
 
 import Navbar from './component/Navigation/Navbar';
+import Footer from './component/Footer/FooterPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='/profile' element={<ProfilePage />} />
         
         </Routes>
+        <Footer/>
       </CartProvider>
       </AuthProvider>
     </Router>

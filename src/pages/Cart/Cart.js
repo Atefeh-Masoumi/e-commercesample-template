@@ -28,7 +28,7 @@ const CartPage = () => {
     const decHandler =(cartItem)=>{
         dispatch({type:"REMOVE_PRODUCT", payload:cartItem})
     }
-    return ( 
+    return (
        <>
           
            <main className="container">
