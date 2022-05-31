@@ -54,7 +54,7 @@ const Navbar =()=>{
                                 <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                    <MDBNavbarLink href='#Productpage' className='' >Product page</MDBNavbarLink>
+                                    <MDBNavbarLink href='/product' className='' >Product page</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                     <MDBNavbarLink href='/cart' className=''>viki page</MDBNavbarLink>

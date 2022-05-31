@@ -41,10 +41,8 @@ const LoginForm = () => {
     const onSubmit= async(values)=>{
        
         try {
-           const {data}=  localStorage.setItem("auth token", JSON.stringify(values));
+           const {data} = localStorage.setItem("auth token", JSON.stringify(values));
            setAuth(data);
-           
-
            console.log(data);
            setError(null);
            history(redirect);
