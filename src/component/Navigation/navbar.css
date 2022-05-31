@@ -21,9 +21,7 @@ a:hover {
     color: var(--myred);
 }
 
-.bg{
-    background-color: #ededed;
-}
+
 
 .search  {
     display: inline-block;
@@ -101,4 +99,20 @@ a:hover {
   .profile-icon {
     font-size: 1.5rem;
   }
-  
+  .waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }

@@ -1,5 +1,18 @@
 
 :root{
     --myred:#ed1d24;
-    
+    --green:#3f9a59;
 }
+.bg{
+    background-color: #ededed;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+main {
+    width: fit-content;
+    min-width: 100%; /* because the content might only be a few words */
+    box-sizing: border-box; /* because 100% + padding > 100% */
+    overflow: auto;
+  }

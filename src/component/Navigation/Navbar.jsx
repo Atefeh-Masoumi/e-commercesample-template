@@ -18,7 +18,7 @@ import {
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
-    const {cart,total} = useCart();
+    const {cart} = useCart();
     
     const userData = useAuth();
    
@@ -122,7 +122,7 @@ const Navbar =()=>{
                           <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
 
                         </a>
-                      </div>
+                       </div>
                       <div className='col-4 function-col'>
                         <nav className='main-nav'>
                           <div>

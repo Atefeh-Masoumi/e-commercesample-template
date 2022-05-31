@@ -17,9 +17,10 @@ import Login from './pages/LoginPage';
 import SignUp from './pages/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/ProfilePage';
-
 import Navbar from './component/Navigation/Navbar';
 import Footer from './component/Footer/FooterPage';
+import ProductPage from './pages/Product/ProductPage';
+
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/product' element={<ProductPage />} />
         
         </Routes>
         <Footer/>

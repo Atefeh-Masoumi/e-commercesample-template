@@ -3,7 +3,7 @@ import * as data from "../data"
 import { useCart, useCartAction } from "../Providers/CartProvider";
 import { checkIncart } from "../utils/checkinCart";
 import { toast } from "react-toastify";
-import Header from "../component/Header/Header";
+import Header from "../component/Header/Header.jsx";
 
 import Slider from "../component/Slider/Slider";
 const Homepage = () => {
@@ -19,7 +19,7 @@ const Homepage = () => {
         <>
     
         <Header/>
-            <main className="container">
+            <main className="container bg">
                 
                 <section style={{backgroundColor: "#eee"}} >
                 <div className="container py-5 ">
@@ -31,13 +31,13 @@ const Homepage = () => {
                         <div className="d-flex justify-content-between p-3">
                             <p className="lead mb-0">Today's Combo Offer</p>
                             <div
-                            className="bg-primary rounded-5 d-flex align-items-center justify-content-center shadow-1-strong "
+                            className="bg-primary rounded-5  justify-content-center shadow-1-strong "
                             style={{width: "auto", height: "35px"}}>
                             <p className="text-white p-1 mb-0 small"> {product.combo} </p>
                             </div>
                         </div>
                         <img src={product.image} alt={product.name}
-                            className="card-img-top"  />
+                            className="card-img-top display-flex justify-content-center align-items-center"  style={{width: "150px", height: "150px"}}/>
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
                             <p className="small"><a href="#!" className="text-muted">Laptops</a></p>

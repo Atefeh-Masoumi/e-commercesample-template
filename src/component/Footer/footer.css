@@ -1,7 +1,3 @@
-.page-footer {
-    overflow: hidden;
-    position: relative;
-}
 
 .page-footer .footer-content {
     padding: 0 0 60px;
@@ -70,4 +66,99 @@
     background: radial-gradient(ellipse at center,rgba(0,0,0,.65) 0%,rgba(0,0,0,0) 64%,rgba(0,0,0,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1);
     opacity: .15;
+}
+.footer-head-content-block {
+    display: inline-block;
+    width: calc(100% - 180px);
+    font-size: 13px;
+    padding: 40px 20px 0 0;
+}
+
+.footer-head-nav{
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+.footer-head-nav span{ 
+    padding: 5px;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.phone{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:var(--green);
+}
+.lineUp {
+    animation: 2s anim-lineUp ease-out infinite;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+.left {
+    text-align: left;
+}
+
+
+
+@media (max-width: 575px){
+.footer-head-content-block {
+    padding-right: 0!important;
+}
+}
+@media (max-width: 767px){
+.page-footer .footer-content .footer-head-content .footer-logo {
+    margin-right: 20px;
+}
+}
+
+@media (max-width: 991px){
+    .container {
+        min-width: 100%;
+        padding: 0 20px;
+    }
+}
+.heading-footer {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.quick-link-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+}
+.quick-link-col-1 {
+    padding-right: 20px;
+}
+
+.sendicon{
+    width: 60px;
+    height: 22px;
+}
+.page-footer{
+    bottom: 0;
+  left: 0;
+    width: 100%;
+    overflow: hidden;
 }
