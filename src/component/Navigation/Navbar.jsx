@@ -43,36 +43,41 @@ const Navbar =()=>{
                         </div>
                        </div>
                       <div className='col-4 function-col d-flex justify-content-evenly'>
+                        
                         <div className='d-flex'>
                         <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(
-                              <MDBNavbarBrand  href='#' className='mt-2'>
-                            
-                              <MDBDropdown>
-                               <MDBDropdownToggle tag='a' className=''>
-                               <MdOutlineAccountCircle width={"40px"} height={"40px"}/> 
-                               </MDBDropdownToggle>
-                               <MDBDropdownMenu>
-                                 <MDBDropdownItem>
-                                   <MDBDropdownLink href="#">My Account</MDBDropdownLink>
-                                 </MDBDropdownItem>
-                                 <MDBDropdownItem>
-                                   <MDBDropdownLink href="#">Favorite list</MDBDropdownLink>
-                                 </MDBDropdownItem>
-                                 <MDBDropdownItem>
-                                   <MDBDropdownLink href="#">Cart</MDBDropdownLink>
-                                 </MDBDropdownItem>
-                                 <MDBDropdownItem>
-                                   <MDBDropdownLink href="#">log out</MDBDropdownLink>
-                                 </MDBDropdownItem>
-                               </MDBDropdownMenu>
-                             </MDBDropdown>
-   
-                             
-                             
-                             </MDBNavbarBrand >
 
-                          ):""}>{userData? <BsFillPersonFill className="profile-icon" />: <BsPersonPlusFill  className='firstseenprofile'/>}
+                           ""
+
+                          ):""}>{userData? 
+                          <MDBNavbarBrand  href='#' className='mt-2'>
+                            
+                          <MDBDropdown>
+                           <MDBDropdownToggle tag='a' className=''>
+                           <BsFillPersonFill className="profile-icon" />
+                           </MDBDropdownToggle>
+                           <MDBDropdownMenu>
+                             <MDBDropdownItem>
+                               <MDBDropdownLink href="#">My Account</MDBDropdownLink>
+                             </MDBDropdownItem>
+                             <MDBDropdownItem>
+                               <MDBDropdownLink href="#">Favorite list</MDBDropdownLink>
+                             </MDBDropdownItem>
+                             <MDBDropdownItem>
+                               <MDBDropdownLink href="/cart">Cart</MDBDropdownLink>
+                             </MDBDropdownItem>
+                             <MDBDropdownItem>
+                               <MDBDropdownLink href="#">log out</MDBDropdownLink>
+                             </MDBDropdownItem>
+                           </MDBDropdownMenu>
+                         </MDBDropdown>
+
+                         
+                         
+                         </MDBNavbarBrand >
+                          : <BsPersonPlusFill  className='firstseenprofile'/>}
                         </NavLink>
+                        
                         </div>
                         <div className="cart-profile">
                           

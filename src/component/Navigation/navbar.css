@@ -20,11 +20,10 @@
 a:hover {
     color: var(--myred);
 }
-
-
 .navbar {
   box-shadow: 0 4px 12px 0 #2e25272e, 0 2px 4px rgb(0 0 0 / 5%);
-  padding-top: 0.5625rem;
+  
+  height: 50px;
 }
 .search  {
   display: inline-block;

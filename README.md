@@ -1,4 +1,4 @@
-This project is a sample Ecommerence store  :
+Facinating Ecommerence store  :
 
 
 Libraries and Technologies :
@@ -12,6 +12,3 @@ Libraries and Technologies :
 - Formik to handle forms
 - Yup for validation
 - react-icons
- 
-
-
