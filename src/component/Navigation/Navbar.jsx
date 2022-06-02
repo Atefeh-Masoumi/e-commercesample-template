@@ -26,50 +26,24 @@ const Navbar =()=>{
     return(
         <header className='bg'>
             <div className="container ">
-                <div className="top-navbar align-center">
-                    <div className="left">
-                      <MDBNavbar expand='lg'  className="p-1" >
-                        <MDBContainer fluid className="">
+            <div className="navbar-content">
+                  <div className='content-inner'>
+                    <div className='row align-items-center no-gutters'>
+                      <div className='col-8 branding-col'>
+                        <a href='/'>
+                          <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
 
-                          <MDBNavbarToggler
-                            type='button'
-                            data-target='#navbarTogglerDemo02'
-                            aria-controls='navbarTogglerDemo02'
-                            aria-expanded='false'
-                            aria-label='Toggle navigation'
-                            className=' '
-                            onClick={() => setShowNavNoToggler(!showNavNoToggler)}
-                          >
-                          <BsJustify icon='bars'/>
-                          </MDBNavbarToggler>
+                        </a>
+                        <div className='search'>
+                          <div className='d-flex justify-content-start'>
+                          <div type="submit" className="sub-search"/>
+                          <input name='searchbar' type="text" placeholder='search...'  className="search-text"/>
                           
-                          <MDBCollapse navbar show={showNavNoToggler}>
-                            <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 ' >
-                              <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page'  cursor='pointer' className=' text-black'>
-                                <NavLink to="/" className={(navData)=>navData.isActive ?"activelink":""} >home</NavLink>
-                                </MDBNavbarLink>
-                              </MDBNavbarItem>
-                              <MDBNavbarItem>
-                                <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>
-                              </MDBNavbarItem>
-                              <MDBNavbarItem>
-                                    <MDBNavbarLink href='/product' className='' >Product page</MDBNavbarLink>
-                              </MDBNavbarItem>
-                              <MDBNavbarItem>
-                                    <MDBNavbarLink href='/cart' className=''>viki page</MDBNavbarLink>
-                              </MDBNavbarItem>
-                              <MDBNavbarItem>
-                                    <MDBNavbarLink href='#' className=''>Admin panel</MDBNavbarLink>
-                              </MDBNavbarItem>
-                            </MDBNavbarNav>
-                          </MDBCollapse>
-                          
-                          
-                            
-                        
-                        </MDBContainer>
-
+                          </div>
+                        </div>
+                       </div>
+                      <div className='col-4 function-col d-flex justify-content-evenly'>
+                        <div className='d-flex'>
                         <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(
                               <MDBNavbarBrand  href='#' className='mt-2'>
                             
@@ -99,14 +73,73 @@ const Navbar =()=>{
 
                           ):""}>{userData? <BsFillPersonFill className="profile-icon" />: <BsPersonPlusFill  className='firstseenprofile'/>}
                         </NavLink>
+                        </div>
                         <div className="cart-profile">
+                          
                             <div className="cartLinkBadge">
                                 <NavLink to="/cart">
                                 <BsCart3 className="cart-icon" />
                                 </NavLink>
                                 <span className="cartCount">{cart.length}</span>
                             </div>
-                            </div>
+                            <div>
+                              <p className='mt-4'>My Cart</p>
+                           </div>
+                          </div>
+
+                        
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div className="top-navbar align-center mt-4">
+                    <div className="left">
+                      <MDBNavbar expand='lg'  className="p-1" >
+                        <MDBContainer fluid className="">
+
+                          <MDBNavbarToggler
+                            type='button'
+                            data-target='#navbarTogglerDemo02'
+                            aria-controls='navbarTogglerDemo02'
+                            aria-expanded='false'
+                            aria-label='Toggle navigation'
+                            className=' '
+                            onClick={() => setShowNavNoToggler(!showNavNoToggler)}
+                          >
+                          <BsJustify icon='bars'/>
+                          </MDBNavbarToggler>
+                          
+                          <MDBCollapse navbar show={showNavNoToggler}>
+                            <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 ' >
+                              <MDBNavbarItem>
+                                <MDBNavbarLink active aria-current='page' cursor='pointer' className=''  href='/'>
+                                  home
+                                </MDBNavbarLink>
+                              </MDBNavbarItem>
+                              <MDBNavbarItem>
+                                <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>
+                              </MDBNavbarItem>
+                              <MDBNavbarItem>
+                                    <MDBNavbarLink href='/product' className='' >Product page</MDBNavbarLink>
+                              </MDBNavbarItem>
+                              <MDBNavbarItem>
+                                    <MDBNavbarLink href='/cart' className=''>viki page</MDBNavbarLink>
+                              </MDBNavbarItem>
+                              <MDBNavbarItem>
+                                    <MDBNavbarLink href='#' className=''>Admin panel</MDBNavbarLink>
+                              </MDBNavbarItem>
+                            </MDBNavbarNav>
+                          </MDBCollapse>
+                          
+                          
+                            
+                        
+                        </MDBContainer>
+
+                        
+                        
                       </MDBNavbar>
                     </div>
                     <div className='right-topnavbar'>
@@ -114,36 +147,7 @@ const Navbar =()=>{
                     </div>
 
                 </div>
-                <div className="navbar-content">
-                  <div className='content-inner'>
-                    <div className='row align-items-center no-gutters'>
-                      <div className='col-8 branding-col'>
-                        <a href='/'>
-                          <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
-
-                        </a>
-                       </div>
-                      <div className='col-4 function-col'>
-                        <nav className='main-nav'>
-                          <div>
-
-                          </div>
-
-                        </nav>
-
-                        <div className='search'>
-                          <div className='d-flex justify-content-start'>
-                          <div type="submit" className="sub-search"/>
-                          <input name='searchbar' type="text" placeholder='search...'  className="search-text"/>
-                          
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
+               
 
             </div>
         </header>

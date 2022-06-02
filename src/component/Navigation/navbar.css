@@ -22,38 +22,36 @@ a:hover {
 }
 
 
-
+.navbar {
+  box-shadow: 0 4px 12px 0 #2e25272e, 0 2px 4px rgb(0 0 0 / 5%);
+  padding-top: 0.5625rem;
+}
 .search  {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    margin-left: 12px;
-    width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 12px;
+  width: 200px;
 }
 .search-text{
-    width: 100%;
-    height: 57px;
-    padding: 0 35px;
-    border: 1px solid #e4e7eb;
-    border-radius: 6px;
-    transition: .3s;
-    
-    
+  width: 100%;
+  height: 57px;
+  padding: 0 35px;
+  border: 1px solid #e4e7eb;
+  border-radius: 6px;
+  transition: .3s; 
 }
 .sub-search{
-    
-        position: absolute;
-      
-        border: none;
-        background: url(../../asset/search.svg) no-repeat center;
-        width: 40px;
-        height: 40px;
-        top: 50%;
-        margin-top: -20px;
-        border-radius: 100%;
-        transition: .3s;
-        transform: rotate(0deg);
-    
+  position: absolute;
+  border: none;
+  background: url(../../asset/search.svg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  border-radius: 100%;
+  transition: .3s;
+  transform: rotate(0deg);   
 }
 
 .sub-search:hover{
@@ -66,17 +64,22 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 100%;
+    border: 1px solid #8e8f92;
+    border-radius: 5px;
+    padding: 5px;
+   
   }
   .cart-profile a {
     padding: 0.5rem 1rem;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 6px;
-    background-color: #f7f7f7;
+   
     color: #444;
+  
   }
   .cart-profile a:hover {
-    color: #ccc;
+    color: var(--green)
   }
   
   .cartLinkBadge {
@@ -92,27 +95,22 @@ a:hover {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--myred);
+    background-color: var(--green);
     color: #fff;
   }
   .cart-icon,
   .profile-icon {
     font-size: 1.5rem;
   }
-  .waviy {
-    position: relative;
-  }
-  .waviy span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    animation: flip 2s infinite;
-    animation-delay: calc(.2s * var(--i))
-  }
-  @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
-    }
-  }
+  .content-inner::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 30px #8e8f92;
+    opacity: .4;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+ 
+}

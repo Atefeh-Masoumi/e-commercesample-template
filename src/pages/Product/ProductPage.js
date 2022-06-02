@@ -1,8 +1,11 @@
-import React from 'react'
+
 
 const ProductPage = () => {
   return (
-    <div>ProductPage</div>
+    <div>
+      ProductPage I Love you 
+      
+    </div>
   )
 }
 export default ProductPage;

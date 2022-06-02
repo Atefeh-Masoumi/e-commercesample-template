@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import Homepage from './pages/Homepage';
+import Homepage from './pages/Home/Homepage';
 import {
   BrowserRouter as Router,
   Route,
@@ -41,7 +41,7 @@ function App() {
           <Route path='/product' element={<ProductPage />} />
         
         </Routes>
-        <Footer/>
+       
       </CartProvider>
       </AuthProvider>
     </Router>

@@ -1,11 +1,12 @@
 
-import * as data from "../data"
-import { useCart, useCartAction } from "../Providers/CartProvider";
-import { checkIncart } from "../utils/checkinCart";
+import * as data from "../../data"
+import { useCart, useCartAction } from "../../Providers/CartProvider";
+import { checkIncart } from "../../utils/checkinCart";
 import { toast } from "react-toastify";
-import Header from "../component/Header/Header.jsx";
+import Header from "../../component/Header/Header.jsx";
 
-import Slider from "../component/Slider/Slider";
+import Slider from "../../component/Slider/Slider";
+import Footer from "../../component/Footer/FooterPage";
 const Homepage = () => {
      const {cart} = useCart();
 
@@ -16,14 +17,13 @@ const Homepage = () => {
 
     }
     return (  
-        <>
+        <div className="">
     
         <Header/>
             <main className="container bg">
                 
-                <section style={{backgroundColor: "#eee"}} >
-                <div className="container py-5 ">
-                    
+                <section  >
+                <div className="container py-5">
                     <div className="row">
                     {data.products.map((product)=>
                     <div className="col-md-12 col-lg-4 mb-4" key={product.id}>
@@ -73,8 +73,8 @@ const Homepage = () => {
             {/* <div className="position-relative">
             <Slider className=" position-absolute"/>
             </div> */}
-           
-        </>
+           <Footer/>
+        </div>
         
     );
 }
