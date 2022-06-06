@@ -5,7 +5,7 @@ import { AiOutlineSend } from "react-icons/ai";
 
 const Footer = () => {
     return ( 
-       <footer className="page-footer ">
+       <footer className="page-footer bg">
          <div className="footer-content">
            <div className="container">
            <div className="footer-head-content">

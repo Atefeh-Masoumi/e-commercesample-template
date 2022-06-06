@@ -119,9 +119,10 @@ const Navbar =()=>{
                           <MDBCollapse navbar show={showNavNoToggler}>
                             <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 ' >
                               <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' cursor='pointer' className=''  href='/'>
+                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='shopmenu'  href='/'>
                                   home
                                 </MDBNavbarLink>
+                                
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                 <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>
@@ -137,9 +138,6 @@ const Navbar =()=>{
                               </MDBNavbarItem>
                             </MDBNavbarNav>
                           </MDBCollapse>
-                          
-                          
-                            
                         
                         </MDBContainer>
 
@@ -147,7 +145,7 @@ const Navbar =()=>{
                         
                       </MDBNavbar>
                     </div>
-                    <div className='right-topnavbar'>
+                    <div className='under-nav'>
 
                     </div>
 

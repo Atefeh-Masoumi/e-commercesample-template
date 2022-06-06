@@ -1,0 +1,10 @@
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=slider.css.map */

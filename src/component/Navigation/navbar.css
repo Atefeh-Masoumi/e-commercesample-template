@@ -101,15 +101,7 @@ a:hover {
   .profile-icon {
     font-size: 1.5rem;
   }
-  .content-inner::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 0 30px #8e8f92;
-    opacity: .4;
-    left: 0;
-    top: 0;
-    border-radius: 100px;
- 
+  
+.under-nav{
+  height: 30px;
 }
