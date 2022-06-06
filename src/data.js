@@ -16,7 +16,7 @@ export const products = [
     {
       id: 2,
       name: "Adidas",
-      description: [{ support: "گارانتی مادام العمر" }, { support: "اورجینال" }],
+      description: [{ support: "گارانتی مادام العمر" }, { support: "original" }],
       combo:"Special offer",
       price: 110,
       offPrice: 100,
@@ -28,8 +28,8 @@ export const products = [
       name: "Vans",
       description: [
         { support: "گارانتی مادام العمر" },
-        { support: "اورجینال" },
-        { support: "ارسال رایگان" },
+        { support: "original" },
+        { support: "Free shipping" },
       ],
       price: 99,
       offPrice: 89,
@@ -41,8 +41,8 @@ export const products = [
       name: "White",
       description: [
         { support: "گارانتی مادام العمر" },
-        { support: "اورجینال" },
-        { support: "ارسال رایگان" },
+        { support: "original" },
+        { support: "Free shipping" },
       ],
       price: 260,
       offPrice: 220,
@@ -54,8 +54,8 @@ export const products = [
       name: "Croopped-shoe",
       description: [
         { support: "گارانتی مادام العمر" },
-        { support: "اورجینال" },
-        { support: "ارسال رایگان" },
+        { support: "original" },
+        { support: "Free shipping" },
       ],
       combo:"Free shipping",
       price: 150,
@@ -68,8 +68,8 @@ export const products = [
       name: "Blues",
       description: [
         { support: "گارانتی مادام العمر" },
-        { support: "اورجینال" },
-        { support: "ارسال رایگان" },
+        { support: "original" },
+        { support: "Free shipping" },
       ],
       price: 220,
       offPrice: 200,

@@ -40,6 +40,10 @@ a:hover {
   border-radius: 6px;
   transition: .3s; 
 }
+
+input[type="text"]::placeholder {  
+  padding-left: 25px; 
+} 
 .sub-search{
   position: absolute;
   border: none;
@@ -104,4 +108,18 @@ a:hover {
   
 .under-nav{
   height: 30px;
+}
+/* dropdown hover  navbar */
+.drop-nav{
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  
+}
+nav>.shopmenu:hover .drop-nav{
+display: flex;
+border-top: var(--green) 2px solid;
 }

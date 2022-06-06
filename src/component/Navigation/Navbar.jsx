@@ -37,8 +37,7 @@ const Navbar =()=>{
                         <div className='search'>
                           <div className='d-flex justify-content-start'>
                           <div type="submit" className="sub-search"/>
-                          <input name='searchbar' type="text" placeholder='search...'  className="search-text"/>
-                          
+                          <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20"/>
                           </div>
                         </div>
                        </div>
@@ -122,7 +121,14 @@ const Navbar =()=>{
                                 <MDBNavbarLink active aria-current='page' cursor='pointer' className='shopmenu'  href='/'>
                                   home
                                 </MDBNavbarLink>
-                                
+                                <div className='bg drop-nav'>
+                                  
+                                  <p>router</p>
+                                  <p>router</p>
+                                  <p>router</p>
+                                  <p>router</p>
+
+                                </div>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                 <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>

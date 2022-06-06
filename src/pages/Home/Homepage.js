@@ -20,27 +20,27 @@ const Homepage = () => {
         <div className="">
     
         <Header/>
-            <main className="container bg">
+            <main className="container ">
                 
                 <section  >
                 <div className="container py-5">
                     <div className="row">
                     {data.products.map((product)=>
-                    <div className="col-md-12 col-lg-4 mb-4" key={product.id}>
-                        <div className="card  hover-zoom">
+                    <div className="col-md-12 col-lg-4 mb-4 " key={product.id}>
+                        <div className="card bg hover-zoom">
                         <div className="d-flex justify-content-between p-3">
-                            <p className="lead mb-0">Today's Combo Offer</p>
+                            <p className="lead mb-0">Our Product</p>
                             <div
-                            className="bg-primary rounded-5  justify-content-center shadow-1-strong "
-                            style={{width: "auto", height: "35px"}}>
+                            className=" rounded-5  justify-content-center shadow-1-strong "
+                            style={{width: "auto", height: "35px",backgroundColor:"var(--myred)"}}>
                             <p className="text-white p-1 mb-0 small"> {product.combo} </p>
                             </div>
                         </div>
                         <img src={product.image} alt={product.name}
-                            className="card-img-top display-flex justify-content-center align-items-center"  style={{width: "150px", height: "150px"}}/>
+                            className=" d-flex justify-content-center align-items-center "  style={{width: "150px", height: "150px"}}/>
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
-                            <p className="small"><a href="#!" className="text-muted">Laptops</a></p>
+                            <p className="small"><a href="/product" className="text-muted">Laptops</a></p>
                             <p className="small text-danger"><s>${product.price}</s></p>
                             </div>
 
