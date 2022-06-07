@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from "../../asset/footer-logo.png";
 import { NavLink } from "react-router-dom";
-import { useCart ,useCartAction} from '../../Providers/CartProvider';
+import { useCart } from '../../Providers/CartProvider';
 import { useAuth } from '../../Providers/AuthProvider';
 import { BsFillPersonFill, BsCart3 ,BsJustify,BsPersonPlusFill} from "react-icons/bs";
 import './navbar.css'
@@ -19,13 +19,13 @@ import {
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
     const {cart} = useCart();
-    
+    const [style, setStyle] = useState({display: 'none'});
     const userData = useAuth();
    
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
     return(
         <header className='bg'>
-            <div className="container ">
+            <div className="container">
             <div className="navbar-content">
                   <div className='content-inner'>
                     <div className='row align-items-center no-gutters'>
@@ -116,19 +116,22 @@ const Navbar =()=>{
                           </MDBNavbarToggler>
                           
                           <MDBCollapse navbar show={showNavNoToggler}>
-                            <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 ' >
+                            <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 stroke' >
                               <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='shopmenu'  href='/'>
+                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/' 
+                                
+                                
+                                >
                                   home
                                 </MDBNavbarLink>
-                                <div className='bg drop-nav'>
+                                {/* submenu show on hover */}
+                                <div className='bg drop-nav' 
+                                >
                                   
-                                  <p>router</p>
-                                  <p>router</p>
-                                  <p>router</p>
-                                  <p>router</p>
+                                 
 
                                 </div>
+                                
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                 <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>

@@ -109,17 +109,35 @@ input[type="text"]::placeholder {
 .under-nav{
   height: 30px;
 }
+
 /* dropdown hover  navbar */
-.drop-nav{
-  position: absolute;
-  z-index: 9;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  display: none;
+
+
+
+/* stroke animation for navbar menu */
+ul.stroke  li a {
+  position:relative;
   
 }
-nav>.shopmenu:hover .drop-nav{
-display: flex;
-border-top: var(--green) 2px solid;
+
+ul.stroke  li a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--green);
+  height: 3px;
+  
+}
+ul.stroke  li a:hover:after {
+  width: 100%;
+}
+ul li a,
+ul li a:before,
+ul li a:after {
+  transition: all 1s;
 }
