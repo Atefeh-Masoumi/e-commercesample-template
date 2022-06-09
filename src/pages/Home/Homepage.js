@@ -81,8 +81,8 @@ const Homepage = () => {
                     <div className="logo"><img src={product.image} alt={product.name} style={{width: "300px", height: "300px"}}/></div>
                     </div>
                     <div className="back">
-                    <h1 className="product-title">BUY NOW!<span>design <i>&</i> photography</span></h1>
-                    <div>
+                    <h1 className="product-title">BUY NOW!<span>{product.name}</span></h1>
+                    <div className="d-flex justify-content-center">
                         <button onClick={()=>addProductHandler(product)} className="btn primary">{checkIncart(cart,product) ? "In Cart":"Add to Cart"}</button>
                         
                     </div>

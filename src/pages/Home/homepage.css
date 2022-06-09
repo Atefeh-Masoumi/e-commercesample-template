@@ -87,7 +87,7 @@ border-radius: .2rem;
   .card1 {
     width: 600px;
     height: 340px;
-    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 17px 35px 0 rgba(0, 0, 0, .7), 0 10px 17px 0 rgba(0, 0, 0, .7);
     position: relative; 
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -153,8 +153,8 @@ border-radius: .2rem;
   
   
   .product-title {
-    color: #FC5135;
-    text-transform: uppercase;
+    color: var(--myred);
+  
     font-weight: 400;
     line-height: 1;
     margin-top: 110px;
@@ -162,13 +162,9 @@ border-radius: .2rem;
     font-size: 40px;
   }
   .product-title span {
-    color: #4E203C;
+    color: black;
     display: block;
     font-size: .45em;
     letter-spacing: 3px;
   }
-  .product-title i {
-    font-style: normal;
-    text-transform: none;
-    font-family: 'Playfair Display', serif;
-  }
+  
