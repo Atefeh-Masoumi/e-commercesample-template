@@ -116,8 +116,7 @@ input[type="text"]::placeholder {
 
 /* stroke animation for navbar menu */
 ul.stroke  li a {
-  position:relative;
-  
+  position:relative; 
 }
 
 ul.stroke  li a:after {

@@ -14,5 +14,5 @@ main {
     width: fit-content;
     min-width: 100%; /* because the content might only be a few words */
     box-sizing: border-box; /* because 100% + padding > 100% */
-    overflow: auto;
+   
   }

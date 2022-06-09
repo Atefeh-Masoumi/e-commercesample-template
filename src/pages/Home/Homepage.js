@@ -4,9 +4,10 @@ import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { checkIncart } from "../../utils/checkinCart";
 import { toast } from "react-toastify";
 import Header from "../../component/Header/Header.jsx";
-
+import Slider from "../../component/Slider/Slider.jsx";
 
 import Footer from "../../component/Footer/FooterPage";
+
 const Homepage = () => {
      const {cart} = useCart();
 
@@ -20,14 +21,15 @@ const Homepage = () => {
         <div className="">
     
         <Header/>
-            <main className="container ">
+            <main className="container bg ">
                 
-                <section  >
+                <section>
                 <div className="container py-5">
                     <div className="row">
+                        <h2>Special offer</h2>
                     {data.products.map((product)=>
                     <div className="col-md-12 col-lg-4 mb-4 " key={product.id}>
-                        <div className="card bg hover-zoom">
+                        <div className="card  hover-zoom">
                         <div className="d-flex justify-content-between p-3">
                             <p className="lead mb-0">Our Product</p>
                             <div
@@ -68,6 +70,9 @@ const Homepage = () => {
                 )}
                 </div>
                 </div>
+                </section>
+                <section>
+                   <Slider/>
                 </section>
             </main>
             
