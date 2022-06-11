@@ -20,6 +20,7 @@ import ProfilePage from './pages/ProfilePage';
 import Navbar from './component/Navigation/Navbar';
 import Footer from './component/Footer/FooterPage';
 import ProductPage from './pages/Product/ProductPage';
+import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/product' element={<ProductPage />} />
+          <Route path='/productdetail' element={<DetailProductPage />} />
         
         </Routes>
        

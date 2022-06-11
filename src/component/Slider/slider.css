@@ -1,3 +1,40 @@
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 250px;
+    height: auto;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .swiper-container {
+  width: 70%;
+  position: inherit;
+  left: 50%;
+  bottom: -16vw;
+  z-index: 2;
+  padding-bottom: 3vw;
+}
+
+@media (max-width: 768px) {
+  .container .swiper-container {
+    bottom: -58vw;
+    padding-bottom: 8vw;
+  }
+}
+
 .swiper-pagination-fraction {
   bottom: 0;
 }
