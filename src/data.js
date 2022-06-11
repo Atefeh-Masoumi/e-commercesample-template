@@ -1,3 +1,8 @@
+import img1 from "../src/asset/cardimg1.jpg";
+import img2 from "../src/asset/cardimg2.jpg";
+import img3 from "../src/asset/cardimg3.jpg";
+import img4 from "../src/asset/cardimg4.jpg";
+import img5 from "../src/asset/cardimg5.jpg";
 export const products = [
     {
       id: 1,
@@ -11,7 +16,7 @@ export const products = [
       price: 120,
       offPrice: 120,
       discount: 0,
-      image: "https://s4.uupload.ir/files/item1_soj.jpg",
+      image: {img1},
     },
     {
       id: 2,

@@ -73,12 +73,12 @@ const Homepage = () => {
         </section>
             <main className="container bg">
             <div className="row">
-                        <h2>Trending Now</h2>
+                        <h2 className="text-center p-4">Trending Now</h2>
                     {data.products.map((product)=>
-                <div className="card-container">
+                <div className="card-container p-3">
                 <div className="card1">
                     <div className="front">
-                    <div className="logo"><img src={product.image} alt={product.name} style={{width: "300px", height: "300px"}}/></div>
+                    <div className="card-img"><img src={product.image} alt={product.name} style={{width: "300px", height: "auto"}}/></div>
                     </div>
                     <div className="back">
                     <h1 className="product-title">BUY NOW!<span>{product.name}</span></h1>

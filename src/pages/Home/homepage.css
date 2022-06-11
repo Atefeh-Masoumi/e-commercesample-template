@@ -68,8 +68,9 @@ border-radius: .2rem;
 
 
 .card-container {
-    width: 600px;
-    height: 340px;
+  justify-content: center;
+  flex: 1;
+  display: flex;
     margin: 0 auto; 
     position: relative;
     -webkit-perspective: 1000;
@@ -85,7 +86,7 @@ border-radius: .2rem;
     perspective-origin: right;
   }
   .card1 {
-    width: 600px;
+    width: 400px;
     height: 340px;
     box-shadow: 0 17px 35px 0 rgba(0, 0, 0, .7), 0 10px 17px 0 rgba(0, 0, 0, .7);
     position: relative; 
@@ -101,12 +102,6 @@ border-radius: .2rem;
     -moz-transform-style: preserve-3d; 
     transform-style: preserve-3d;
     transition: .8s ease-in-out;
-  }
-  .logo {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    
   }
   
   
