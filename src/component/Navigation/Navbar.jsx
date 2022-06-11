@@ -42,8 +42,8 @@ const Navbar =()=>{
                         </div>
                        </div>
                       <div className='col-4 function-col d-flex justify-content-evenly'>
-                        
-                        <div className='d-flex'>
+                        {/* login */}
+                        <div className='d-flex mt-3'>
                         <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(
 
                            ""
@@ -78,6 +78,7 @@ const Navbar =()=>{
                         </NavLink>
                         
                         </div>
+                        {/*cart */}
                         <div className="cart-profile">
                           
                             <div className="cartLinkBadge">
@@ -98,6 +99,7 @@ const Navbar =()=>{
                   </div>
 
                 </div>
+                {/* navbar- product menu */}
                 <div className="top-navbar align-center mt-4">
                     <div className="left">
                       <MDBNavbar expand='lg'  className="p-1" >
@@ -122,7 +124,7 @@ const Navbar =()=>{
                                 
                                 
                                 >
-                                  home
+                                  Camera
                                 </MDBNavbarLink>
                                 {/* submenu show on hover */}
                                 <div className='bg drop-nav' 
@@ -134,16 +136,16 @@ const Navbar =()=>{
                                 
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                <MDBNavbarLink href='#About us' className=' '>About US</MDBNavbarLink>
+                                <MDBNavbarLink href='/product' className=' '>Watch</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                    <MDBNavbarLink href='/product' className='' >Product page</MDBNavbarLink>
+                                    <MDBNavbarLink href='/product' className=''>Computers</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                    <MDBNavbarLink href='/cart' className=''>viki page</MDBNavbarLink>
+                                    <MDBNavbarLink href='/product' className=''>Mobiles</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                    <MDBNavbarLink href='#' className=''>Admin panel</MDBNavbarLink>
+                                    <MDBNavbarLink href='/product' className=''>Accesories</MDBNavbarLink>
                               </MDBNavbarItem>
                             </MDBNavbarNav>
                           </MDBCollapse>

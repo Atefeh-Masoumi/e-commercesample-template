@@ -1,18 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 :root{
     --myred:#ed1d24;
     --green:#3f9a59;
 }
+body{
+    font-family: 'Karla', sans-serif;
+}
+
 .bg{
     background-color: #ededed;
 }
 html {
     position: relative;
     min-height: 100%;
+    
 }
 main {
     width: fit-content;
-    min-width: 100%; /* because the content might only be a few words */
     box-sizing: border-box; /* because 100% + padding > 100% */
    
   }

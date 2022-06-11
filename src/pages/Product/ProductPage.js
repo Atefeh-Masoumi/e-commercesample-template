@@ -14,6 +14,8 @@ const ProductPage = () => {
             <option value="4">Lowest Price</option>
           </select>
           </div>
+
+          
       </div>
     </div> 
   )

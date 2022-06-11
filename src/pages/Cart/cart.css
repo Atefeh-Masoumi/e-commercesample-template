@@ -1,4 +1,4 @@
-.cartItemList{
+.cartItemListcart{
     display: flex;
     background-color: #fff;
     border-radius: 5px;
@@ -7,7 +7,9 @@
     flex:1;
     padding: 1rem;
 }
-
+.btncheckout{
+    font-size: 20px;
+}
 
 .cartItem{
 display: flex;
@@ -57,11 +59,7 @@ border-bottom: 1px solid #ccc;
     padding-top: 3px;
 }
 .btnGroup button {
-    outline: none;
-    color: #6d28d9;
-    border: 1px solid #6d28d9;
-    padding: 5px 10px;
-    background-color: #fff;
+    
    }
 
    .btnGroup button:first-child{

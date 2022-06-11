@@ -14,9 +14,9 @@ const CartPage = () => {
     return (
       <>
       
-        <main>
-          <h2 style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>cart is empty !</h2>
-        </main>
+        <div>
+          <h2 className="text-center" style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>cart is empty !</h2>
+        </div>
       </>
       
     );
@@ -33,23 +33,34 @@ const CartPage = () => {
           
            <main className="container">
                 <section className="cartCenter">
-                  <section className="cartItemList">
+                  <section className="cartItemListcart">
                    {cart.map((item)=> {
                        return(
                        <div className="cartItem" key={item.id}>
-                           <div className="itemImage" >
+                           <div className="itemImage d-flex">
                             <img src={item.image} alt={item.name}></img>
+                                <div className="d-flex flex-column m-3">
+                                
+                                    <div className="row text-muted">{item.name}</div>
+                                    
+                                
+                                </div>
                            </div>
-                           <div>{item.name}</div>
-                           <div>$ {item.offPrice* item.quantity}</div>
+                          
+                           <div className="font-weight-bold">$ {item.offPrice* item.quantity}</div>
                           
                            <div className="btnGroup">
                            <button onClick={()=>decHandler(item)}> - </button>
                            <button>{item.quantity}</button>
                            <button onClick={()=>incrementHandler(item)}> + </button>
                            </div>
+                           <div className="font-weight-bold" style={{color:"#3f9a59"}}>{item.description}</div>
                        </div>)
                    })}
+                 </section>
+                 {/* card panel */}
+                 <section>
+
                  </section>
                   <CartSummary cart={cart} total={total}/>
                </section>
@@ -85,7 +96,7 @@ const CartSummary = ({total,cart})=>{
             </div>
             {/* link to check out page if user is logged in */}
             <Link to="/signup?redirect=/checkout">
-            <button className="btn primary" style={{marginTop:"20px",width:"100%"}}>Go to CheckOut</button>
+            <button className="btncheckout primary text-black" style={{marginTop:"20px",width:"100%",backgroundColor:"#3f9a59"}}>Go to CheckOut</button>
             </Link>
                 
         </section>
