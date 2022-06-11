@@ -78,7 +78,7 @@ const Homepage = () => {
                 <div className="card-container p-3" key={product.id}>
                 <div className="card1">
                     <div className="front">
-                    <div className="card-img"><img src={img2} alt={product.name} style={{width: "300px", height: "auto"}}/></div>
+                    <div className="card-img"><img src={product.image} alt={product.name} style={{width: "300px", height: "auto"}}/></div>
                     </div>
                     <div className="back">
                     <h1 className="product-title">BUY NOW!<span className='mt-5'>{product.name}</span></h1>

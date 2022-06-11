@@ -34,7 +34,7 @@ export const products = [
       price: 99,
       offPrice: 89,
       discount: 10,
-      image:{img3},
+      image:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img1.webp",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export const products = [
       price: 260,
       offPrice: 220,
       discount: 15,
-      image: {img4},
+      image: "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img2.webp",
     },
     {
       id: 5,
