@@ -65,7 +65,9 @@ border-radius: .2rem;
 }
 
 /* card */
-
+.textstyle{
+  color: var(--myred);
+}
 .bgcolor{
   background-color: #ededed;
     min-width: 100%;
@@ -104,7 +106,7 @@ border-radius: .2rem;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d; 
     transform-style: preserve-3d;
-    transition: .8s ease-in-out;
+    transition: .9s ease-in-out;
     border-radius: 8px;
   }
   
@@ -155,6 +157,7 @@ border-radius: .2rem;
   
   
   
+  .textstyle ,
   .product-title {
     color: var(--myred);
   

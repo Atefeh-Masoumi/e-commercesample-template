@@ -1,5 +1,5 @@
 
-import img2 from '../../asset/cardimg2.jpg'
+
 import * as data from "../../data"
 import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { checkIncart } from "../../utils/checkinCart";
@@ -72,7 +72,7 @@ const Homepage = () => {
         </section>
             <main className="container bgcolor">
             <div className="row">
-                <h2 className="text-center p-4 text-danger">Trending Now</h2>
+                <h2 className="text-center p-4 textstyle">Trending Now</h2>
                   {data.products.map((product)=>
                 <div className="card-container p-3" key={product.id}>
                 <div className="card1">

@@ -2,7 +2,7 @@
 export const products = [
     {
       id: 1,
-      name: "Usb Storage",
+      name: "Modern Watch",
       description: "Free shipping",
       combo:"new",
       price: 120,
