@@ -20,7 +20,6 @@ const Homepage = () => {
     }
     return (  
         <>
-    
         <Header/>
         <section className="mt-100">
             <h2 className="text-center">Categories</h2>
@@ -78,7 +77,7 @@ const Homepage = () => {
                 <div className="card-container p-3" key={product.id}>
                 <div className="card1">
                     <div className="front">
-                    <div className="card-img"><img src={product.image} alt={product.name} style={{width: "300px", height: "auto"}}/></div>
+                    <div className="card-img"><img src={product.image} alt={product.name} style={{width: "400px", height: "340px"}}/></div>
                     </div>
                     <div className="back">
                     <h1 className="product-title">BUY NOW!<span className='mt-5'>{product.name}</span></h1>
@@ -93,8 +92,9 @@ const Homepage = () => {
                
                 
             </main>
+            {/* New Product dection Section  */}
             <section className="bg-white mt-100">
-                   <h3 className="text-center font-weight-bold"> Our Special Offer</h3>
+                   <h3 className="text-center font-weight-bold"> Look at New amazing Product</h3>
                    <Slider/>
             </section>
            <Footer/>

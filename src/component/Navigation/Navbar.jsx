@@ -120,9 +120,7 @@ const Navbar =()=>{
                           <MDBCollapse navbar show={showNavNoToggler}>
                             <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 stroke' >
                               <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/' 
-                                
-                                
+                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/product'
                                 >
                                   Camera
                                 </MDBNavbarLink>

@@ -1,238 +1,117 @@
-import './detailproduct.scss';
-const DetailProductPage = () => {
+import React, {  useState } from "react";
+import './detailproduct.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+
+
+import "swiper/components/navigation/navigation.min.css";
+import'swiper/components/thumbs/thumbs.min.css';
+import SwiperCore, {
+  
+     Navigation, Thumbs
+} from "swiper/core";
+
+SwiperCore.use([ Navigation, Thumbs]);
+
+const DetailProductPage  = () => {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return ( 
-        <div>
-<main class="main">
-    <div class="mainWrapper">
-        <div class="mainBackground clearfix">
-            <div class="row">
-                <div class="column small-centered">
-                    <div class="productCard_block">
-                        <div class="row">
-                            <div class="small-12 large-6 columns">
-                                <div class="productCard_leftSide clearfix">
-                                    <div class="productCard_brendBlock">
-                                        <a class="productCard_brendBlock__imageBlock" href="#">
-                                            <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/brtendsLogos/logo_sennheiser.png?raw=true" alt="sennheiser"/>
-                                        </a>
-                                    </div>
-
-                                    <div class="sliderBlock">
-                                        <ul class="sliderBlock_items">
-                                            <li class="sliderBlock_items__itemPhoto sliderBlock_items__showing">
-                                                <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/goods/item1/phones1.png?raw=true" alt="headphones"/>
-                                            </li>
-                                            <li class="sliderBlock_items__itemPhoto">
-                                                <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/goods/item1/phones2.png?raw=true"  alt="headphones"/>
-                                            </li>
-                                            <li class="sliderBlock_items__itemPhoto">
-                                                <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/goods/item1/phones3.png?raw=true"  alt="headphones"/>
-                                            </li>
-                                            <li class="sliderBlock_items__itemPhoto">
-                                                <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/goods/item1/phones4.png?raw=true"  alt="headphones"/>
-                                            </li>
-                                            <li class="sliderBlock_items__itemPhoto">
-                                                <img src="https://github.com/BlackStar1991/CardProduct/blob/master/app/img/goods/item1/phones5.png?raw=true"  alt="headphones"/>
-                                            </li>
-                                        </ul>
-
-                                        
-                                        <div class="sliderBlock_controls">
-                                            <div class="sliderBlock_controls__navigatin">
-                                                <div class="sliderBlock_controls__wrapper">
-                                                    <div class="sliderBlock_controls__arrow sliderBlock_controls__arrowBackward">
-                                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="sliderBlock_controls__arrow sliderBlock_controls__arrowForward">
-                                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <ul class="sliderBlock_positionControls">
-                                                <li class="sliderBlock_positionControls__paginatorItem sliderBlock_positionControls__active"></li>
-                                                <li class="sliderBlock_positionControls__paginatorItem"></li>
-                                                <li class="sliderBlock_positionControls__paginatorItem"></li>
-                                                <li class="sliderBlock_positionControls__paginatorItem"></li>
-                                                <li class="sliderBlock_positionControls__paginatorItem"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="small-12 large-6 columns">
-                                <div class="productCard_rightSide">
-                                    <div class="block_specification">
-                                        <div class="block_specification__specificationShow">
-                                            <i class="fa fa-cog block_specification__button block_specification__button__rotate"
-                                               aria-hidden="true"></i>
-                                            <span class="block_specification__text">spec</span>
-                                        </div>
-                                        <div class="block_specification__informationShow hide">
-                                            <i class="fa fa-info-circle block_specification__button block_specification__button__jump"
-                                               aria-hidden="true"></i>
-                                            <span class="block_specification__text">inform</span>
-                                        </div>
-                                    </div>
-
-                                    <p class="block_model">
-                                        <span class="block_model__text">Model: </span>
-                                        <span class="block_model__number">505795</span>
-                                    </p>
-
-                                    <div class="block_product">
-                                        <h2 class="block_name block_name__mainName">MOMENTUM<sup>&reg; </sup></h2>
-                                        <h2 class="block_name block_name__addName">Wireless Black</h2>
-
-                                        <p class="block_product__advantagesProduct">
-                                            Wireless headphones with integrated microphone
-                                        </p>
-
-                                        <div class="block_informationAboutDevice">
-
-                                            <div class="block_descriptionCharacteristic block_descriptionCharacteristic__disActive">
-                                                <table class="block_specificationInformation_table">
-                                                    <tr>
-                                                        <th>Characteristic</th>
-                                                        <th>Value</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Ear Coupling</td>
-                                                        <td>Around Ear</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Transducer Principle</td>
-                                                        <td>Dynamic, Closed-back</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Frequency Response</td>
-                                                        <td>16Hz – 22kHz</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sound Pressure Level (SPL)</td>
-                                                        <td>113 dB (Passive: 1 kHz/1 Vrms)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Total Harmonic Distortion (THD)</td>
-                                                        <td>&lt;0.5% (1 kHz, 100 dB SPL)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Volume Control</td>
-                                                        <td>Earcup control when Bluetooth connected</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Microphone Type</td>
-                                                        <td>Dual omni-directional microphone <br/>(2 mic beam forming
-                                                            array)
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cable / Connector</td>
-                                                        <td>1.4m (Detachable) / 3.5mm Angled</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Weight</td>
-                                                        <td>260g (9.17 oz)</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-
-
-                                            <div class="block_descriptionInformation">
-                                                <span>Peak performance with active noise cancelation. Sennheiser's new MOMENTUM Wireless
-                                                - Closed circumauralheadphone featuring <a class="block_product__link" href="#">
-                                                    Bluetooth<sup>&reg;</sup></a>  wireless technology and NoiseGard Hybrid active noise cancelation
-                                                </span>
-                                            </div>
-
-                                            <div class="block_rating clearfix">
-                                                <fieldset class="block_rating__stars">
-                                                    <input type="radio" id="star5" name="rating" value="5"/><label
-                                                        class="full" for="star5" title="Awesome - 5 stars"></label>
-                                                    <input type="radio" id="star4half" name="rating"
-                                                           value="4 and a half"/><label class="half" for="star4half"
-                                                                                        title="Pretty good - 4.5 stars"></label>
-                                                    <input type="radio" id="star4" name="rating" value="4"/><label
-                                                        class="full" for="star4" title="Good - 4 stars"></label>
-                                                    <input type="radio" id="star3half" name="rating"
-                                                           value="3 and a half"/><label class="half" for="star3half"
-                                                                                        title="Above average - 3.5 stars"></label>
-                                                    <input type="radio" id="star3" name="rating" value="3"/><label
-                                                        class="full" for="star3" title="Average - 3 stars"></label>
-                                                    <input type="radio" id="star2half" name="rating"
-                                                           value="2 and a half"/><label class="half" for="star2half"
-                                                                                        title="Kinda bad - 2.5 stars"></label>
-                                                    <input type="radio" id="star2" name="rating" value="2"/><label
-                                                        class="full" for="star2"
-                                                        title="Kinda bad - 2 stars"></label>
-                                                    <input type="radio" id="star1half" name="rating"
-                                                           value="1 and a half"/><label class="half" for="star1half"
-                                                                                        title="Meh - 1.5 stars"></label>
-                                                    <input type="radio" id="star1" name="rating" value="1"/><label
-                                                        class="full" for="star1"
-                                                        title="Sucks big time - 1 star"></label>
-                                                    <input type="radio" id="starhalf" name="rating"
-                                                           value="half"/><label
-                                                        class="half" for="starhalf"
-                                                        title="Sucks big time - 0.5 stars"></label>
-                                                </fieldset>
-
-                                                <span class="block_rating__avarage">4.25</span>
-                                                <span class="block_rating__reviews">(153 reviews)</span>
-
-                                            </div>
-                                            <div class="row ">
-                                                <div class="large-6 small-12 column left-align">
-                                                    <div class="block_price">
-                                                        <p class="block_price__currency">$499.95</p>
-                                                        <p class="block_price__shipping">Shipping and taxes extra</p>
-                                                    </div>
-                                                    <div class="block_quantity clearfix">
-                                                        <span class="text_specification">Quantity</span>
-                                                        <div class="block_quantity__chooseBlock">
-                                                            <input class="block_quantity__number" name="quantityNumber"
-                                                                   type="text" min="1" value="1"/>
-                                                            <button class="block_quantity__button block_quantity__up"></button>
-                                                            <button class="block_quantity__button block_quantity__down"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="large-6 small-12 column end">
-                                                    <div class="block_goodColor">
-                                                        <span class="text_specification">Choose your colors:</span>
-                                                        <div class="block_goodColor__allColors">
-                                                            <input type="radio" name="colorOfItem" class="radio_button"
-                                                                   id="radioColor" checked/>
-                                                            <label for="radioColor"
-                                                                   class="block_goodColor__radio block_goodColor__black"></label>
-                                                            <input type="radio" name="colorOfItem" class="radio_button"
-                                                                   id="radioColor2"/>
-                                                            <label for="radioColor2"
-                                                                   class="block_goodColor__radio block_goodColor__silver"></label>
-                                                        </div>
-                                                    </div>
-                                                    <button class="button button_addToCard">
-                                                        Add to Cart
-                                                    </button>
-                                                </div>
-                                  
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="d-flex justify-content-center mt-100">
+            {/* left section product slider */}
+            <div className="col-lg-6 col-md-12 ">
+            <Swiper
+                style={{
+                "--swiper-navigation-color": "#000",
+                
+                }}
+                loop={true}
+                spaceBetween={10}
+                navigation={true}
+                thumbs={{ swiper: thumbsSwiper }}
+                modules={[ Navigation, Thumbs]}
+                className="mySwiper2 "
+            >
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" />
+                </SwiperSlide>
+            </Swiper>
+            <Swiper
+                onSwiper={setThumbsSwiper}
+                loop={true}
+                spaceBetween={5}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[ Navigation, Thumbs]}
+                className="Swiperdetailpage"
+            >
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" />
+                </SwiperSlide>   
+                
+            </Swiper>
             </div>
+
+            {/* right section product info */}
+        <div class = "product-content col-lg-5 col-md-12 ">
+          <h2 class = "product-title-page">Modern Watch</h2>
+          <a href = "/product" class = "product-link hover-zoom">visit store</a>
+          
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price: <span>$257.00</span></p>
+            <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>about this item: </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Watch</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1"/>
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            
+          </div>
+
+          
         </div>
-    </div>
-
-</main>
-
-
         </div>
      );
 }
  
-export default DetailProductPage;
+export default DetailProductPage ;
