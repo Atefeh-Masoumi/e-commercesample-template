@@ -83,7 +83,7 @@ const Homepage = () => {
                     <h1 className="product-title">BUY NOW!<span className='mt-5'>{product.name}</span></h1>
                     <div className="d-flex justify-content-center hover-zoom">
                         <button onClick={()=>addProductHandler(product)} className="m-2 rounded border-success  hover-shadow" >{checkIncart(cart,product) ? "In Cart":"Add to Cart"}</button>
-                        <button className="m-2 rounded border-2 border-primary hover-shadow-soft">View Deatil</button>
+                        <button className="m-2 rounded border-2 border-primary hover-shadow-soft"><a href="/productdetail">View Deatil</a></button>
                     </div>
                     </div>
                     </div>

@@ -21,6 +21,7 @@ import Navbar from './component/Navigation/Navbar';
 import Footer from './component/Footer/FooterPage';
 import ProductPage from './pages/Product/ProductPage';
 import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/product' element={<ProductPage />} />
           <Route path='/productdetail' element={<DetailProductPage />} />
-        
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
        
       </CartProvider>

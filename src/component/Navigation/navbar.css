@@ -18,7 +18,7 @@
     color:var(--myred);
 }
 a:hover {
-    color: var(--myred);
+    color: var(--green);
 }
 .navbar {
   box-shadow: 0 4px 12px 0 #2e25272e, 0 2px 4px rgb(0 0 0 / 5%);
@@ -108,7 +108,7 @@ input[type="text"]::placeholder {
   height: 30px;
 }
 
-/* dropdown hover  navbar */
+/* dropdown hover submenu navbar */
 
 
 

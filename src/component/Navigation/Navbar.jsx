@@ -1,3 +1,6 @@
+import submenu1 from '../../asset/submenu lenz.jpg';
+import submenu2 from '../../asset/saubmenue-mobile.jpg';
+import submenu3 from '../../asset/submenu-camera.jpg';
 import React, { useState } from 'react';
 import logo from "../../asset/footer-logo.png";
 import { NavLink } from "react-router-dom";
@@ -5,7 +8,7 @@ import { useCart } from '../../Providers/CartProvider';
 import { useAuth } from '../../Providers/AuthProvider';
 import { BsFillPersonFill, BsCart3 ,BsJustify,BsPersonPlusFill} from "react-icons/bs";
 import './navbar.css'
-import { MdOutlineAccountCircle } from "react-icons/md";
+
 import {
     MDBNavbar,
     MDBContainer,
@@ -19,13 +22,13 @@ import {
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
     const {cart} = useCart();
-    const [style, setStyle] = useState({display: 'none'});
+    
     const userData = useAuth();
    
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
     return(
         <header className='bg'>
-            <div className="container">
+          <div className="container">
             <div className="navbar-content">
                   <div className='content-inner'>
                     <div className='row align-items-center no-gutters'>
@@ -49,8 +52,7 @@ const Navbar =()=>{
                            ""
 
                           ):""}>{userData? 
-                          <MDBNavbarBrand  href='#' className='mt-2'>
-                            
+                          <MDBNavbarBrand  href='#' className='mt-2'>  
                           <MDBDropdown>
                            <MDBDropdownToggle tag='a' className=''>
                            <BsFillPersonFill className="profile-icon" />
@@ -60,7 +62,7 @@ const Navbar =()=>{
                                <MDBDropdownLink href="#">My Account</MDBDropdownLink>
                              </MDBDropdownItem>
                              <MDBDropdownItem>
-                               <MDBDropdownLink href="#">Favorite list</MDBDropdownLink>
+                               <MDBDropdownLink href=""></MDBDropdownLink>
                              </MDBDropdownItem>
                              <MDBDropdownItem>
                                <MDBDropdownLink href="/cart">Cart</MDBDropdownLink>
@@ -71,7 +73,6 @@ const Navbar =()=>{
                            </MDBDropdownMenu>
                          </MDBDropdown>
 
-                         
                          
                          </MDBNavbarBrand >
                           : <BsPersonPlusFill  className='firstseenprofile'/>}
@@ -99,19 +100,18 @@ const Navbar =()=>{
                   </div>
 
                 </div>
-                {/* navbar- product menu */}
+                {/* product menu */}
                 <div className="top-navbar align-center mt-4">
                     <div className="left">
                       <MDBNavbar expand='lg'  className="p-1" >
                         <MDBContainer fluid className="">
-
                           <MDBNavbarToggler
                             type='button'
                             data-target='#navbarTogglerDemo02'
                             aria-controls='navbarTogglerDemo02'
                             aria-expanded='false'
                             aria-label='Toggle navigation'
-                            className=' '
+                            className=''
                             onClick={() => setShowNavNoToggler(!showNavNoToggler)}
                           >
                           <BsJustify icon='bars'/>
@@ -120,17 +120,69 @@ const Navbar =()=>{
                           <MDBCollapse navbar show={showNavNoToggler}>
                             <MDBNavbarNav right className='mr-auto mb-2 mb-lg-0 stroke' >
                               <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/product'
+                                {/* <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/product'
                                 >
-                                  Camera
-                                </MDBNavbarLink>
+                                    
+                                  </MDBNavbarLink> */}
+                              
                                 {/* submenu show on hover */}
-                                <div className='bg drop-nav' 
-                                >
-                                  
-                                 
+                               
+                                   <MDBDropdown>
+                                    <MDBDropdownToggle tag='a' className='mt-3'>
+                                    Camera
+                                    </MDBDropdownToggle>
+                                    <MDBDropdownMenu>
+                                      <MDBDropdownItem>
+                                        <MDBDropdownLink href="#" className='bg-white border-bottom'>
+                                          <div className="d-flex justify-content-between m-2 bg-white">
+                                            <img src={submenu1} alt="submenu" className='m-2'/>
+                                            <img src={submenu2} alt="submenu-img"/>
+                                            <img src={submenu3} alt="submenu-img"/>
+                                          </div>
+     
+                                        </MDBDropdownLink>
+                                      </MDBDropdownItem>
+                                      <MDBDropdownItem>
+                                        <MDBDropdownLink href="/product" className='bg-white'>
+                                          <h3 className='text-center'> Also see </h3>
+                                          <div className="d-flex justify-content-between flex-row fs-6 ">
+                                            <div className="d-flex flex-column p-4">
+                                                <a href='/product'> Photography Bags & Cases</a>
+                                                <a href='/product'>Memory Cards & Accessories</a>
+                                                <a href='/product'>Batteries & Power Accessories</a>
+                                                <a href='/product'>Flashes & On Camera Lighting</a>
+                                                <a href='/product'>Lens Filters</a>
+                                                <a href='/product'>Lens Accessories</a>
+                                                <a href='/product'>Photo Accessories</a>
+                                            </div>
+                                            <div className="d-flex flex-column p-4">
+                                              <a href='/product'>Medium & Large Format Accessories</a>
+                                              <a href='/product'>Film Cameras</a>
+                                              <a href='/product'>Film</a>
+                                              <a href='/product'>See All Creator Accessories</a>
+                                              <a href='/product'>Lighting & Studio</a>
+                                              <a href='/product'>Underwater Photography </a>
+                                                                                
+                                            </div>
+                                          </div>
 
-                                </div>
+                                        </MDBDropdownLink>
+                                      </MDBDropdownItem>
+                                      <MDBDropdownItem>
+                                        <MDBDropdownLink href="/product">
+                                        
+                                        </MDBDropdownLink>
+                                      </MDBDropdownItem>
+                                      <MDBDropdownItem>
+                                        <MDBDropdownLink href="/product">
+
+
+                                        </MDBDropdownLink>
+                                      </MDBDropdownItem>
+                                    </MDBDropdownMenu>
+                                  </MDBDropdown>
+                                  
+                                  
                                 
                               </MDBNavbarItem>
                               <MDBNavbarItem>
@@ -150,8 +202,6 @@ const Navbar =()=>{
                         
                         </MDBContainer>
 
-                        
-                        
                       </MDBNavbar>
                     </div>
                     <div className='under-nav'>
@@ -161,7 +211,7 @@ const Navbar =()=>{
                 </div>
                
 
-            </div>
+          </div>
         </header>
     )
 }
