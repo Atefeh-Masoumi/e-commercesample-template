@@ -1,3 +1,15 @@
+@media(max-width:768px){
+  .navbar-content{
+    background-color: #ededed;
+  }
+.branding-col{
+  margin-top: 10px;  
+}
+.cart-profile{
+  margin-top: 1rem;
+}
+
+}
 .activelink{
     color: black;
     background-color: #fff;

@@ -44,26 +44,21 @@ const Navbar =()=>{
                           </div>
                         </div>
                        </div>
-                      <div className='col-4 function-col d-flex justify-content-evenly'>
+                   <div className='col-4 function-col d-flex justify-content-evenly'>
                         {/* login */}
-                        <div className='d-flex mt-3'>
-                        <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(
-
-                           ""
-
+                      <div className='d-flex'>
+                        <NavLink to={userData? "/profile" : "/login"} className={(navData)=>navData.isActive ?(""
                           ):""}>{userData? 
-                          <MDBNavbarBrand  href='#' className='mt-2'>  
+                          <MDBNavbarBrand  href='#' className='mt-3'>
                           <MDBDropdown>
-                           <MDBDropdownToggle tag='a' className=''>
-                           <BsFillPersonFill className="profile-icon" />
+                           <MDBDropdownToggle tag='a' className='' style={{width: "70px", height: "70px"}}>
+                           <BsFillPersonFill className="profile-icon  w-100"/>
                            </MDBDropdownToggle>
                            <MDBDropdownMenu>
                              <MDBDropdownItem>
-                               <MDBDropdownLink href="#">My Account</MDBDropdownLink>
+                               <MDBDropdownLink href="/profile">My Account</MDBDropdownLink>
                              </MDBDropdownItem>
-                             <MDBDropdownItem>
-                               <MDBDropdownLink href=""></MDBDropdownLink>
-                             </MDBDropdownItem>
+                             
                              <MDBDropdownItem>
                                <MDBDropdownLink href="/cart">Cart</MDBDropdownLink>
                              </MDBDropdownItem>
@@ -71,16 +66,14 @@ const Navbar =()=>{
                                <MDBDropdownLink href="#">log out</MDBDropdownLink>
                              </MDBDropdownItem>
                            </MDBDropdownMenu>
-                         </MDBDropdown>
-
-                         
-                         </MDBNavbarBrand >
+                         </MDBDropdown>                         
+                        </MDBNavbarBrand >
                           : <BsPersonPlusFill  className='firstseenprofile'/>}
                         </NavLink>
                         
-                        </div>
+                    </div>
                         {/*cart */}
-                        <div className="cart-profile">
+                        <div className="cart-profile ">
                           
                             <div className="cartLinkBadge">
                                 <NavLink to="/cart">
@@ -88,12 +81,11 @@ const Navbar =()=>{
                                 </NavLink>
                                 <span className="cartCount">{cart.length}</span>
                             </div>
-                            <div>
-                              <p className='mt-4'>My Cart</p>
+                            <div className=''>
+                              <p className='mt-4 d-none d-sm-flex'>My Cart</p>
                            </div>
-                          </div>
+                        </div>
 
-                        
                       </div>
 
                     </div>
@@ -186,7 +178,7 @@ const Navbar =()=>{
                                 
                               </MDBNavbarItem>
                               <MDBNavbarItem>
-                                <MDBNavbarLink href='/product' className=' '>Watch</MDBNavbarLink>
+                                <MDBNavbarLink href='/product' className=''>Watch</MDBNavbarLink>
                               </MDBNavbarItem>
                               <MDBNavbarItem>
                                     <MDBNavbarLink href='/product' className=''>Computers</MDBNavbarLink>

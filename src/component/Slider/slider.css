@@ -1,4 +1,4 @@
-.swiper-slide {
+.mySwiper .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
@@ -6,9 +6,9 @@
 }
 
 @media (max-width: 768px) {
-  .swiper-slide {
+  .mySwiper .swiper-slide {
     width: 250px;
-    height: auto;
+    height: 350;
   }
 }
 
@@ -30,8 +30,16 @@
 
 @media (max-width: 768px) {
   .container .swiper-container {
-    bottom: -58vw;
-    padding-bottom: 8vw;
+    width: 60%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .swiper-container img {
+    width: 60%;
+    height: 90%;
+    min-width: 100%;
   }
 }
 

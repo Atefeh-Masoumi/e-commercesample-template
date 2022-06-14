@@ -1,5 +1,5 @@
 .swiper-container{
-    height: 60vh;
+    // height: 60vh;
 }
 
 .swiper-slide img{
@@ -7,15 +7,24 @@
         width:100%;
         height: auto;
         object-fit: cover;
+        
     }
 
-    .swiper-slide{
+    .slider .swiper-slide{
             background-position: center;
             background-size:cover;
            
             @media(max-width:768px){
                 width:250px;
-                height:auto;
+                height: auto;
+            }
+            img {
+              
+                @media(max-width:768px){
+                    max-width: 100%;
+                    width: fit-content;
+                    height: 350px;
+                }
             }
         }
 

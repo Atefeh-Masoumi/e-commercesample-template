@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import cartempty from '../../asset/empty cart.png'
 import { useCart,useCartAction } from "../../Providers/CartProvider";
 import'./cart.css';
 
@@ -14,8 +14,12 @@ const CartPage = () => {
     return (
       <>
       
-        <div>
-          <h2 className="text-center" style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>cart is empty !</h2>
+        <div  className="d-flex justify-content-center"> 
+        <Link to='/product' className="d-flex justify-content-center align-items-center flex-column">
+            <img src={cartempty} alt="cart is empty" className="d-flex justify-content-center align-content-center w-10 h-10" />
+          <h2 className="text-center hover-zoom" >Visit Product page and Come back soon!</h2>
+          <button className="border-0 d-flex justify-content-center mt-3 btngoshop">Lets go Shopping </button> 
+          </Link>
         </div>
       </>
       

@@ -26,6 +26,14 @@ const ProfilePage = ({history}) => {
             </button>
       ) : null}
     </div>
+          <div>
+            <div className="col-md-4">
+
+            </div>
+            <div className="col-md-8">
+
+            </div>
+          </div>
        </>
      );
 }

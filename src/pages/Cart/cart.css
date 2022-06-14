@@ -71,3 +71,22 @@ border-bottom: 1px solid #ccc;
        border-left: 0;
        border-right: 0;
    }
+
+   .btngoshop{
+    width: 500px;
+    justify-content: center;
+    color:var(--green);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    -webkit-transition:  300ms ease-in-out;
+    transition: 300ms ease-in-out;
+   }
+   .btngoshop:hover{
+    box-shadow: 8px 8px #4b9b62;
+  transition: .3s;
+    color:var(--green);
+   }
+   
+  
+

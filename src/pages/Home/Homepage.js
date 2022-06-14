@@ -20,11 +20,14 @@ const Homepage = () => {
     }
     return (  
         <>
+        {/* header slider */}
+
         <Header/>
+         {/* Categories section */}
         <section className="mt-100">
             <h2 className="text-center">Categories</h2>
             <div className="container mt-100 ">
-               {/* Categories */}            
+                          
                 <div className="row">
                   <div className="col-md-4 col-sm-6">
                     <div className="card mb-30">

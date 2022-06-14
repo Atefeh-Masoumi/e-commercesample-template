@@ -1,12 +1,12 @@
 
-.swiper-slide{
+.mySwiper .swiper-slide{
     background-position: center;
     background-size:cover;
     width:300px;
     height:400px;
     @media(max-width:768px){
         width:250px;
-        height:auto;
+        height:350;
     }
 }
 .swiper-slide img{
@@ -22,14 +22,24 @@
        position: inherit;
         left:50%;
         bottom:-16vw;
-       
+  
         z-index: 2;
         padding-bottom:3vw;
         @media(max-width:768px){
-            bottom:-58vw;
-            padding-bottom:8vw;
+            // bottom:-58vw;
+            // padding-bottom:8vw;
+            width:60%;
+            height: 70%;
+        }
+        img{
+            @media(max-width:768px){
+                width:60%;
+                height: 90%;
+                min-width: 100%;
+            }
         }
     }
+
 }
 
 
