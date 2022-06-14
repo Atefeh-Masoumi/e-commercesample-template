@@ -68,7 +68,7 @@ const Navbar =()=>{
                            </MDBDropdownMenu>
                          </MDBDropdown>                         
                         </MDBNavbarBrand >
-                          : <BsPersonPlusFill  className='firstseenprofile'/>}
+                          : <BsPersonPlusFill  className='firstseenprofile mt-4' style={{width: "30px", height: "30px"}}/>}
                         </NavLink>
                         
                     </div>

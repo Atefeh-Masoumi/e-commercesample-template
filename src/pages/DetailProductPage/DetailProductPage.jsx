@@ -18,7 +18,7 @@ const DetailProductPage  = () => {
     return ( 
         <div className="d-flex justify-content-center mt-100">
             {/* left section product slider */}
-            <div className="col-lg-6 col-md-12 ">
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" >
             <Swiper
                 style={{
                 "--swiper-navigation-color": "#000",
@@ -77,7 +77,7 @@ const DetailProductPage  = () => {
             </div>
 
             {/* right section product info */}
-        <div class = "product-content col-lg-5 col-md-12 ">
+        <div class = "product-content col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <h2 class = "product-title-page">Modern Watch</h2>
           <a href = "/product" class = "product-link hover-zoom">visit store</a>
           

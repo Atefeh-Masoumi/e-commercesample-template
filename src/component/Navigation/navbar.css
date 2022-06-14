@@ -4,8 +4,17 @@
   }
 .branding-col{
   margin-top: 10px;  
+  
 }
-.cart-profile{
+.branding-col img{
+  width: 30%;
+  height:30%;
+}
+.branding-col .search  {
+  display: none;
+}
+
+ .cart-profile{
   margin-top: 1rem;
 }
 
@@ -42,8 +51,9 @@ a:hover {
   vertical-align: middle;
   position: relative;
   margin-left: 12px;
-  width: 200px;
+  width: 10rem;
 }
+ 
 .search-text{
   width: 100%;
   height: 57px;

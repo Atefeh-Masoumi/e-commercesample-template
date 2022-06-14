@@ -16,9 +16,9 @@ import CheckoutPage from './pages/CheckoutPage';
 import Login from './pages/LoginPage';
 import SignUp from './pages/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
-import ProfilePage from './pages/ProfilePage';
+import ProfilePage from './pages/Profilepage/ProfilePage';
 import Navbar from './component/Navigation/Navbar';
-import Footer from './component/Footer/FooterPage';
+
 import ProductPage from './pages/Product/ProductPage';
 import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';

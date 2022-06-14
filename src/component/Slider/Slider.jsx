@@ -1,4 +1,4 @@
-import {MDBAnimation} from 'mdbreact';
+
 import slider1 from '../../asset/golden watch special offer.jpg'
 import slider2 from '../../asset/watchspecialoffer.jpg'
 import slider3 from '../../asset/lenz-specialoffer.jpg';
