@@ -2,6 +2,7 @@
 :root{
     --myred:#ed1d24;
     --green:#3f9a59;
+    --spacing-base: 4px;
 }
 body{
     font-family: 'Karla', sans-serif;
@@ -19,4 +20,4 @@ main {
     width: fit-content;
     box-sizing: border-box; /* because 100% + padding > 100% */
    
-  }
+}

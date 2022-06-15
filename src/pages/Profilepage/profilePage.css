@@ -1,21 +1,26 @@
 .profileContainer {
   display: flex;
+  color: #000;
 }
 .info-section{
   border: 1px solid #ccc;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 .user-info{
     width: 200px;
-    height: 300px;
+   height: auto;
    
+   border-bottom: 1px solid #ccc;
    
 }
- .usericon{
-    width: 25px;
-    height: 25px;
-   
-  }
  
+  
+  .user-info {
+    padding-top: calc(4 * var(--spacing-base));
+    padding-bottom: calc(4 * var(--spacing-base));
+  }
