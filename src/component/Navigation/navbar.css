@@ -138,9 +138,10 @@ input[type="text"]::placeholder {
 ul.stroke  li a {
   position:relative; 
   padding: 1px;
+  cursor: pointer;
 }
 
-ul.stroke  li a:after {
+ul.stroke  li a:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -153,7 +154,7 @@ ul.stroke  li a:after {
   height: 3px;
   
 }
-ul.stroke  li a:hover:after {
+ul.stroke  li a:hover:before {
   width: 100%;
 }
 ul li a,

@@ -67,7 +67,7 @@ const ProfilePage = ({history}) => {
                    
                   </div>
                   <div className="p-2 d-flex"> 
-                  <img src={delivery} alt="" fontSize="3em"/>
+                    <img src={delivery} alt="delivered icon" fontSize="3em"/>
                     <span className='fs-5'> Completed </span>
                   </div>
                   <div className="p-2">
