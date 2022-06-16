@@ -17,7 +17,15 @@
  .cart-profile{
   margin-top: 1rem;
 }
-
+}
+@media(max-width:992px){
+  .navbar-collapse {
+    z-index: 10;
+    background-color: #f3f2f2;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+  }
 }
 .activelink{
     color: black;
@@ -46,6 +54,7 @@ a:hover {
   
   height: 50px;
 }
+
 .search  {
   display: inline-block;
   vertical-align: middle;

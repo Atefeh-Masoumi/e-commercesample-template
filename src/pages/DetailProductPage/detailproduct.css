@@ -115,9 +115,15 @@ width: 220px;
     opacity: 0.9;
     display: flex;
 }
-
-
-@media screen and (max-width: 500px){
+.product-detail-container{
+ display: flex;
+ justify-content: center;
+}
+@media screen and (max-width: 768px){
+    .product-detail-container{
+        display: block;
+        justify-content: start;
+    }
     .swiper-container img{
         width:fit-content;
 
