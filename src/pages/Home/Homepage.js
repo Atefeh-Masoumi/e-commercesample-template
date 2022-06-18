@@ -77,10 +77,10 @@ const Homepage = () => {
             <div className="row">
                 <h2 className="text-center p-4 textstyle">Trending Now</h2>
                   {data.products.map((product)=>
-                <div className="card-container p-3" key={product.id}>
+                <div className="card-container p-2" key={product.id}>
                 <div className="card1">
                     <div className="front">
-                    <div className="card-img"><img src={product.image} alt={product.name} style={{width: "400px", height: "340px"}}/></div>
+                    <div className="card-img"><img src={product.image} alt={product.name} /></div>
                     </div>
                     <div className="back">
                     <h1 className="product-title">BUY NOW!<span className='mt-5'>{product.name}</span></h1>

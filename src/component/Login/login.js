@@ -35,7 +35,7 @@ const LoginForm = () => {
 
     useEffect(()=>{
         if(userData) history(redirect);
-    },[redirect,userData])
+    },[redirect,userData,history])
 
       // submit handler
     const onSubmit= async(values)=>{
