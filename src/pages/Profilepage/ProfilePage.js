@@ -7,15 +7,12 @@ import { useAuth } from "../../Providers/AuthProvider";
 import {AiOutlineShopping, AiOutlineLogout, AiOutlineUser,AiOutlineEdit } from "react-icons/ai";
 import { useState } from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
-import{MDBBadge} from 'mdb-react-ui-kit';
 
 const ProfilePage = ({history}) => {
 
   const [Logout, setLogout] = useState(true);
   const [Order, setOrder] = useState(true);
   const [UserInfo, setUserInfo] = useState(true);
- 
-
 
   //  user login data from context
   const userInfo = useAuth();
@@ -193,13 +190,13 @@ const ProfilePage = ({history}) => {
               {/* log out info lef section */}
               <div className='flex-column border rounded m-2 p-2 align-items-center' style={{ display: Logout ? "none" : "flex" }}>
                 
-                      {userInfo ? (<>
-                        <h5 className="text-center p-2 mt-2">Are you sure you want to Log Out? </h5>
-                        
-                        <button className="btn-danger rounded-4 p-2 " onClick={logoutHandler}>
-                            Logout
-                        </button>
-                      </>
+                  {userInfo ? (
+                  <>
+                    <h5 className="text-center p-2 mt-2">Are you sure you want to Log Out? </h5>
+                    <button className="btn rounded-4 p-2" style={{backgroundColor:"#ed1d24", color:"#fff",width:"5rem"}}onClick={logoutHandler}>
+                      Logout
+                    </button>
+                  </>
                   ) : "Come Back Soon!"}
               </div>
 

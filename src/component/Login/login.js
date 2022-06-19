@@ -66,9 +66,9 @@ const LoginForm = () => {
             <form onSubmit={formik.handleSubmit} >
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
-                <Link  to={'/profile'}>
+
                 <button type="submit" disabled={!formik.isValid} className="btn primary btnlg"> Log In</button>   
-                </Link>
+                                
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
                 <Link to={`/signup?redirect=${redirect}`}>
                     <p className="">Not have an Account yet? </p>
