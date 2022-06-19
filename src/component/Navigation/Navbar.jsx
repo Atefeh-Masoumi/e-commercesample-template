@@ -26,6 +26,11 @@ const Navbar =()=>{
     const userData = useAuth();
    
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
+
+    const logoutHandler = () => {
+      localStorage.removeItem("auth token");
+      window.location.reload();
+    };
     return(
         <header className='bg'>
           <div className="container">
@@ -58,12 +63,13 @@ const Navbar =()=>{
                              <MDBDropdownItem>
                                <MDBDropdownLink href="/profile">My Account</MDBDropdownLink>
                              </MDBDropdownItem>
-                             
                              <MDBDropdownItem>
-                               <MDBDropdownLink href="/cart">Cart</MDBDropdownLink>
+                               <MDBDropdownLink href="/profile">Wishlist</MDBDropdownLink>
                              </MDBDropdownItem>
                              <MDBDropdownItem>
-                               <MDBDropdownLink href="#">log out</MDBDropdownLink>
+                             {userData ? (                 
+                               <MDBDropdownLink href="#" onClick={logoutHandler}>log out</MDBDropdownLink>
+                               ) : null}
                              </MDBDropdownItem>
                            </MDBDropdownMenu>
                          </MDBDropdown>                         
@@ -77,13 +83,13 @@ const Navbar =()=>{
                           
                             <div className="cartLinkBadge">
                                 <NavLink to="/cart">
-                                <BsCart3 className="cart-icon" />
+                                  <BsCart3 className="cart-icon" />
                                 </NavLink>
                                 <span className="cartCount">{cart.length}</span>
                             </div>
                             <div className=''>
                               <p className='mt-4 d-none d-sm-flex'>My Cart</p>
-                           </div>
+                            </div>
                         </div>
 
                       </div>

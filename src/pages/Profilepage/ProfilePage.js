@@ -10,7 +10,7 @@ import{MDBBadge} from 'mdb-react-ui-kit'
 
 const ProfilePage = ({history}) => {
 
-  const [Info, setInfo] = useState(false);
+  const [Logout, setLogout] = useState(false);
   const [Order, setOrder] = useState(true);
   const [UserInfo, setUserInfo] = useState(true);
  
@@ -22,17 +22,21 @@ const ProfilePage = ({history}) => {
     localStorage.removeItem("auth token");
     window.location.reload();
   };
-
+  if (!userInfo)
+  return (
+    <div className='d-flex justify-content-center align-items-center flex-column'>
+    
+    <h5 className="text-center animate-charcter">Come Back Soon!</h5>
+    <button className="border-0 d-flex justify-content-center align-items-center mt-3 btngoshop animate-charcter fs-1">Visit Home Page </button> 
+    
+    </div>
+  )
     return ( 
 
       <>
-       
+       {/* welcome top text */}
         <div className=" d-flex align-items-center flex-column mt-100">
-            <h1 className='knockout' >Welcome {userInfo.name}</h1>
-            < div>
-              <h3 className="fs-4"> </h3> 
-            </div>
-            
+            <h1 className='btn-shine text-center'> Welcome {userInfo.name}</h1>
       </div>
       
           <div className="profileContainer d-flex flex-row justify-content-center">
@@ -40,7 +44,7 @@ const ProfilePage = ({history}) => {
             <div className="col-md-4 d-flex justify-content-center">
               <div className="info-section d-flex flex-column  ">
                 <div className="user-info m-2 d-flex justify-content-between" >
-                 <div className="d-flex flex-column " >
+                 <div className="d-flex flex-column">
                   
                     <div className="d-flex">
                       <FaRegUserCircle fontSize="2em" color="#000" className="usericon" />
@@ -53,9 +57,8 @@ const ProfilePage = ({history}) => {
 
                  </div>
                  <div className='d-flex flex-end'>
-                        <AiOutlineEdit fontSize="2em" color="#000" className=''/>
-                    </div>
-
+                    <AiOutlineEdit fontSize="2em" color="#000" className=''/>
+                  </div>
                 </div>
 
 
@@ -80,9 +83,14 @@ const ProfilePage = ({history}) => {
                       </div>
                       
                     </div>
-                    <div className="d-flex pt-lg-1 cursor-pointer bghover">
-                      <AiOutlineLogout fontSize="2em" color="#000"/>
-                      <p className="pb-3 fs-5 p-1">Logout</p>
+                    <div className="d-flex pt-lg-1 justify-content-between cursor-pointer bghover" onClick={()=>setLogout(!Logout)}>
+                      <div className='d-flex'>
+                        <AiOutlineLogout fontSize="2em" color="#000"/>
+                        <p className="pb-3 fs-5 p-1">Logout</p>
+                      </div>
+                      <div className="d-flex">
+                       <IoIosArrowDropright fontSize="2em"/>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -99,9 +107,12 @@ const ProfilePage = ({history}) => {
                 <div className="d-flex flex-1 flex-row flex-start justify-content-around m-2 mt-20" >
                   
                   <div className="p-2 d-flex">
-                    <AiOutlineShopping  fontSize="3em" color="3f9a59"/>
-                    
                     <div>
+                      
+                    <AiOutlineShopping  fontSize="3em" color="3f9a59"/>
+                    </div>
+                    
+                    <div className="">
                     <span className="p-2  mt-2">active orders</span>
                     <MDBBadge color='success' notification rounded className="fs-6" >
                       9+
@@ -166,13 +177,16 @@ const ProfilePage = ({history}) => {
                 </div>
               </div>
               )}
-              <div className='flex-column border rounded m-2 d-flex  align-items-center'>
-                <h5 className="text-center mt-5">Are you sure you want to Log Out? </h5>
-                      {userInfo ? (
+              <div className='flex-column border rounded m-2 p-2 align-items-center' style={{ display: Logout ? "none" : "flex" }}>
+                
+                      {userInfo ? (<>
+                        <h5 className="text-center p-2 mt-2">Are you sure you want to Log Out? </h5>
+                        
                         <button className="btn-danger rounded-4 p-2 " onClick={logoutHandler}>
                             Logout
                         </button>
-                  ) : null}
+                      </>
+                  ) : "Come Back Soon!"}
               </div>
 
             </div>

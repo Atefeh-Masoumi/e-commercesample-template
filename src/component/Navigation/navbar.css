@@ -13,11 +13,11 @@
 .branding-col .search  {
   display: none;
 }
-
  .cart-profile{
   margin-top: 1rem;
 }
 }
+
 @media(max-width:992px){
   .navbar-collapse {
     z-index: 10;

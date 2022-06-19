@@ -58,7 +58,7 @@ const CartPage = () => {
                            <button>{item.quantity}</button>
                            <button onClick={()=>incrementHandler(item)}> + </button>
                            </div>
-                           <div className="font-weight-bold" style={{color:"#3f9a59"}}>{item.description}</div>
+                           <div className="font-weight-bold" style={{color:"#3f9a59"}}>{item.shippingInfo}</div>
                        </div>)
                    })}
                  </section>
@@ -75,10 +75,14 @@ const CartPage = () => {
  
 export default CartPage;
 
+
+
 const CartSummary = ({total,cart})=>{
+
     // this function calculate the total price of the cart without discount
    const originalTotalPrice = cart.length ? cart.reduce((acc,curr)=>acc + curr.quantity * curr.price,0):0;
-  
+
+
     return(
         <section className="cartSummary">
 
