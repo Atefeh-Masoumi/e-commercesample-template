@@ -43,7 +43,6 @@ const LoginForm = () => {
         try {
            const {data} = localStorage.setItem("auth token", JSON.stringify(values));
            setAuth(data);
-           console.log(data);
            setError(null);
            history(redirect);
         } catch (error) {
@@ -67,11 +66,12 @@ const LoginForm = () => {
             <form onSubmit={formik.handleSubmit} >
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
-                
-                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg"> Log In</button>
+                <Link  to={'/profile'}>
+                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg"> Log In</button>   
+                </Link>
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
                 <Link to={`/signup?redirect=${redirect}`}>
-                    <p className="alreadylogin">Not have an Account yet? </p>
+                    <p className="">Not have an Account yet? </p>
                 </Link>
             
 

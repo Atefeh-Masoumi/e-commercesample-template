@@ -21,14 +21,14 @@
     padding-bottom: calc(4 * var(--spacing-base));
   }
   .cancleshopimg{
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
     color: var(--myred);
   }
 
   .delivery-img{
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
   }
   .bghover:hover{
     background-color: #ededed;

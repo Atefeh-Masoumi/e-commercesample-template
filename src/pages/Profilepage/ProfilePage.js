@@ -1,16 +1,17 @@
 import delivery from '../../asset/delivery in process.png';
 import cancelshop from '../../asset/cancelshop.png';
+import whishlist from"../../asset/favorites-list-empty.svg";
 import "./profilePage.css";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useAuth } from "../../Providers/AuthProvider";
 import {AiOutlineShopping, AiOutlineLogout, AiOutlineUser,AiOutlineEdit } from "react-icons/ai";
 import { useState } from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
-import{MDBBadge} from 'mdb-react-ui-kit'
+import{MDBBadge} from 'mdb-react-ui-kit';
 
 const ProfilePage = ({history}) => {
 
-  const [Logout, setLogout] = useState(false);
+  const [Logout, setLogout] = useState(true);
   const [Order, setOrder] = useState(true);
   const [UserInfo, setUserInfo] = useState(true);
  
@@ -25,10 +26,10 @@ const ProfilePage = ({history}) => {
   if (!userInfo)
   return (
     <div className='d-flex justify-content-center align-items-center flex-column'>
-    
-    <h5 className="text-center animate-charcter">Come Back Soon!</h5>
-    <button className="border-0 d-flex justify-content-center align-items-center mt-3 btngoshop animate-charcter fs-1">Visit Home Page </button> 
-    
+      <h5 className="text-center animate-charcter">Come Back Soon!</h5>
+      <a href='/'>
+        <button className="border-0 d-flex justify-content-center align-items-center mt-3 btngoshop animate-charcter fs-1">Visit Home Page </button> 
+      </a>
     </div>
   )
     return ( 
@@ -66,7 +67,7 @@ const ProfilePage = ({history}) => {
                     <div className="d-flex justify-content-between border-bottom border-top pt-lg-3 bghover" onClick={()=>setOrder( !Order)}>
                     <div className='d-flex' >
                       <AiOutlineShopping  fontSize="2em" color="#000" />
-                      <p className="pb-3 fs-5 p-1">Orders</p>
+                      <p className="pb-3 fs-5 p-1">whishlist</p>
                       </div>
                       <div className="d-flex "  >
                        <IoIosArrowDropright fontSize="2em"/>
@@ -98,41 +99,55 @@ const ProfilePage = ({history}) => {
 
 
             {/* info of each section */}
-            <div className="col-md-8 d-flex flex-column ">
+            <div className="col-md-8 d-flex flex-column m-3">
 
               { (<div className="d-flex flex-column border rounded p-2">
                 <div className="">
                   <p className='fs-4'>My shopping List</p>
                 </div>
-                <div className="d-flex flex-1 flex-row flex-start justify-content-around m-2 mt-20" >
+                <div className="d-flex flex-1 flex-row flex-1 m-2 mt-20" >
                   
                   <div className="p-2 d-flex">
-                    <div>
+                    <div className='p-2'>
                       
-                    <AiOutlineShopping  fontSize="3em" color="3f9a59"/>
+                    <AiOutlineShopping  fontSize="4em" color="3f9a59"/>
                     </div>
                     
-                    <div className="">
-                    <span className="p-2  mt-2">active orders</span>
-                    <MDBBadge color='success' notification rounded className="fs-6" >
-                      9+
-                    </MDBBadge>
+                    <div className=" d-flex flex-column">
+                    <span className=" mt-2 fs-5">active orders</span>
+                    <div className="fs-6 border rounded text-center bg" >
+                      9
+                    </div>
                   </div>
                   </div>
 
-                  <div className="p-2 d-flex"> 
-                    <img src={delivery} alt="delivered icon" className='delivery-img'/>
-                    <span className='fs-5'> Completed </span>
+                  <div className="p-2 d-flex">
+                    <div className='p-2'> 
+                     <img src={delivery} alt="delivered icon" className='delivery-img'/>
+                    </div>
+                    <div className=" d-flex flex-column">
+                      <span className='fs-5 mt-2 '> Completed </span>
+                      <div className="fs-6 border rounded text-center bg" >
+                          3
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="p-2">
-                    <img src={cancelshop} alt='cancleshop' className='cancleshopimg'/>
-                    <span>Canceled</span>
+                  <div className="p-2 d-flex flex-row p-2">
+                    <div className='p-2'>
+                     <img src={cancelshop} alt='cancleshop' className='cancleshopimg'/>
+                    </div>
+                    <div className=" d-flex flex-column">
+                      <span className=" mt-2 fs-5">Canceled</span>
+                      <div className="fs-6 border rounded text-center bg" >
+                        0
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>) }
 
-              {/* User Info left section */}
+            {/* User Info left section */}
 
               { (
                 <div className=" flex-column border rounded p-2" style={{ display: UserInfo ? "none" : "flex" }}>
@@ -155,28 +170,27 @@ const ProfilePage = ({history}) => {
                 </div>
               </div>
               ) }
-              {/* Order info left section */}
+              {/* Whish list info left section */}
               { (
-                <div className=" flex-column border rounded p-2" style={{ display: Order ? "none" : "flex" }}>
+                <div className=" flex-column border rounded m-2  p-2" style={{ display: Order ? "none" : "flex" }}>
                 <div className="">
-                  <p className='fs-4'>List of orders</p>
+                  <p className='fs-4'>Wishlist</p>
                 </div>
-                <div className="d-flex flex-1 flex-column flex-start justify-align-content-between m-2 mt-20" >
+                <div className="d-flex flex-1 flex-column flex-start align-items-center m-2 mt-20" >
                   
                   <div className="p-2 d-flex">
                     
-                    <span>History of payment</span>
+                    <img src={whishlist} alt="whishlist"/>
                   </div>
                   <div className="p-2 d-flex"> 
-                    <span className='fs-5'>  On going </span>
+                    <span className='fs-5'>  There is nothing yet in your wishlist </span>
                   </div>
 
-                  <div className="p-2">
-                    <span>  Completed </span>
-                  </div>
+                  
                 </div>
               </div>
               )}
+              {/* log out info lef section */}
               <div className='flex-column border rounded m-2 p-2 align-items-center' style={{ display: Logout ? "none" : "flex" }}>
                 
                       {userInfo ? (<>

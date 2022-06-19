@@ -25,7 +25,7 @@ const ProductPage = () => {
         <div className="card shadow-0 border rounded-3 mb-3">
           <div className="card-body" key={product.id}>
             <div className="row">
-              <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+              <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 p-3">
                 <div className="bg-image hovereffect ripple rounded ripple-surface">
                   <img src={product.image} alt={product.alt}
                     className="w-100 img1 position-absolute " />

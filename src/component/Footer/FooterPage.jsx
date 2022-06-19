@@ -59,9 +59,9 @@ const Footer = () => {
                   <nav className="quick-link-list">
                     <div className="menu-container">
                       <ul id="menu" className="menu">
-                        <li id="menu-item-6743" className=" menu-item-6743"><a href="/product">Help Center</a></li>
-                        <li id="menu-item-6741" className=" menu-item-6741"><a href="/product"> Refund Policy</a></li>
-                        <li id="menu-item-6739" className=" menu-item-6739"><a href="/product">Report Spam</a></li>
+                        <li id="menu-item-6743" className=" menu-item-6743"><a href="/#">Help Center</a></li>
+                        <li id="menu-item-6741" className=" menu-item-6741"><a href="/#"> Refund Policy</a></li>
+                        <li id="menu-item-6739" className=" menu-item-6739"><a href="/#">Report Spam</a></li>
                         
                         
                       </ul>
