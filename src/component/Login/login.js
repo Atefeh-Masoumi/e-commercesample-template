@@ -2,7 +2,7 @@ import Input from "../../common/Input";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import './login.css';
-import { Link,useNavigate } from "react-router-dom";
+import { Link,Navigate,useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
 import { loginUser } from "../../Services/LoginService";
 import { useAuthAction,useAuth } from "../../Providers/AuthProvider";
@@ -31,7 +31,7 @@ const LoginForm = () => {
 
     // useAuthActions to dispatch actions
      const setAuth = useAuthAction();
-    const userData = useAuth();
+     const userData = useAuth();
 
     useEffect(()=>{
         if(userData) history(redirect);
@@ -42,9 +42,12 @@ const LoginForm = () => {
        
         try {
            const {data} = localStorage.setItem("auth token", JSON.stringify(values));
+        //    if ypu want to use API un comment line blew
+        //    const {data} = await loginUser(values)
            setAuth(data);
            setError(null);
            history(redirect);
+        
         } catch (error) {
             console.log(error);
             if(error.response && error.response.data.message)
@@ -63,13 +66,17 @@ const LoginForm = () => {
 
     return (
         <div className="formContainer">
-            <form onSubmit={formik.handleSubmit} >
+            <form onSubmit={formik.handleSubmit}>
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
 
-                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg"> Log In</button>   
-                                
+                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" onClick={()=><Navigate to="/profile" />}>
+                 
+                 Login   
+                </button>   
+
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
+
                 <Link to={`/signup?redirect=${redirect}`}>
                     <p className="">Not have an Account yet? </p>
                 </Link>

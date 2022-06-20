@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL="https://mahtisa-shopping.herokuapp.com/api"
+axios.defaults.baseURL=""
 
 const http={
     get:axios.get,
