@@ -2,7 +2,7 @@ import Input from "../../common/Input";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import './login.css';
-import { Link,Navigate,useNavigate } from "react-router-dom";
+import { Link,Navigate,useLocation,useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
 import { loginUser } from "../../Services/LoginService";
 import { useAuthAction,useAuth } from "../../Providers/AuthProvider";
@@ -32,7 +32,7 @@ const LoginForm = () => {
     // useAuthActions to dispatch actions
      const setAuth = useAuthAction();
      const userData = useAuth();
-
+       
     useEffect(()=>{
         if(userData) history(redirect);
     },[redirect,userData,history])
@@ -41,13 +41,12 @@ const LoginForm = () => {
     const onSubmit= async(values)=>{
        
         try {
-           const {data} = localStorage.setItem("auth token", JSON.stringify(values));
-           Navigate("/");
+           const {data} = localStorage.setItem("auth token", JSON.stringify(values));          
         //    if you want to use API un comment line blew
         //    const {data} = await loginUser(values)
             setAuth(data);
-        //    setError(null);
-        //    history(redirect);
+            setError(null);
+            history(redirect);
         
         } catch (error) {
             console.log(error);
@@ -71,8 +70,8 @@ const LoginForm = () => {
             <form onSubmit={formik.handleSubmit}>
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
-
-                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg">   
+             
+                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" >   
                     Login 
                 </button>   
                 
