@@ -20,6 +20,7 @@ const ProfilePage = ({history}) => {
     localStorage.removeItem("auth token");
     window.location.reload();
   };
+// if user logout show this message 
   if (!userInfo)
   return (
     <div className='d-flex justify-content-center align-items-center flex-column'>
@@ -28,9 +29,9 @@ const ProfilePage = ({history}) => {
         <button className="border-0 d-flex justify-content-center align-items-center mt-3 btngoshop animate-charcter fs-1">Visit Home Page </button> 
       </a>
     </div>
-  )
-    return ( 
+  );
 
+    return (
       <>
        {/* welcome top text */}
         <div className=" d-flex align-items-center flex-column mt-100">
@@ -48,7 +49,6 @@ const ProfilePage = ({history}) => {
                       <FaRegUserCircle fontSize="2em" color="#000" className="usericon" />
                       <p className="user-name fs-5 p-2 ">Dear Customer{userInfo.name} </p>
                     </div>
-
                   <div className="">
                     <p className="emailP">Email : {userInfo.email}</p>
                   </div>

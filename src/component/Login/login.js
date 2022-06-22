@@ -42,11 +42,12 @@ const LoginForm = () => {
        
         try {
            const {data} = localStorage.setItem("auth token", JSON.stringify(values));
-        //    if ypu want to use API un comment line blew
+           Navigate("/");
+        //    if you want to use API un comment line blew
         //    const {data} = await loginUser(values)
-           setAuth(data);
-           setError(null);
-           history(redirect);
+            setAuth(data);
+        //    setError(null);
+        //    history(redirect);
         
         } catch (error) {
             console.log(error);
@@ -55,6 +56,7 @@ const LoginForm = () => {
             toast.error(error.response.data.message);
         }
     };
+
 
     // useFormik hook
     const formik = useFormik({
@@ -70,17 +72,16 @@ const LoginForm = () => {
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
 
-                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" onClick={()=><Navigate to="/profile" />}>
-                 
-                 Login   
+                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg">   
+                    Login 
                 </button>   
+                
 
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
 
                 <Link to={`/signup?redirect=${redirect}`}>
                     <p className="">Not have an Account yet? </p>
-                </Link>
-            
+                </Link>            
 
             </form>
         </div>
