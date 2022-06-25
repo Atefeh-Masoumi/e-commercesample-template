@@ -97,7 +97,7 @@ const Homepage = () => {
             </main>
             {/* New Product dection Section  */}
             <section className="bg-white mt-100">
-                   <h3 className="text-center font-weight-bold"> Look at New amazing Product</h3>
+                   <h3 className="text-center font-weight-bold mb-6"> Look at New amazing Product</h3>
                    <Slider/>
             </section>
            <Footer/>

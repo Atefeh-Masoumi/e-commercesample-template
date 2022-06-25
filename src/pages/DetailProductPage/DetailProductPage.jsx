@@ -6,6 +6,7 @@ import "swiper/swiper.min.css";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import "swiper/components/navigation/navigation.min.css";
 import'swiper/components/thumbs/thumbs.min.css';
+import Footer from '../../component/Footer/FooterPage'
 import SwiperCore, {
   
      Navigation, Thumbs
@@ -16,7 +17,8 @@ SwiperCore.use([ Navigation, Thumbs]);
 const DetailProductPage  = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return ( 
-        <div className=" mt-100 product-detail-container">
+      <>
+        <div className=" mt-100 product-detail-container mb-10">
             {/* left section product slider */}
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" >
             <Swiper
@@ -111,6 +113,8 @@ const DetailProductPage  = () => {
           
         </div>
         </div>
+        <Footer/>
+      </>
      );
 }
  

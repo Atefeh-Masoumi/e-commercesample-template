@@ -3,8 +3,7 @@
     background-color: #ededed;
   }
 .branding-col{
-  margin-top: 10px;  
-  
+  margin-top: 10px;   
 }
 .branding-col img{
   width: 30%;
@@ -27,6 +26,7 @@
     padding-left: 10px;
   }
 }
+
 .activelink{
     color: black;
     background-color: #fff;
@@ -65,7 +65,7 @@ a:hover {
  
 .search-text{
   width: 100%;
-  height: 57px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
   padding: 0 35px;
   border: 1px solid #e4e7eb;
   border-radius: 6px;

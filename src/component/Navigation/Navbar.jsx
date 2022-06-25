@@ -32,7 +32,7 @@ const Navbar =()=>{
       window.location.reload();
     };
     return(
-        <header className='bg'>
+        <header className=''>
           <div className="container">
             <div className="navbar-content">
                   <div className='content-inner'>

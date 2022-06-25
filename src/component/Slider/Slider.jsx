@@ -2,6 +2,8 @@
 import slider1 from '../../asset/golden watch special offer.jpg'
 import slider2 from '../../asset/watchspecialoffer.jpg'
 import slider3 from '../../asset/lenz-specialoffer.jpg';
+import slider4 from '../../asset/slider4.png';
+import slider5 from '../../asset/slider5.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
@@ -55,10 +57,10 @@ const Slider = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slider2} alt="slider4" />
+          <img src={slider4} alt="slider4" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slider1}  alt="slider5"/>
+          <img src={slider5}  alt="slider5"/>
         </SwiperSlide>
         
       </Swiper>
