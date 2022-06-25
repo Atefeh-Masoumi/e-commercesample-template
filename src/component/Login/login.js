@@ -26,27 +26,30 @@ const LoginForm = () => {
   // error state
     const[err, setError]= useState(null);
     const history = useNavigate()
-    const query = useQuery();
-    const redirect = query.get('redirect') || "/";
+    // const query = useQuery();
+    // const redirect = query.get('/');
 
     // useAuthActions to dispatch actions
      const setAuth = useAuthAction();
-     const userData = useAuth();
+     //const userData = useAuth();
        
-    useEffect(()=>{
-        if(userData) history(redirect);
-    },[redirect,userData,history])
+    // useEffect(()=>{
+    //     if(userData) history(redirect);
+    // },[redirect,userData,history])
 
       // submit handler
     const onSubmit= async(values)=>{
        
         try {
-           const {data} = localStorage.setItem("auth token", JSON.stringify(values));          
-        //    if you want to use API un comment line blew
-        //    const {data} = await loginUser(values)
-            setAuth(data);
-            setError(null);
-            history(redirect);
+         localStorage.setItem("auth token", JSON.stringify(values));  
+           console.log(values);   
+
+            // if you want to use API un comment line blew
+            //const {data} = await loginUser(values)
+            setAuth(values);
+             setError(null);
+            history("/");           
+            
         
         } catch (error) {
             console.log(error);
@@ -70,15 +73,15 @@ const LoginForm = () => {
             <form onSubmit={formik.handleSubmit}>
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
-             
+
+                
                 <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" >   
                     Login 
                 </button>   
-                
 
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
 
-                <Link to={`/signup?redirect=${redirect}`}>
+                <Link to={`/signup?redirect=signup`}>
                     <p className="">Not have an Account yet? </p>
                 </Link>            
 
