@@ -1,22 +1,28 @@
-import'./productpage.css';
-import * as data from "../../data"
+import "./productpage.css";
+import * as data from "../../data";
 const ProductPage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-6 mb-4 d-flex mt-100">
-          <span className="m-2 font-weight-bold">Sort By: </span>
-          <select className="md-form">
-            <option value="0" defaultValue>
-              All Product
-            </option>
-            <option value="1">Best selling</option>
-            <option value="2">Newest</option>
-            <option value="3">Highest Price</option>
-            <option value="4">Lowest Price</option>
-          </select>
-        </div>
+        <div className="d-flex justify-content-between">
+          <div className="col-md-6 mb-4 d-flex mt-50">
+            <span className="m-2 font-weight-bold">Sort By: </span>
+            <select className="md-form">
+              <option value="0" defaultValue>
+                All Product
+              </option>
+              <option value="1">Best selling</option>
+              <option value="2">Newest</option>
+              <option value="3">Highest Price</option>
+              <option value="4">Lowest Price</option>
+            </select>
+          </div>
+          <div className="d-flex">
+            <div className="">
 
+            </div>
+          </div>
+        </div>
         {/* product list */}
         <section>
           <div className="container py-5">
@@ -115,5 +121,5 @@ const ProductPage = () => {
       </div>
     </div>
   );
-}
+};
 export default ProductPage;

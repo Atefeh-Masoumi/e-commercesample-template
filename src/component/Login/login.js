@@ -44,7 +44,7 @@ const LoginForm = () => {
          localStorage.setItem("auth token", JSON.stringify(values));  
            console.log(values);   
 
-            // if you want to use API un comment line blew
+            // if you want to use API uncomment line blew
             //const {data} = await loginUser(values)
             setAuth(values);
              setError(null);
