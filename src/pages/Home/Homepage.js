@@ -73,9 +73,9 @@ const Homepage = () => {
 
         {/* Trending section */}
         </section>
-            <main className="container bgcolor">
+            <main className="container bgcolor ">
             <div className="row">
-                <h2 className="text-center p-4 textstyle">Trending Now</h2>
+                <h2 className="text-center p-4 textstyle animatedtext">Trending Now!</h2>
                   {data.products.map((product)=>
                 <div className="card-container p-2" key={product.id}>
                 <div className="card1">
@@ -97,7 +97,7 @@ const Homepage = () => {
             </main>
             {/* New Product dection Section  */}
             <section className="bg-white mt-100">
-                   <h3 className="text-center font-weight-bold mb-6"> Look at New amazing Product</h3>
+                   <h3 className="text-center font-weight-bold mb-6 "> Look at New  amazing Product</h3>
                    <Slider/>
             </section>
            <Footer/>

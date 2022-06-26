@@ -141,16 +141,14 @@ border-radius: .2rem;
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    
+    transform: rotateY(0deg);  
   }
   .back {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    font-family: 'Arimo', sans-serif;
-    
+    font-family: 'Arimo', sans-serif;  
   }
   .container:hover .card1 {
     -webkit-transform: rotateY(180deg) translateX(100%);
@@ -158,10 +156,7 @@ border-radius: .2rem;
     -ms-transform: rotateY(180deg) translateX(100%);
     transform: rotateY(180deg) translateX(100%);
     cursor: pointer;
-  }
-  
-  
-  
+  } 
   
   .textstyle ,
   .product-title {
@@ -180,4 +175,16 @@ border-radius: .2rem;
     font-size: .45em;
     letter-spacing: 3px;
   }
-  
+  .animatedtext{
+    animation: wiggle 2s infinite;
+   
+  }
+  @keyframes wiggle {
+    50%{
+      transform: translateX(10px) rotate(3deg);
+
+    }
+    0%, 100%{
+      transform: translateX(-10px) rotate(-3deg);
+    }
+  }

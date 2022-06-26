@@ -1,5 +1,5 @@
 
-import slider1 from '../../asset/golden watch special offer.jpg'
+import slider1 from '../../asset/digital watch special offer.jpg'
 import slider2 from '../../asset/watchspecialoffer.jpg'
 import slider3 from '../../asset/lenz-specialoffer.jpg';
 import slider4 from '../../asset/slider4.png';
@@ -40,27 +40,50 @@ const Slider = () => {
       >
         <SwiperSlide>
           <a href='/product'>
-        
-            <p className='bg-white hover-zoom'> Golden Watch</p>
+            <div className="d-flex justify-content-between">
+            <p className='bg-white hover-zoom'> Digital Watch</p>
+            <p>$340</p>
+            </div>
+            
        
           <img src={slider1} alt="slider1" className=''/>
           </a>
         </SwiperSlide>
         <SwiperSlide>
         <a href='/product'>
+          <div className="d-flex justify-content-between">
+              <p className='bg-white hover-zoom'> Smart Watch</p>
+              <p>$300</p>
+          </div>
           <img src={slider2} alt="slider2" />
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a href='/product'>
+          <div className="d-flex justify-content-between">
+              <p className='bg-white hover-zoom'> Camera Lens</p>
+              <p>$120</p>
+          </div>
           <img src={slider3} alt="slider3"/>
           </a>
         </SwiperSlide>
         <SwiperSlide>
+        <a href='/product'>
+          <div className="d-flex justify-content-between">
+              <p className='bg-white hover-zoom'> Nikon Lens</p>
+              <p>$100</p>
+          </div>
           <img src={slider4} alt="slider4" />
+        </a>
         </SwiperSlide>
         <SwiperSlide>
+        <a href='/product'>
+          <div className="d-flex justify-content-between">
+              <p className='bg-white hover-zoom'>Silver Microphone</p>
+              <p>$20</p>
+          </div>
           <img src={slider5}  alt="slider5"/>
+        </a>
         </SwiperSlide>
         
       </Swiper>

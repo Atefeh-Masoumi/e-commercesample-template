@@ -2,8 +2,8 @@ import Input from "../../common/Input";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import './login.css';
-import { Link,Navigate,useLocation,useNavigate } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import { useState ,useEffect} from "react";
 import { loginUser } from "../../Services/LoginService";
 import { useAuthAction,useAuth } from "../../Providers/AuthProvider";
 import {useQuery} from './../../hooks/useQuery'
@@ -26,16 +26,16 @@ const LoginForm = () => {
   // error state
     const[err, setError]= useState(null);
     const history = useNavigate()
-    // const query = useQuery();
-    // const redirect = query.get('/');
+    const query = useQuery();
+     const redirect = query.get('/');
 
     // useAuthActions to dispatch actions
      const setAuth = useAuthAction();
-     //const userData = useAuth();
+     const userData = useAuth();
        
-    // useEffect(()=>{
-    //     if(userData) history(redirect);
-    // },[redirect,userData,history])
+    useEffect(()=>{
+        if(userData) history(redirect);
+    },[redirect,userData,history])
 
       // submit handler
     const onSubmit= async(values)=>{
