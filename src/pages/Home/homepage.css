@@ -108,7 +108,7 @@ border-radius: .2rem;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d; 
     transform-style: preserve-3d;
-    transition: .9s ease-in-out;
+    transition: 1.1s ease-in-out;
     border-radius: 8px;
   }
   .card1 img {

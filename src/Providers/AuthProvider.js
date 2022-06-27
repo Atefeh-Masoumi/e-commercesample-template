@@ -10,9 +10,8 @@ function AuthProvider({children}){
     const[state,setState ] = useState(false);
 
     useEffect(()=>{
-        const userData = 
-        JSON.parse(localStorage.getItem(LOCAL_STORAGE_AUTH_KEY))|| false;
-        setState(userData)
+        let userData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_AUTH_KEY))|| false; 
+            setState(userData)
     },[]);
 
     useEffect(()=>{

@@ -47,9 +47,8 @@ const LoginForm = () => {
             // if you want to use API uncomment line blew
             //const {data} = await loginUser(values)
             setAuth(values);
-             setError(null);
-            history("/");           
-            
+            setError(null);
+            history(redirect);             
         
         } catch (error) {
             console.log(error);
@@ -81,7 +80,7 @@ const LoginForm = () => {
 
                 {err&&<p style={{color:"red",marginTop:"20px"}}> {err}</p>}
 
-                <Link to={`/signup?redirect=signup`}>
+                <Link to={`/signup`}>
                     <p className="">Not have an Account yet? </p>
                 </Link>            
 
