@@ -27,7 +27,7 @@ const LoginForm = () => {
     const[err, setError]= useState(null);
     const history = useNavigate()
     const query = useQuery();
-     const redirect = query.get('/');
+    const redirect = query.get('redirect') ||'/';
 
     // useAuthActions to dispatch actions
      const setAuth = useAuthAction();
@@ -43,13 +43,12 @@ const LoginForm = () => {
         try {
          localStorage.setItem("auth token", JSON.stringify(values));  
            console.log(values);   
-
             // if you want to use API uncomment line blew
             //const {data} = await loginUser(values)
             setAuth(values);
             setError(null);
-            history(redirect);             
-        
+            history("/");             
+
         } catch (error) {
             console.log(error);
             if(error.response && error.response.data.message)
@@ -72,7 +71,6 @@ const LoginForm = () => {
             <form onSubmit={formik.handleSubmit}>
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
-
                 
                 <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" >   
                     Login 
