@@ -41,11 +41,9 @@ const Slider = () => {
         <SwiperSlide>
           <a href='/product'>
             <div className="d-flex justify-content-between">
-            <p className='bg-white hover-zoom'> Digital Watch</p>
+            <p className='bg-white hover-zoom'> Apple Watch</p>
             <p>$340</p>
-            </div>
-            
-       
+            </div>    
           <img src={slider1} alt="slider1" className=''/>
           </a>
         </SwiperSlide>

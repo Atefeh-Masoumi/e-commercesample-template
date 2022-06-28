@@ -4,7 +4,7 @@ const ProductPage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between ">
           <div className="col-md-6 mb-4 d-flex mt-50">
             <span className="m-2 font-weight-bold">Sort By: </span>
             <select className="md-form">
@@ -19,7 +19,7 @@ const ProductPage = () => {
           </div>
           <div className="d-flex">
             <div className="">
-
+              
             </div>
           </div>
         </div>
@@ -33,16 +33,16 @@ const ProductPage = () => {
                     <div className="card-body" key={product.id}>
                       <div className="row">
                         <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 p-3">
-                          <div className="bg-image hovereffect ripple rounded ripple-surface">
+                          <div className="bg-image hovereffect ripple rounded ripple-surface ">
                             <img
                               src={product.image}
                               alt={product.alt}
-                              className="w-100 img1 position-absolute "
+                              className="w-100 img1 position-absolute w-100 h-100"
                             />
                             <img
                               src={product.imageback}
                               alt={product.alt}
-                              className="w-100 "
+                              className=" w-100 h-100"
                             />
                             <a href="#!">
                               <div className="hover-overlay">
