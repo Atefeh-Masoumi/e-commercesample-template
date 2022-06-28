@@ -2,15 +2,15 @@
 export const products = [
   {
     id: 1,
-    name: "iphone",
+    name: "I PHONE",
     shippingInfo: "Free shipping" ,
-    price: 99,
-    offPrice: 89,
+    price: 199,
+    offPrice: 189,
     discount: 10,
     image:"https://images.unsplash.com/photo-1516163173352-d1c4d006f9ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     imageback:"https://images.unsplash.com/photo-1510698453013-dd490a55cb4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
     description:[
-      "Black Aluminum Case with Leather Link",
+      "Retina HD display",
       "Battery saving",
       "128GB Storage",
     ],
