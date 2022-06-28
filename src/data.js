@@ -2,7 +2,7 @@
 export const products = [
   {
     id: 1,
-    name: "I PHONE",
+    name: "IPHONE",
     shippingInfo: "Free shipping" ,
     price: 199,
     offPrice: 189,

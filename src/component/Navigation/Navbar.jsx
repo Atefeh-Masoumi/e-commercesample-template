@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import { useCart } from '../../Providers/CartProvider';
 import { useAuth } from '../../Providers/AuthProvider';
 import { BsFillPersonFill, BsCart3 ,BsJustify,BsPersonPlusFill} from "react-icons/bs";
+import * as data from "../../data";
 import './navbar.css'
 
 import {
@@ -21,12 +22,19 @@ import {
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
 const Navbar =()=>{
-    const {cart} = useCart();
-    
-    const userData = useAuth();
-   
+    const {cart} = useCart();  
+    const userData = useAuth();   
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
 
+    const[filter,setFilter] = useState([]);
+    const handleSearch=(e)=>{
+      const searchWord = e.target.value;
+      const newFilter = data.products.filter((value)=>{
+        return value.name.toLowerCase().includes(searchWord.toLowerCase());
+      })
+      setFilter(newFilter);
+
+    }
     const logoutHandler = () => {
       localStorage.removeItem("auth token");
       window.location.reload();
@@ -40,13 +48,23 @@ const Navbar =()=>{
                       <div className='col-8 branding-col'>
                         <a href='/'>
                           <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
-
                         </a>
                         <div className='search'>
                           <div className='d-flex justify-content-start'>
                           <div type="submit" className="sub-search"/>
-                          <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20"/>
+                          <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
                           </div>
+                          {filter.length !== 0 && (
+                            <div className='searchresult'>
+                              {filter.map(( value, key)=>{
+                                return <a href='/product'>
+                                  <p className='bg-white'>{value.name}</p>
+                                  </a>
+
+                              })}
+
+                            </div>
+                          )}
                         </div>
                        </div>
                    <div className='col-4 function-col d-flex justify-content-evenly'>
@@ -166,18 +184,8 @@ const Navbar =()=>{
 
                                         </MDBDropdownLink>
                                       </MDBDropdownItem>
-                                      <MDBDropdownItem>
-                                        <MDBDropdownLink href="/product">
-                                        
-                                        </MDBDropdownLink>
-                                      </MDBDropdownItem>
-                                      <MDBDropdownItem>
-                                        <MDBDropdownLink href="/product">
-
-
-                                        </MDBDropdownLink>
-                                      </MDBDropdownItem>
-                                    </MDBDropdownMenu>
+                                      
+                                      </MDBDropdownMenu>
                                   </MDBDropdown>
                                   
                                   
