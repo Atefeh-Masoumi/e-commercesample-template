@@ -1,10 +1,25 @@
 import "./productpage.css";
+import { useState } from 'react';
 import * as data from "../../data";
+
 const ProductPage = () => {
+
+  //search function
+  const[filter,setFilter] = useState([]);
+    const handleSearch=(e)=>{
+      const searchWord = e.target.value;
+      const newFilter = data.products.filter((value)=>{
+        return value.name.toLowerCase().includes(searchWord.toLowerCase());
+      })
+      setFilter(newFilter);
+
+    }
+
+
   return (
     <div className="container">
       <div className="row">
-        <div className="d-flex justify-content-between ">
+        <div className="d-flex ">
           <div className="col-md-6 mb-4 d-flex mt-50">
             <span className="m-2 font-weight-bold">Sort By: </span>
             <select className="md-form">
@@ -19,7 +34,26 @@ const ProductPage = () => {
           </div>
           <div className="d-flex">
             <div className="">
-              
+            <div className='search'>
+                          <div className='d-flex justify-content-start'>
+                          <div type="submit" className="sub-search"/>
+                          <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
+                          </div>
+                          
+                          {filter.length !== 0 && (
+                            <div className='searchresult d-absolute overflow-hidden'>
+                              {filter.map(( value, key)=>{
+                                return <div className='border '>
+                                  <a href='/product' className='border'>
+                                    <p className='bg-white'>{value.name}</p>
+                                  </a>
+                                  </div>
+
+                              })}
+
+                            </div>
+                          )}
+                        </div>
             </div>
           </div>
         </div>

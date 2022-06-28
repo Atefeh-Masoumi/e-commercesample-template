@@ -55,11 +55,13 @@ const Navbar =()=>{
                           <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
                           </div>
                           {filter.length !== 0 && (
-                            <div className='searchresult'>
+                            <div className='searchresult d-absolute overflow-hidden'>
                               {filter.map(( value, key)=>{
-                                return <a href='/product'>
-                                  <p className='bg-white'>{value.name}</p>
+                                return <div className='border '>
+                                  <a href='/product' className='border'>
+                                    <p className='bg-white'>{value.name}</p>
                                   </a>
+                                  </div>
 
                               })}
 
