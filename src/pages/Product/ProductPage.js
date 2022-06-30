@@ -39,26 +39,27 @@ const ProductPage = () => {
                 <div className='d-flex justify-content-start'>
                 
                 <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
-                </div>
-                
-                    {filter.length !== 0 && (
-                      <div className='searchresult d-absolute overflow-hidden' >
-                        {filter.map(( value, key)=>{
-                          return <div className='border '>
-                            <a href='/product' className='border'>
-                              <p className='bg-white'>{value.name}</p>
-                            </a>
-                            </div>
-
-                        })}
-                        
-                      </div>
-                    )}
+                </div>                
+                  
                 
               </div>
             </div>
           </div>
         </div>
+
+        {filter.length !== 0 && (
+          <div className='searchresult d-absolute overflow-hidden' >
+            {filter.map(( value, key)=>{
+              return <div className='border '>
+                <a href='/product' className='border'>
+                  <p className='bg-white'>{value.name}</p>
+                </a>
+                </div>
+            })}
+            
+          </div>
+        )}
+
         {/* product list */}
         <section>
           <div className="container py-5">
