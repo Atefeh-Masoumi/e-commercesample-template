@@ -1,5 +1,13 @@
 
-
+import catpc1 from '../../asset/cat-pc-1.jpg';
+import catpc2 from '../../asset/pc-cat-2.jpg';
+import catpc3 from '../../asset/pc-cat-3.jpg';
+import catmob1 from '../../asset/cat-mob-1.jpg';
+import catmob2 from '../../asset/cat-mob-2.jpg';
+import catmob3 from '../../asset/cat-mob-3.jpg';
+import Accessories1 from '../../asset/Accessories-cat-1.jpg';
+import Accessories2 from '../../asset/Accessories-cat-2.jpg';
+import Accessories3 from '../../asset/Accessories-cat-3.jpg';
 import * as data from "../../data"
 import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { checkIncart } from "../../utils/checkinCart";
@@ -33,9 +41,9 @@ const Homepage = () => {
                     <div className="card mb-30">
                         <a className="card-img-tiles" href="/product" data-abc="true">
                         <div className="inner">
-                          <div className="main-img"><img src="https://i.imgur.com/O0GMYuw.jpg" alt="Category"/></div>
-                          <div className="thumblist"><img src="https://i.imgur.com/ILEU18M.jpg" alt="Category"/>
-                          <img src="https://i.imgur.com/2kePJmX.jpg" alt="Category"/></div>
+                          <div className="main-img"><img src={catpc1} alt="Category"/></div>
+                          <div className="thumblist"><img src={catpc2} alt="Category"/>
+                          <img src={catpc3} alt="Category"/></div>
                         </div></a>
                       <div className="card-body text-center">
                         <h4 className="card-title">Laptops</h4>
@@ -46,9 +54,9 @@ const Homepage = () => {
                   <div className="col-md-4 col-sm-6">
                     <div className="card mb-30"><a className="card-img-tiles" href="/product" data-abc="true">
                         <div className="inner">
-                          <div className="main-img"><img src="https://i.imgur.com/uRgdVY1.jpg" alt="Category"/></div>
-                          <div className="thumblist"><img src="https://i.imgur.com/VwSKS7A.jpg" alt="Category"/>
-                          <img src="https://i.imgur.com/gTvZ2H5.jpg" alt="Category"/></div>
+                          <div className="main-img"><img src={catmob1} alt="Category"/></div>
+                          <div className="thumblist"><img src={catmob2} alt="Category"/>
+                          <img src={catmob3} alt="Category"/></div>
                         </div></a>
                       <div className="card-body text-center">
                         <h4 className="card-title">Mobiles</h4>
@@ -59,8 +67,8 @@ const Homepage = () => {
                   <div className="col-md-4 col-sm-6">
                     <div className="card mb-30"><a className="card-img-tiles" href="/product" data-abc="true">
                         <div className="inner">
-                          <div className="main-img"><img src="https://i.imgur.com/0jO40CF.jpg" alt="Category"/></div>
-                          <div className="thumblist"><img src="https://i.imgur.com/dWYAg41.jpg" alt="Category"/><img src="https://i.imgur.com/5oQEZSC.jpg" alt="Category"/></div>
+                          <div className="main-img"><img src={Accessories1} alt="Category"/></div>
+                          <div className="thumblist"><img src={Accessories2} alt="Category"/><img src={Accessories3} alt="Category"/></div>
                         </div></a>
                       <div className="card-body text-center">
                         <h4 className="card-title">Accessories</h4>

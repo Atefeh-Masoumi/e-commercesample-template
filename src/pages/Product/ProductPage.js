@@ -15,7 +15,6 @@ const ProductPage = () => {
 
     }
 
-
   return (
     <div className="container">
       <div className="row">
@@ -32,28 +31,31 @@ const ProductPage = () => {
               <option value="4">Lowest Price</option>
             </select>
           </div>
+          {/* search  */}
           <div className="d-flex">
             <div className="">
+              
             <div className='search'>
-                          <div className='d-flex justify-content-start'>
-                          <div type="submit" className="sub-search"/>
-                          <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
-                          </div>
-                          
-                          {filter.length !== 0 && (
-                            <div className='searchresult d-absolute overflow-hidden'>
-                              {filter.map(( value, key)=>{
-                                return <div className='border '>
-                                  <a href='/product' className='border'>
-                                    <p className='bg-white'>{value.name}</p>
-                                  </a>
-                                  </div>
-
-                              })}
-
+                <div className='d-flex justify-content-start'>
+                
+                <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
+                </div>
+                
+                    {filter.length !== 0 && (
+                      <div className='searchresult d-absolute overflow-hidden' >
+                        {filter.map(( value, key)=>{
+                          return <div className='border '>
+                            <a href='/product' className='border'>
+                              <p className='bg-white'>{value.name}</p>
+                            </a>
                             </div>
-                          )}
-                        </div>
+
+                        })}
+                        
+                      </div>
+                    )}
+                
+              </div>
             </div>
           </div>
         </div>
