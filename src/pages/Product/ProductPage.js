@@ -33,15 +33,11 @@ const ProductPage = () => {
           </div>
           {/* search  */}
           <div className="d-flex">
-            <div className="">
-              
-            <div className='search'>
-                <div className='d-flex justify-content-start'>
-                
-                <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
-                </div>                
-                  
-                
+            <div>
+              <div className='search'>
+                  <div className='d-flex justify-content-start'> 
+                    <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
+                  </div>                 
               </div>
             </div>
           </div>
@@ -66,8 +62,8 @@ const ProductPage = () => {
             <div className="row justify-content-center mb-3">
               <div className="col-md-12 col-xl-10">
                 {data.products.map((product) => (
-                  <div className="card shadow-0 border rounded-3 mb-3">
-                    <div className="card-body" key={product.id}>
+                  <div className="card shadow-0 border rounded-3 mb-3" key={product.id}>
+                    <div className="card-body" >
                       <div className="row">
                         <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 p-3">
                           <div className="bg-image hovereffect ripple rounded ripple-surface ">

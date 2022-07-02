@@ -34,14 +34,14 @@ const ProfilePage = ({history}) => {
     return (
       <>
        {/* welcome top text */}
-        <div className=" d-flex align-items-center flex-column mt-100">
-            <h1 className='btn-shine text-center'> Welcome {userInfo.name}</h1>
-      </div>
-      
+          <div className="d-flex align-items-center flex-column mt-100">
+              <h1 className='btn-shine text-center'> Welcome {userInfo.name}</h1>
+          </div>
+
           <div className="profileContainer d-flex flex-row justify-content-center">
             {/* sidebar */}
-            <div className="col-md-4 d-flex justify-content-center">
-              <div className="info-section d-flex flex-column  ">
+            <div className="col-md-4 d-flex justify-content-center col-sm-12">
+              <div className="info-section d-flex flex-column">
                 <div className="user-info m-2 d-flex justify-content-between" >
                  <div className="d-flex flex-column">
                   
