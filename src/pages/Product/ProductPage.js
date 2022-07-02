@@ -14,15 +14,15 @@ const ProductPage = () => {
       setFilter(newFilter);
 
     }
-
+      
   return (
     <div className="container">
       <div className="row">
         <div className="d-flex ">
-          <div className="col-md-6 mb-4 d-flex mt-50">
+          <div className="col-md-6 mb-4 d-flex mt-50 col-sm-6">
             <span className="m-2 font-weight-bold">Sort By: </span>
             <select className="md-form">
-              <option value="0" defaultValue>
+              <option value="0" defaultValue className="">
                 All Product
               </option>
               <option value="1">Best selling</option>

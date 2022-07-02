@@ -3,3 +3,8 @@
     
 transition: 2s all;
 }
+@media (max-width: 700px){
+    .md-form{
+        padding: 3px 6px;
+    }
+}
