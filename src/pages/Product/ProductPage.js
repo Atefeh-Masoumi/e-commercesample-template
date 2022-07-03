@@ -33,17 +33,13 @@ const ProductPage = () => {
             </select>
           </div>
           {/* search  */}
-          <div className="d-flex">
+          <div className="search ">
             <div>
-              <div className='search'>
-                  <div className='d-flex justify-content-between'> 
-                    <input name='searchbar' type="text" placeholder='Search...'  className="" />
-                    <button type="submit" onClick={handleSearch} className="search-icon">
-                      <AiOutlineSearch className="fs-5"/>
-                    </button>  
-                  </div>  
-                               
-              </div>
+            <div className='d-flex justify-content-between'>
+            <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
+                  <div type="submit" className="searchproduct"/>
+                   
+                </div>
             </div>
           </div>
         </div>

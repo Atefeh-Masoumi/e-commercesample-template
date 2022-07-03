@@ -21,7 +21,8 @@ import {
     MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBDropdownLink,
     MDBNavbarNav,
   } from 'mdb-react-ui-kit';
-const Navbar =()=>{
+
+  const Navbar =()=>{
     const {cart} = useCart();  
     const userData = useAuth();   
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
@@ -42,6 +43,7 @@ const Navbar =()=>{
       localStorage.removeItem("auth token");
       window.location.reload();
     };
+    
     return(
         <header className=''>
           <div className="container">
@@ -52,6 +54,7 @@ const Navbar =()=>{
                         <a href='/'>
                           <img src={logo} alt="logo" width={"57px"} height={"57px"}/>
                         </a>
+                        {/* search bar */}
                         <div className='search'>
                           <div className='d-flex justify-content-start'>
                           <div type="submit" className="sub-search"/>

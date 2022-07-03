@@ -9,8 +9,15 @@ transition: 2s all;
     }
 }
 
-.search-icon{
-    outline: none;
+
+.searchproduct{
+    position: absolute;
     border: none;
-    background-color: #fff;
-}
+    background: url(../../asset/searchproductpage.svg) no-repeat center;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 100%;
+    
+  }
