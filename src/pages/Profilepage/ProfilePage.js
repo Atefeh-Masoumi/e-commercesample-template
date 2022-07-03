@@ -41,7 +41,7 @@ const ProfilePage = ({history}) => {
 
           <div className="profileContainer d-flex flex-row justify-content-center">
             {/* sidebar */}
-            <div className="col-md-4 d-flex justify-content-center col-sm-12">
+            <div className="col-lg-4 col-md-6 d-flex justify-content-center col-sm-12">
               <div className="info-section d-flex flex-column">
                 <div className="user-info m-2 d-flex justify-content-between" >
                  <div className="d-flex flex-column">
@@ -97,7 +97,7 @@ const ProfilePage = ({history}) => {
 
 
             {/* info of each section */}
-            <div className="col-md-8 d-flex flex-column m-3">
+            <div className="col-lg-8 col-md-6 d-flex flex-column m-3">
 
               { (<div className="d-flex flex-column border rounded p-2">
                 <div className="">

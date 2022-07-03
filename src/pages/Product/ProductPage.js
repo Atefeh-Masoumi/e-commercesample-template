@@ -1,7 +1,8 @@
 import "./productpage.css";
 import { useState } from 'react';
 import * as data from "../../data";
-import {AiOutlineSearch} from "react-icons/ai";
+import searchicon from '../../asset/searchproductpage.svg'
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
 
 const ProductPage = () => {
 
@@ -35,23 +36,33 @@ const ProductPage = () => {
           {/* search  */}
           <div className="search ">
             <div>
-            <div className='d-flex justify-content-between'>
-            <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
-                  <div type="submit" className="searchproduct"/>
-                   
-                </div>
+            <div className='d-flex '>
+                     <input name='searchbar' type="text" placeholder='Search...'  className="searchinput" onChange={handleSearch}/>
+                  
+                    <img src={searchicon} className="searchproduct" />
+                  </div>
             </div>
           </div>
         </div>
 
         {filter.length !== 0 && (
-          <div className='searchresult d-absolute overflow-hidden' >
+          <div className='d-flex row' >
             {filter.map(( value, key)=>{
-              return <div className='border '>
-                <a href='/product' className='border'>
-                  <p className='bg-white'>{value.name}</p>
+              return <MDBCard style={{ maxWidth: '22rem' }}>
+              <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                <MDBCardImage src={value.image} fluid alt={value.name} />
+                <a>
+                  <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
                 </a>
-                </div>
+              </MDBRipple>
+              <MDBCardBody>
+                <MDBCardTitle>{value.name}</MDBCardTitle>
+                <MDBCardText>
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </MDBCardText>
+                <MDBBtn href='productdetail'>Detailpage</MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
             })}
             
           </div>

@@ -9,15 +9,19 @@ transition: 2s all;
     }
 }
 
-
+.searchinput{
+    height: 50px;
+    
+}
 .searchproduct{
-    position: absolute;
-    border: none;
-    background: url(../../asset/searchproductpage.svg) no-repeat center;
+    position: absolute;    
+    /* background: url(../../asset/searchproductpage.svg) no-repeat center; */
     width: 40px;
     height: 40px;
     top: 50%;
-    margin-top: -20px;
-    border-radius: 100%;
+    left:100%;
+    margin-top: -25px;
+
+   
     
   }
