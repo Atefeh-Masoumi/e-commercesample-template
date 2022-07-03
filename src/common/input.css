@@ -21,7 +21,6 @@ input[type="tel"],
 input[type="email"],
 input[type="password"],
 select {
-  
   padding: 6px 12px;
   display: block;
   background-color: #fff;

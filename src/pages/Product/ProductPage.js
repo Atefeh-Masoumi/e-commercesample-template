@@ -1,6 +1,7 @@
 import "./productpage.css";
 import { useState } from 'react';
 import * as data from "../../data";
+import {AiOutlineSearch} from "react-icons/ai";
 
 const ProductPage = () => {
 
@@ -35,9 +36,13 @@ const ProductPage = () => {
           <div className="d-flex">
             <div>
               <div className='search'>
-                  <div className='d-flex justify-content-start'> 
-                    <input name='searchbar' type="text" placeholder='Search...'  className="search-text left-20" onChange={handleSearch}/>
-                  </div>                 
+                  <div className='d-flex justify-content-between'> 
+                    <input name='searchbar' type="text" placeholder='Search...'  className="" />
+                    <button type="submit" onClick={handleSearch} className="search-icon">
+                      <AiOutlineSearch className="fs-5"/>
+                    </button>  
+                  </div>  
+                               
               </div>
             </div>
           </div>

@@ -25,8 +25,8 @@
     height: 64px;
     color: var(--myred);
   }
-
-  .delivery-img{
+  
+  .shopicon{
     width: 64px;
     height: 64px;
   }
@@ -97,3 +97,4 @@
     background-position: 200% center;
   }
 }
+

@@ -26,6 +26,7 @@ const Navbar =()=>{
     const userData = useAuth();   
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
 
+    // search function
     const[filter,setFilter] = useState([]);
     const handleSearch=(e)=>{
       const searchWord = e.target.value;
@@ -35,6 +36,8 @@ const Navbar =()=>{
       setFilter(newFilter);
 
     }
+
+    // logout function
     const logoutHandler = () => {
       localStorage.removeItem("auth token");
       window.location.reload();

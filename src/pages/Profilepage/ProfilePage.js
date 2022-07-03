@@ -1,5 +1,6 @@
-import delivery from '../../asset/delivery in process.png';
+import delivery from '../../asset/deliverycompleted.png';
 import cancelshop from '../../asset/cancelshop.png';
+import activeorder from '../../asset/inprocess delivery icon.png';
 import whishlist from"../../asset/favorites-list-empty.svg";
 import "./profilePage.css";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -59,7 +60,7 @@ const ProfilePage = ({history}) => {
                   </div>
                 </div>
 
-
+               
                 <div className="d-flex flex-column justify-content-center m-2">
                     <div className="d-flex justify-content-between border-bottom border-top pt-lg-3 bghover" onClick={()=>setOrder( !Order)}>
                     <div className='d-flex' >
@@ -107,24 +108,24 @@ const ProfilePage = ({history}) => {
                   <div className="p-2 d-flex">
                     <div className='p-2'>
                       
-                    <AiOutlineShopping  fontSize="4em" color="3f9a59"/>
+                    <img src={activeorder} alt="activeorder icon" className='shopicon'/>
                     </div>
                     
                     <div className=" d-flex flex-column">
-                    <span className=" mt-2 fs-5">active orders</span>
-                    <div className="fs-6 border rounded text-center bg" >
-                      9
+                      <span className="mt-2 fs-5">active orders</span>
+                      <div className="fs-6 border rounded text-center bg" >
+                        9
+                      </div>
                     </div>
-                  </div>
                   </div>
 
                   <div className="p-2 d-flex">
                     <div className='p-2'> 
-                     <img src={delivery} alt="delivered icon" className='delivery-img'/>
+                     <img src={delivery} alt="delivered icon" className='shopicon'/>
                     </div>
                     <div className=" d-flex flex-column">
                       <span className='fs-5 mt-2 '> Completed </span>
-                      <div className="fs-6 border rounded text-center bg" >
+                      <div className="fs-6 border rounded text-center bg">
                           3
                       </div>
                     </div>

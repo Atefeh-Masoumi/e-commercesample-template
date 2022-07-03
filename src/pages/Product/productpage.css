@@ -8,3 +8,9 @@ transition: 2s all;
         padding: 3px 6px;
     }
 }
+
+.search-icon{
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
