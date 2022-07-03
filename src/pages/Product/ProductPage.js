@@ -2,10 +2,20 @@ import "./productpage.css";
 import { useState } from 'react';
 import * as data from "../../data";
 import searchicon from '../../asset/searchproductpage.svg'
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter } from 'mdb-react-ui-kit';
 
 const ProductPage = () => {
+  //search modal
+  const [basicModal, setBasicModal] = useState(false);
 
+  const toggleShow = () => setBasicModal(!basicModal);
   //search function
   const[filter,setFilter] = useState([]);
     const handleSearch=(e)=>{
@@ -37,7 +47,7 @@ const ProductPage = () => {
           <div className="search ">
             <div>
             <div className='d-flex '>
-                     <input name='searchbar' type="text" placeholder='Search...'  className="searchinput" onChange={handleSearch}/>
+                     <input name='searchbar' type="text" placeholder='Search...'  className="searchinput" onChange={handleSearch} onClick={toggleShow}/>
                   
                     <img src={searchicon} className="searchproduct" />
                   </div>
@@ -48,7 +58,18 @@ const ProductPage = () => {
         {filter.length !== 0 && (
           <div className='d-flex row' >
             {filter.map(( value, key)=>{
-              return <MDBCard style={{ maxWidth: '22rem' }}>
+              return <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+              <MDBModalDialog>
+                <MDBModalContent>
+                  <MDBModalHeader>
+                    <MDBModalTitle>Modal title</MDBModalTitle>
+                    <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                  </MDBModalHeader>
+                  <MDBModalBody>
+
+                  
+
+                  <MDBCard style={{ maxWidth: '22rem' }}>
               <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                 <MDBCardImage src={value.image} fluid alt={value.name} />
                 <a>
@@ -63,6 +84,25 @@ const ProductPage = () => {
                 <MDBBtn href='productdetail'>Detailpage</MDBBtn>
               </MDBCardBody>
             </MDBCard>
+
+
+
+                  </MDBModalBody>
+        
+                  <MDBModalFooter>
+                    <MDBBtn color='secondary' onClick={toggleShow}>
+                      Close
+                    </MDBBtn>
+                    <MDBBtn>Save changes</MDBBtn>
+                  </MDBModalFooter>
+                </MDBModalContent>
+              </MDBModalDialog>
+            </MDBModal>
+              
+              
+              
+              
+              
             })}
             
           </div>
