@@ -39,7 +39,7 @@ const ProfilePage = ({history}) => {
               <h1 className='btn-shine text-center'> Welcome {userInfo.name}</h1>
           </div>
 
-          <div className="profileContainer d-flex flex-row justify-content-center">
+          <div className="profileContainer d-flex justify-content-center">
             {/* sidebar */}
             <div className="col-lg-4 col-md-6 d-flex justify-content-center col-sm-12">
               <div className="info-section d-flex flex-column">
@@ -97,13 +97,13 @@ const ProfilePage = ({history}) => {
 
 
             {/* info of each section */}
-            <div className="col-lg-8 col-md-6 d-flex flex-column m-3">
+            <div className="d-flex flex-column m-3 ">
 
-              { (<div className="d-flex flex-column border rounded p-2">
+              { (<div className="d-flex flex-column border rounded p-2  ">
                 <div className="">
                   <p className='fs-4'>My shopping List</p>
                 </div>
-                <div className="d-flex flex-1 flex-row flex-1 m-2 mt-20" >
+                <div className="flex-1 m-2 mt-20 shoplist" >
                   
                   <div className="p-2 d-flex">
                     <div className='p-2'>
@@ -111,9 +111,9 @@ const ProfilePage = ({history}) => {
                     <img src={activeorder} alt="activeorder icon" className='shopicon'/>
                     </div>
                     
-                    <div className=" d-flex flex-column">
+                    <div className="d-flex flex-column">
                       <span className="mt-2 fs-5">active orders</span>
-                      <div className="fs-6 border rounded text-center bg" >
+                      <div className="fs-6 border rounded text-center bg">
                         9
                       </div>
                     </div>

@@ -24,9 +24,13 @@ import {
 
   const Navbar =()=>{
     const {cart} = useCart();  
-    const userData = useAuth();   
+    const userData = useAuth(); 
+    //mobile menu   
     const [showNavNoToggler, setShowNavNoToggler] = useState(false);
+      //search modal
+    const [basicModal, setBasicModal] = useState(false);
 
+    const toggleShow = () => setBasicModal(!basicModal);
     // search function
     const[filter,setFilter] = useState([]);
     const handleSearch=(e)=>{

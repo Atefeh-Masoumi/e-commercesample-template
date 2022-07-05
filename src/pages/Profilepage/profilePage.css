@@ -1,6 +1,7 @@
 .profileContainer {
   display: flex;
   color: #000;
+  flex-direction: row;
 }
 .info-section{
   border: 1px solid #ccc;
@@ -98,6 +99,21 @@
   }
 }
 
-@media (max-width) {
-  
+.shoplist{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 700px){
+  .profileContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .user-info{
+    width: auto;
+  }
+  .shoplist{
+    display: flex;
+    flex-direction: column;
+  }
 }
