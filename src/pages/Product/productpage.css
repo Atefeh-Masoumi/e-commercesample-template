@@ -3,25 +3,37 @@
     
 transition: 2s all;
 }
-@media (max-width: 700px){
-    .md-form{
-        padding: 3px 6px;
-    }
-}
 
 .searchinput{
     height: 50px;
     
 }
 .searchproduct{
-    position: absolute;    
-    /* background: url(../../asset/searchproductpage.svg) no-repeat center; */
+    position: absolute; 
     width: 40px;
     height: 40px;
     top: 50%;
     left:100%;
     margin-top: -25px;
-
-   
     
   }
+
+
+  @media (max-width: 700px){
+    .md-form{
+        padding: 3px 6px;
+        width:auto;
+    }
+    .searchinput{
+        width:auto;
+        height: 40px;
+    }
+    .searchproduct{
+        width: 30px;
+        height: 30px;
+        top: 40%;
+    }
+    .textsearchproduct{
+        display: none;
+    }
+}

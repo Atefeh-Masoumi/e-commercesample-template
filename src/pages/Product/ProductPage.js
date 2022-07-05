@@ -1,15 +1,23 @@
 import "./productpage.css";
-import { useState } from 'react';
+import { useState } from "react";
 import * as data from "../../data";
-import searchicon from '../../asset/searchproductpage.svg'
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple,
+import searchicon from "../../asset/searchproductpage.svg";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardImage,
+  MDBBtn,
+  MDBRipple,
   MDBModal,
   MDBModalDialog,
   MDBModalContent,
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
-  MDBModalFooter } from 'mdb-react-ui-kit';
+  MDBModalFooter,
+} from "mdb-react-ui-kit";
 
 const ProductPage = () => {
   //search modal
@@ -17,21 +25,20 @@ const ProductPage = () => {
 
   const toggleShow = () => setBasicModal(!basicModal);
   //search function
-  const[filter,setFilter] = useState([]);
-    const handleSearch=(e)=>{
-      const searchWord = e.target.value;
-      const newFilter = data.products.filter((value)=>{
-        return value.name.toLowerCase().includes(searchWord.toLowerCase());
-      })
-      setFilter(newFilter);
+  const [filter, setFilter] = useState([]);
+  const handleSearch = (e) => {
+    const searchWord = e.target.value;
+    const newFilter = data.products.filter((value) => {
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
+    });
+    setFilter(newFilter);
+  };
 
-    }
-      
   return (
     <div className="container">
       <div className="row">
         <div className="d-flex ">
-          <div className="col-md-6 mb-4 d-flex mt-50 col-sm-6">
+          <div className="col-md-6 col-sm-8 col-xs-10 mb-4 d-flex mt-50 col-sm-6">
             <span className="m-2 font-weight-bold">Sort By: </span>
             <select className="md-form">
               <option value="0" defaultValue className="">
@@ -44,67 +51,107 @@ const ProductPage = () => {
             </select>
           </div>
           {/* search  */}
-          <div className="search ">
+          <div className="search col-md-6 col-sm-12 ">
             <div>
-            <div className='d-flex '>
-                     <input name='searchbar' type="text" placeholder='Search...'  className="searchinput" onChange={handleSearch} onClick={toggleShow}/>
-                  
-                    <img src={searchicon} className="searchproduct" />
-                  </div>
+              <div className="d-flex ">
+              <span className="m-2 font-weight-bold fs-5 textsearchproduct">Search: </span>
+                <input
+                  name="searchbar"
+                  type="text"
+                  placeholder="Search..."
+                  className="searchinput"
+                  onChange={handleSearch}
+                />
+
+                <img
+                  src={searchicon}
+                  className="searchproduct"
+                  onClick={toggleShow}
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        {filter.length !== 0 && (
-          <div className='d-flex row' >
-            {filter.map(( value, key)=>{
-              return <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+        {filter.length == 0 && (
+          <div className="d-flex row">
+            <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">
               <MDBModalDialog>
                 <MDBModalContent>
                   <MDBModalHeader>
                     <MDBModalTitle>Modal title</MDBModalTitle>
-                    <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                    <MDBBtn
+                      className="btn-close"
+                      color="none"
+                      onClick={toggleShow}
+                    ></MDBBtn>
                   </MDBModalHeader>
-                  <MDBModalBody>
+                  <MDBModalBody>Nothing Found</MDBModalBody>
 
-                  
-
-                  <MDBCard style={{ maxWidth: '22rem' }}>
-              <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                <MDBCardImage src={value.image} fluid alt={value.name} />
-                <a>
-                  <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                </a>
-              </MDBRipple>
-              <MDBCardBody>
-                <MDBCardTitle>{value.name}</MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                </MDBCardText>
-                <MDBBtn href='productdetail'>Detailpage</MDBBtn>
-              </MDBCardBody>
-            </MDBCard>
-
-
-
-                  </MDBModalBody>
-        
                   <MDBModalFooter>
-                    <MDBBtn color='secondary' onClick={toggleShow}>
+                    <MDBBtn color="secondary" onClick={toggleShow}>
                       Close
                     </MDBBtn>
-                    <MDBBtn>Save changes</MDBBtn>
                   </MDBModalFooter>
                 </MDBModalContent>
               </MDBModalDialog>
             </MDBModal>
-              
-              
-              
-              
-              
-            })}
-            
+          </div>
+        )}
+
+        {filter.length !== 0 && (
+          <div className="d-flex row">
+            <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">
+              <MDBModalDialog>
+                <MDBModalContent>
+                  <MDBModalHeader>
+                    <MDBModalTitle>Product list</MDBModalTitle>
+                    <MDBBtn
+                      className="btn-close"
+                      color="none"
+                      onClick={toggleShow}
+                    ></MDBBtn>
+                  </MDBModalHeader>
+                  <MDBModalBody>
+                    {filter.map((value, key) => {
+                      return (
+                        <MDBCard style={{ maxWidth: "22rem" }} key={value.id}>
+                          <MDBRipple
+                            rippleColor="light"
+                            rippleTag="div"
+                            className="bg-image hover-overlay"
+                          >
+                            <MDBCardImage
+                              src={value.image}
+                              fluid
+                              alt={value.name}
+                            />
+                            <a>
+                              <div
+                                className="mask"
+                                style={{
+                                  backgroundColor: "rgba(251, 251, 251, 0.15)",
+                                }}
+                              ></div>
+                            </a>
+                          </MDBRipple>
+                          <MDBCardBody>
+                            <MDBCardTitle>{value.name}</MDBCardTitle>
+                            <MDBCardText></MDBCardText>
+                            <MDBBtn href="/productdetail">Detailpage</MDBBtn>
+                          </MDBCardBody>
+                        </MDBCard>
+                      );
+                    })}
+                  </MDBModalBody>
+
+                  <MDBModalFooter>
+                    <MDBBtn color="secondary" onClick={toggleShow}>
+                      Close
+                    </MDBBtn>
+                  </MDBModalFooter>
+                </MDBModalContent>
+              </MDBModalDialog>
+            </MDBModal>
           </div>
         )}
 
@@ -114,8 +161,11 @@ const ProductPage = () => {
             <div className="row justify-content-center mb-3">
               <div className="col-md-12 col-xl-10">
                 {data.products.map((product) => (
-                  <div className="card shadow-0 border rounded-3 mb-3" key={product.id}>
-                    <div className="card-body" >
+                  <div
+                    className="card shadow-0 border rounded-3 mb-3"
+                    key={product.id}
+                  >
+                    <div className="card-body">
                       <div className="row">
                         <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 p-3">
                           <div className="bg-image hovereffect ripple rounded ripple-surface ">
