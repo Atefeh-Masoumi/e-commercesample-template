@@ -231,9 +231,9 @@ const Navbar = () => {
                               ></div>
                             </a>
                           </MDBRipple>
-                          <MDBCardBody>
-                            <MDBCardTitle>{value.name}</MDBCardTitle>
-                            <MDBCardText></MDBCardText>
+                          <MDBCardBody className="d-flex justify-content-between">
+                            <MDBCardTitle>{value.name} </MDBCardTitle>
+                            
                             <MDBBtn href="/productdetail">Detailpage</MDBBtn>
                           </MDBCardBody>
                         </MDBCard>
