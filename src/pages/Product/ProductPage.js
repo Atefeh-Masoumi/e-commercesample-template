@@ -72,6 +72,7 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
+        {/* search Modal */}
         {filter.length == 0 && (
           <div className="d-flex row">
             <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">

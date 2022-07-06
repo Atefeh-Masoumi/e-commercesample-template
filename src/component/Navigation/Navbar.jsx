@@ -19,7 +19,6 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText,
   MDBCardImage,
   MDBBtn,
   MDBRipple,
@@ -43,7 +42,6 @@ import {
   MDBModalTitle,
   MDBModalBody,
   MDBModalFooter,
- 
 } from "mdb-react-ui-kit";
 
 const Navbar = () => {
@@ -97,7 +95,6 @@ const Navbar = () => {
                       onChange={handleSearch}
                     />
                   </div>
-                  
                 </div>
               </div>
 
@@ -194,8 +191,8 @@ const Navbar = () => {
             </MDBModal>
           </div>
         )}
-{/* search list Modal */}
-{filter.length !== 0 && (
+        {/* search list Modal */}
+        {filter.length !== 0 && (
           <div className="d-flex row">
             <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">
               <MDBModalDialog>
@@ -233,7 +230,7 @@ const Navbar = () => {
                           </MDBRipple>
                           <MDBCardBody className="d-flex justify-content-between">
                             <MDBCardTitle>{value.name} </MDBCardTitle>
-                            
+
                             <MDBBtn href="/productdetail">Detailpage</MDBBtn>
                           </MDBCardBody>
                         </MDBCard>

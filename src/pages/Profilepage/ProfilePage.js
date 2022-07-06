@@ -10,7 +10,8 @@ import { useState } from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
 
 const ProfilePage = ({history}) => {
-
+  const infosection = ["info","wishlist","logout"]
+  const[info, setInfo]= useState(infosection)
   const [Logout, setLogout] = useState(true);
   const [Order, setOrder] = useState(true);
   const [UserInfo, setUserInfo] = useState(true);
@@ -42,7 +43,7 @@ const ProfilePage = ({history}) => {
           <div className="profileContainer d-flex justify-content-center">
             {/* sidebar */}
             <div className="col-lg-4 col-md-6 d-flex justify-content-center col-sm-12">
-              <div className="info-section d-flex flex-column">
+              <div className="info-section d-flex flex-column" >
                 <div className="user-info m-2 d-flex justify-content-between" >
                  <div className="d-flex flex-column">
                   
@@ -62,7 +63,7 @@ const ProfilePage = ({history}) => {
 
                
                 <div className="d-flex flex-column justify-content-center m-2">
-                    <div className="d-flex justify-content-between border-bottom border-top pt-lg-3 bghover" onClick={()=>setOrder( !Order)}>
+                    <div className="d-flex justify-content-between border-bottom border-top pt-lg-3 bghover" onClick={()=>setOrder(!Order)}>
                     <div className='d-flex' >
                       <AiOutlineShopping  fontSize="2em" color="#000" />
                       <p className="pb-3 fs-5 p-1">whishlist</p>
@@ -95,55 +96,59 @@ const ProfilePage = ({history}) => {
               </div>
             </div>
 
-
+           
             {/* info of each section */}
+         
             <div className="d-flex flex-column m-3 ">
 
-              { (<div className="d-flex flex-column border rounded p-2  ">
-                <div className="">
-                  <p className='fs-4'>My shopping List</p>
-                </div>
-                <div className="flex-1 m-2 mt-20 shoplist" >
-                  
-                  <div className="p-2 d-flex">
-                    <div className='p-2'>
-                      
-                    <img src={activeorder} alt="activeorder icon" className='shopicon'/>
-                    </div>
-                    
-                    <div className="d-flex flex-column">
-                      <span className="mt-2 fs-5">active orders</span>
-                      <div className="fs-6 border rounded text-center bg">
-                        9
-                      </div>
-                    </div>
-                  </div>
+            <div className="d-flex flex-column border rounded p-2  ">
+<div className="">
+  <p className='fs-4'>My shopping List</p>
+</div>
+<div className="flex-1 m-2 mt-20 shoplist" >
+  
+  <div className="p-2 d-flex">
+    <div className='p-2'>
+      
+    <img src={activeorder} alt="activeorder icon" className='shopicon'/>
+    </div>
+    
+    <div className="d-flex flex-column">
+      <span className="mt-2 fs-5">active orders</span>
+      <div className="fs-6 border rounded text-center bg">
+        9
+      </div>
+    </div>
+  </div>
 
-                  <div className="p-2 d-flex">
-                    <div className='p-2'> 
-                     <img src={delivery} alt="delivered icon" className='shopicon'/>
-                    </div>
-                    <div className=" d-flex flex-column">
-                      <span className='fs-5 mt-2 '> Completed </span>
-                      <div className="fs-6 border rounded text-center bg">
-                          3
-                      </div>
-                    </div>
-                  </div>
+  <div className="p-2 d-flex">
+    <div className='p-2'> 
+     <img src={delivery} alt="delivered icon" className='shopicon'/>
+    </div>
+    <div className=" d-flex flex-column">
+      <span className='fs-5 mt-2 '> Completed </span>
+      <div className="fs-6 border rounded text-center bg">
+          3
+      </div>
+    </div>
+  </div>
 
-                  <div className="p-2 d-flex flex-row p-2">
-                    <div className='p-2'>
-                     <img src={cancelshop} alt='cancleshop' className='cancleshopimg'/>
-                    </div>
-                    <div className=" d-flex flex-column">
-                      <span className=" mt-2 fs-5">Canceled</span>
-                      <div className="fs-6 border rounded text-center bg" >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>) }
+  <div className="p-2 d-flex flex-row p-2">
+    <div className='p-2'>
+     <img src={cancelshop} alt='cancleshop' className='cancleshopimg'/>
+    </div>
+    <div className=" d-flex flex-column">
+      <span className=" mt-2 fs-5">Canceled</span>
+      <div className="fs-6 border rounded text-center bg" >
+        0
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+                
+             
 
             {/* User Info left section */}
 
@@ -191,14 +196,14 @@ const ProfilePage = ({history}) => {
               {/* log out info lef section */}
               <div className='flex-column border rounded m-2 p-2 align-items-center' style={{ display: Logout ? "none" : "flex" }}>
                 
-                  {userInfo ? (
+                  {userInfo && (
                   <>
                     <h5 className="text-center p-2 mt-2">Are you sure you want to Log Out? </h5>
                     <button className="btn rounded-4 p-2" style={{backgroundColor:"#ed1d24", color:"#fff",width:"5rem"}}onClick={logoutHandler}>
                       Logout
                     </button>
                   </>
-                  ) : "Come Back Soon!"}
+                  ) }
               </div>
 
             </div>
@@ -208,3 +213,9 @@ const ProfilePage = ({history}) => {
 }
  
 export default ProfilePage;
+
+const shoplist = () => {
+
+
+
+}
