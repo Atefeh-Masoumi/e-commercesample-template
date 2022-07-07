@@ -22,6 +22,7 @@ import Navbar from './component/Navigation/Navbar';
 import ProductPage from './pages/Product/ProductPage';
 import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import ServicesPage from './pages/ServicesPage/Services';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/product' element={<ProductPage />} />
           <Route path='/productdetail' element={<DetailProductPage />} />
+          <Route path='/services' element={<ServicesPage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
        

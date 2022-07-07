@@ -88,5 +88,15 @@ border-bottom: 1px solid #ccc;
     color:var(--green);
    }
    
-  
+   @media (max-width: 700px){
 
+   .btngoshop{
+    width:auto;
+
+   }
+   .text-visitproduct{
+    overflow-wrap: break-word; 
+    inline-size: 150px;
+   }
+  
+}

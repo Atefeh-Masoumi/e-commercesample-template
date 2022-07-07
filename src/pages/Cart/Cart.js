@@ -16,8 +16,10 @@ const CartPage = () => {
       
         <div  className="d-flex justify-content-center"> 
         <Link to='/product' className="d-flex justify-content-center align-items-center flex-column">
-            <img src={cartempty} alt="cart is empty" className="d-flex justify-content-center align-content-center w-10 h-10" />
-          <h2 className="text-center hover-zoom" >Visit Product page and Come back soon!</h2>
+            <img src={cartempty} alt="cart is empty" className="d-flex justify-content-center align-content-center" />
+            <div className="flex flex-wrap  text-visitproduct">
+            <h2 className="text-center hover-zoom" >Do you like Shopping?</h2>
+          </div>
           <button className="border-0 d-flex justify-content-center mt-3 btngoshop">Lets go Shopping </button> 
           </Link>
         </div>

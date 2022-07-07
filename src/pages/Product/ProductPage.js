@@ -79,7 +79,7 @@ const ProductPage = () => {
               <MDBModalDialog>
                 <MDBModalContent>
                   <MDBModalHeader>
-                    <MDBModalTitle>Modal title</MDBModalTitle>
+                    <MDBModalTitle>Product list</MDBModalTitle>
                     <MDBBtn
                       className="btn-close"
                       color="none"
