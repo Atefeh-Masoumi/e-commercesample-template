@@ -1,11 +1,13 @@
 import React from "react";
 import Footer from "../../component/Footer/FooterPage";
 import "./Services.css";
+import { MdPriceCheck,MdLocalShipping,MdSupportAgent } from "react-icons/md";
+import {BsCurrencyDollar} from "react-icons/bs";
+import {FaAward} from "react-icons/fa";
 const ServicesPage = () => {
   return (
     <>
-     
-
+    {/* our services */}
         <section className="we-offer-area text-center bg-gray">
           <div className="container">
             <div className="row row-servicespage">
@@ -35,7 +37,9 @@ const ServicesPage = () => {
               {/* Single Item */}
               <div className="col-md-4 col-sm-6 equal-height">
                 <div className="item">
-                  <i className="fas fa-dharmachakra"></i>
+                  <i>
+                  <MdPriceCheck/>
+                  </i>
                   <h4>Discount Offers</h4>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -48,7 +52,9 @@ const ServicesPage = () => {
               {/* Single Item */}
               <div className="col-md-4 col-sm-6 equal-height">
                 <div className="item">
-                  <i className="fas fa-tasks"></i>
+                  <i className="fas fa-tasks">
+                    <MdLocalShipping/>
+                  </i>
                   <h4>Free Shipping</h4>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -61,7 +67,9 @@ const ServicesPage = () => {
               {/* Single Item  */}
               <div className="col-md-4 col-sm-6 equal-height">
                 <div className="item">
-                  <i className="fas fa-tachometer-alt"></i>
+                  <i className="">
+                    <FaAward/>
+                  </i>
                   <h4>Warrenty</h4>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -74,7 +82,9 @@ const ServicesPage = () => {
               {/* Single Item  */}
               <div className="col-md-4 col-sm-6 equal-height">
                 <div className="item">
-                  <i className="fas fa-recycle"></i>
+                  <i className="fas fa-recycle">
+                    <BsCurrencyDollar/>
+                  </i>
                   <h4>Best Price</h4>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -87,7 +97,9 @@ const ServicesPage = () => {
               {/* Single Item */}
               <div className="col-md-4 col-sm-6 equal-height">
                 <div className="item">
-                  <i className="fas fa-headset"></i>
+                  <i className="fas fa-headset">
+                    <MdSupportAgent/>
+                  </i>
                   <h4>24/7 Support</h4>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and

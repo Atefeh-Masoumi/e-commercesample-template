@@ -87,7 +87,7 @@ ul {
 }
 
 .we-offer-area.text-center .item i {
-  background: #ededed none repeat scroll 0 0;
+  background: var(--green) none repeat scroll 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -108,7 +108,7 @@ ul {
 }
 
 .we-offer-area.text-center .item i::after {
-  border: 2px solid #ededed;
+  border: 2px solid var(--green);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -220,11 +220,11 @@ ul {
 
 .we-offer-area.text-center .item:hover i {
   background-color: #ffffff !important;
-  color: #ededed !important;
+  color: var(--green) !important;
 }
 
 .we-offer-area.text-left .item i {
-  background: #ededed none repeat scroll 0 0;
+  background: var(--green) none repeat scroll 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -241,7 +241,7 @@ ul {
 }
 
 .we-offer-area.text-left .item i::after {
-  border: 2px solid #ededed;
+  border: 2px solid var(--green);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;

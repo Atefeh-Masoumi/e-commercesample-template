@@ -15,7 +15,7 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     flex-direction: column;
-    width: 30%;
+   
     margin-left: 3rem;
 
 }
@@ -49,4 +49,12 @@
   .buyBtn {
     margin-top: 2rem;
   }
-  
+  @media(max-width:768px){
+    .cartItem{
+      flex-direction: column;
+    }
+    .cartSummery{
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
