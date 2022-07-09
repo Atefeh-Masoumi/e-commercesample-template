@@ -82,7 +82,7 @@ const Homepage = () => {
         {/* Trending section */}
         </section>
             <main className="container bgcolor ">
-            <div className="row">
+            <div className="row row-hompage">
                 <h2 className="text-center p-4 textstyle animatedtext">Trending Now!</h2>
                   {data.products.map((product)=>
                 <div className="card-container p-2" key={product.id}>

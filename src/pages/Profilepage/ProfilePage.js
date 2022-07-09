@@ -10,6 +10,7 @@ import {
   AiOutlineLogout,
   AiOutlineUser,
   AiOutlineEdit,
+  AiOutlineHistory,
 } from "react-icons/ai";
 import { useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
@@ -78,8 +79,8 @@ const ProfilePage = ({ history }) => {
                 onClick={() => setOrder(!Order)}
               >
                 <div className="d-flex">
-                  <AiOutlineShopping fontSize="2em" color="#000" />
-                  <p className="pb-3 fs-5 p-1">whishlist</p>
+                  <AiOutlineHistory fontSize="2em" color="#000" />
+                  <p className="pb-3 fs-5 p-1">Payment History</p>
                 </div>
                 <div className="d-flex ">
                   <IoIosArrowDropright fontSize="2em" />
@@ -202,7 +203,7 @@ const ProfilePage = ({ history }) => {
               style={{ display: Order ? "none" : "flex" }}
             >
               <div className="">
-                <p className="fs-4">Wishlist</p>
+                <p className="fs-4">Payment History</p>
               </div>
               <div className="d-flex flex-1 flex-column flex-start align-items-center m-2 mt-20">
                 <div className="p-2 d-flex">
