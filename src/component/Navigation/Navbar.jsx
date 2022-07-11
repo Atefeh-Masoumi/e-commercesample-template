@@ -123,7 +123,7 @@ const Navbar = () => {
                             </MDBDropdownItem>
                             <MDBDropdownItem>
                               <MDBDropdownLink href="/profile">
-                                Wishlist
+                                History
                               </MDBDropdownLink>
                             </MDBDropdownItem>
                             <MDBDropdownItem>

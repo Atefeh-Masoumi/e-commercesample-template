@@ -212,7 +212,7 @@ const ProfilePage = ({ history }) => {
                 <div className="p-2 d-flex">
                   <span className="fs-5">
                     {" "}
-                    There is nothing yet in your wishlist{" "}
+                    Payment History is empty{" "}
                   </span>
                 </div>
               </div>
