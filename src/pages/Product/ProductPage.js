@@ -2,6 +2,9 @@ import "./productpage.css";
 import { useState } from "react";
 import * as data from "../../data";
 import searchicon from "../../asset/searchproductpage.svg";
+import {  useCart, useCartAction } from "../../Providers/CartProvider";
+import { toast } from "react-toastify";
+import { checkIncart } from "../../utils/checkinCart";
 import {
   MDBCard,
   MDBCardBody,
@@ -20,6 +23,14 @@ import {
 } from "mdb-react-ui-kit";
 
 const ProductPage = () => {
+  // cart contex
+  const {cart}= useCart();
+  const dispatch = useCartAction();
+  const addProductHandler =(product)=>{
+    toast.success(`${product.name} added to cart`);
+    dispatch({type:"ADD_TO_CART",payload:product})
+
+}
   //search modal
   const [basicModal, setBasicModal] = useState(false);
 
@@ -241,8 +252,10 @@ const ProductPage = () => {
                             <button
                               className="btn btn-outline-primary btn-sm mt-2"
                               type="button"
+                              onClick={()=>addProductHandler(product)}
                             >
-                              Add to Cart
+                              {checkIncart(cart,product) ? "In Cart": "Add to Cart" }  
+                              
                             </button>
                           </div>
                         </div>
