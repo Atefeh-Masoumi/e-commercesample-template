@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./detailproduct.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import { HiOutlineShoppingCart } from "react-icons/hi";
+import { HiOutlineShoppingCart,HiSearch } from "react-icons/hi";
+import { AiOutlineHeart } from "react-icons/ai";
+
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import Footer from "../../component/Footer/FooterPage";
@@ -16,10 +18,12 @@ SwiperCore.use([Navigation, Thumbs]);
 
 const DetailProductPage = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+// tag 
+const[tag, setTag] = useState();
 
   return (
     <>
-      <div className=" mt-100 product-detail-container mb-10">
+      <div className=" mt-100 product-detail-container ">
         {/* left section product slider */}
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <Swiper
@@ -166,8 +170,18 @@ const DetailProductPage = () => {
               Add to Cart <HiOutlineShoppingCart fontSize={"2em"} />
             </button>
           </div>
+          
+          
+        </div>
+      </div>
+      {/* rating section */}
+        <h2>Leave us a review: </h2>
+      <div className="d-flex justify-content-center">
+          <textarea className="texerea ">
+
+          </textarea>
           {/* rating emoji */}
-          <div className="container d-flex">
+          <div className=" d-flex">
             <div className="feedback">
               <div className="rating">
                 <input type="radio" name="rating" id="rating-5" />
@@ -471,55 +485,53 @@ const DetailProductPage = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
-      {/* Related Product section */}
 
+
+      {/* Related Product section */}
+      
+      <h2 className="black">Related Product</h2>
       <hr />
-      <div class="row">
-      {data.products.map((product) => (<>
-      <div class="col-md-3 col-sm-6">
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="pic-1" src={product.image} />
-                <img class="pic-2" src={product.imageback} />
+      <div className="row m-2">
+      {data.products.filter(product=>product.tag === "watch").map((p) => (<>
+      <div className="col-md-3 col-sm-6">
+          <div className="product-grid">
+            <div className="product-image">
+              <a href="#" className="image">
+                <img className="pic-1" src={p.image} />
+                <img className="pic-2" src={p.imageback} />
               </a>
-              <ul class="product-links">
+              <ul className="product-links">
                 <li>
                   <a href="#">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i className="fa fa-shopping-cart">
+                      <HiOutlineShoppingCart/>
+                    </i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="far fa-heart"></i>
+                    <i className="far fa-heart">
+                      <AiOutlineHeart/>
+                    </i>
                   </a>
                 </li>
+                
                 <li>
                   <a href="#">
-                    <i class="fa fa-random"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-search"></i>
+                    <i className="fa fa-search">
+                    <HiSearch/>
+                    </i>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="fa fa-star"></li>
-                <li class="fa fa-star"></li>
-                <li class="fa fa-star"></li>
-                <li class="fa fa-star"></li>
-                <li class="far fa-star"></li>
-              </ul>
-              <h3 class="title">
-                <a href="#">{product.name}</a>
+            <div className="product-content">
+              
+              <h3 className="title">
+                <a href="#">{p.name}</a>
               </h3>
-              <div class="price">$ {product.price}</div>
+              <div className="price">$ {p.price}</div>
             </div>
           </div>
         </div>
