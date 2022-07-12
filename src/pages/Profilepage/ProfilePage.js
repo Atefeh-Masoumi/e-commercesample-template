@@ -16,12 +16,11 @@ import { useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 
 const ProfilePage = ({ history }) => {
-  const infosection = ["info", "wishlist", "logout"];
-  const [info, setInfo] = useState(infosection);
-  const [Logout, setLogout] = useState(true);
-  const [Order, setOrder] = useState(true);
-  const [UserInfo, setUserInfo] = useState(true);
-
+  // toggling between tab
+  const [toggle, setToggle] = useState(1);
+  const toggleTab = (index) => {
+    setToggle(index);
+  };
   //  user login data from context
   const userInfo = useAuth();
   const logoutHandler = () => {
@@ -52,7 +51,10 @@ const ProfilePage = ({ history }) => {
         {/* sidebar */}
         <div className="col-lg-4 col-md-6 d-flex justify-content-center col-sm-12">
           <div className="info-section d-flex flex-column">
-            <div className="user-info m-2 d-flex justify-content-between">
+            <div className="user-info m-2 d-flex justify-content-between"
+             onClick={() => toggleTab(1)}
+             
+             >
               <div className="d-flex flex-column">
                 <div className="d-flex">
                   <FaRegUserCircle
@@ -61,7 +63,7 @@ const ProfilePage = ({ history }) => {
                     className="usericon"
                   />
                   <p className="user-name fs-5 p-2 ">
-                    Dear Customer{userInfo.name}{" "}
+                    Dear Customer{userInfo.name}
                   </p>
                 </div>
                 <div className="">
@@ -76,7 +78,7 @@ const ProfilePage = ({ history }) => {
             <div className="d-flex flex-column justify-content-center m-2">
               <div
                 className="d-flex justify-content-between border-bottom border-top pt-lg-3 bghover"
-                onClick={() => setOrder(!Order)}
+                onClick={() => toggleTab(3)}
               >
                 <div className="d-flex">
                   <AiOutlineHistory fontSize="2em" color="#000" />
@@ -88,7 +90,7 @@ const ProfilePage = ({ history }) => {
               </div>
               <div
                 className="d-flex justify-content-between border-bottom pt-lg-3 bghover"
-                onClick={() => setUserInfo(!UserInfo)}
+                onClick={() => toggleTab(2)}
               >
                 <div className="d-flex">
                   <AiOutlineUser fontSize="2em" color="#000" />
@@ -100,7 +102,7 @@ const ProfilePage = ({ history }) => {
               </div>
               <div
                 className="d-flex pt-lg-1 justify-content-between cursor-pointer bghover"
-                onClick={() => setLogout(!Logout)}
+                onClick={() => toggleTab(4)}
               >
                 <div className="d-flex">
                   <AiOutlineLogout fontSize="2em" color="#000" />
@@ -118,7 +120,7 @@ const ProfilePage = ({ history }) => {
 
         <div className="d-flex flex-column m-3 ">
           <div className="d-flex flex-column border rounded p-2  ">
-            <div className="">
+            <div className=""style={ { display: toggle === 1 ? "flex" : "none" }}>
               <p className="fs-4">My shopping List</p>
             </div>
             <div className="flex-1 m-2 mt-20 shoplist">
@@ -172,7 +174,7 @@ const ProfilePage = ({ history }) => {
           {
             <div
               className=" flex-column border rounded p-2"
-              style={{ display: UserInfo ? "none" : "flex" }}
+              style={ { display: toggle === 2 ? "flex" : "none" }}
             >
               <div className="">
                 <p className="fs-4">User Info</p>
@@ -185,7 +187,7 @@ const ProfilePage = ({ history }) => {
                 <div className="p-2 d-flex flex-column border  m-2 w-50 h-auto">
                   <span className="fs-5 ">Email:</span>
                   <span className="fs-5">
-                    {" "}
+                    
                     {userInfo.email || "  JohnDoe@gmail.com"}
                   </span>
                 </div>
@@ -196,11 +198,11 @@ const ProfilePage = ({ history }) => {
               </div>
             </div>
           }
-          {/* Whish list info left section */}
+          {/* Payment History info left section */}
           {
             <div
               className=" flex-column border rounded m-2  p-2"
-              style={{ display: Order ? "none" : "flex" }}
+              style={{ display: toggle === 3 ? "flex" : "none" }}
             >
               <div className="">
                 <p className="fs-4">Payment History</p>
@@ -211,8 +213,8 @@ const ProfilePage = ({ history }) => {
                 </div>
                 <div className="p-2 d-flex">
                   <span className="fs-5">
-                    {" "}
-                    Payment History is empty{" "}
+                    
+                    Payment History is empty
                   </span>
                 </div>
               </div>
@@ -221,7 +223,7 @@ const ProfilePage = ({ history }) => {
           {/* log out info lef section */}
           <div
             className="flex-column border rounded m-2 p-2 align-items-center"
-            style={{ display: Logout ? "none" : "flex" }}
+            style={{ display: toggle === 4 ? "flex" : "none" }}
           >
             {userInfo && (
               <>
@@ -250,4 +252,4 @@ const ProfilePage = ({ history }) => {
 
 export default ProfilePage;
 
-const shoplist = () => {};
+

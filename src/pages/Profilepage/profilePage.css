@@ -92,7 +92,12 @@
     margin-top: 100px;
      
 }
-
+.none{
+  display: none;
+}
+.dflex{
+  display: flex;
+}
 @keyframes textclip {
   to {
     background-position: 200% center;

@@ -169,7 +169,7 @@ const DetailProductPage = () => {
               className="w-auto m-3 border-success rounded"
             />
             
-            <button class="button-87" role="button">
+            <button className="button-addtocart" role="button">
             Add to Cart <HiOutlineShoppingCart fontSize={"2em"}/>
             </button>
             
