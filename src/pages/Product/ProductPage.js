@@ -2,7 +2,7 @@ import "./productpage.css";
 import { useState } from "react";
 import * as data from "../../data";
 import searchicon from "../../asset/searchproductpage.svg";
-import {  useCart, useCartAction } from "../../Providers/CartProvider";
+import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { toast } from "react-toastify";
 import { checkIncart } from "../../utils/checkinCart";
 import {
@@ -24,13 +24,12 @@ import {
 
 const ProductPage = () => {
   // cart contex
-  const {cart}= useCart();
+  const { cart } = useCart();
   const dispatch = useCartAction();
-  const addProductHandler =(product)=>{
+  const addProductHandler = (product) => {
     toast.success(`${product.name} added to cart`);
-    dispatch({type:"ADD_TO_CART",payload:product})
-
-}
+    dispatch({ type: "ADD_TO_CART", payload: product });
+  };
   //search modal
   const [basicModal, setBasicModal] = useState(false);
 
@@ -65,7 +64,9 @@ const ProductPage = () => {
           <div className="search col-md-6 col-sm-12 ">
             <div>
               <div className="d-flex ">
-              <span className="m-2 font-weight-bold fs-5 textsearchproduct">Search: </span>
+                <span className="m-2 font-weight-bold fs-5 textsearchproduct">
+                  Search:{" "}
+                </span>
                 <input
                   name="searchbar"
                   type="text"
@@ -252,10 +253,11 @@ const ProductPage = () => {
                             <button
                               className="btn btn-outline-primary btn-sm mt-2"
                               type="button"
-                              onClick={()=>addProductHandler(product)}
+                              onClick={() => addProductHandler(product)}
                             >
-                              {checkIncart(cart,product) ? "In Cart": "Add to Cart" }  
-                              
+                              {checkIncart(cart, product)
+                                ? "In Cart"
+                                : "Add to Cart"}
                             </button>
                           </div>
                         </div>

@@ -1,7 +1,9 @@
+import { FaMobile } from "react-icons/fa";
 
 export const products = [
   {
     id: 1,
+    tag:"mobile",
     name: "IPHONE",
     shippingInfo: "Free shipping" ,
     price: 199,
@@ -18,6 +20,7 @@ export const products = [
     
     {
       id: 2,
+      tag:"game",
       name: "Play Station",
       shippingInfo:  "Free shipping" ,
       combo:"Special offer",
@@ -35,6 +38,7 @@ export const products = [
     {
       id: 3,
       name: "Modern Watch",
+      tag:"watch",
       shippingInfo: "Free shipping",
       combo:"new",
       price: 120,
@@ -51,6 +55,7 @@ export const products = [
     {
       id: 4,
       name: "iphone",
+      tag:"mobile",
       shippingInfo:"Free shipping" ,
       price: 260,
       offPrice: 220,
@@ -66,6 +71,7 @@ export const products = [
     {
       id: 5,
       name: "Camera Lenz",
+      tag:"watch",
       shippingInfo: "Free shipping" ,
       combo:"Free shipping",
       price: 150,
@@ -83,6 +89,7 @@ export const products = [
     {
       id: 6,
       name: "Smart watch",
+      tag:"watch",
       shippingInfo: "Free shipping",
       price: 220,
       offPrice: 200,
@@ -98,6 +105,7 @@ export const products = [
     {
       id: 7,
       name: "BLUETOOTH HEADPHONES ",
+      tag:"watch",
       shippingInfo: "Free shipping",
       price: 59,
       offPrice: 45,
@@ -113,6 +121,7 @@ export const products = [
     {
       id: 8,
       name: "AIR POD",
+      tag:"mobile",
       shippingInfo: "Free shipping",
       price: 115,
       offPrice: 105,
@@ -128,6 +137,7 @@ export const products = [
     {
       id: 9,
       name: "PERSONAL COMPUTER",
+      tag:"computer",
       shippingInfo: "Free shipping",
       price: 1950,
       offPrice: 1549,
@@ -143,6 +153,7 @@ export const products = [
     {
       id: 10,
       name: "Personal Computer",
+      tag:"computer",
       shippingInfo: "Free shipping",
       combo:"new",
       price: 120,
@@ -159,6 +170,7 @@ export const products = [
     {
       id: 11,
       name: "VIRTUAL HEADSET",
+      tag:"watch",
       shippingInfo: "Free shipping",
       combo:"new",
       price: 49.99,
@@ -175,6 +187,7 @@ export const products = [
     {
       id: 12,
       name: "IPad",
+      tag:"mobile",
       shippingInfo: "Free shipping",
       combo:"new",
       price: 820,
