@@ -175,13 +175,13 @@ const[tag, setTag] = useState();
         </div>
       </div>
       {/* rating section */}
-        <h2>Leave us a review: </h2>
-      <div className="d-flex justify-content-center">
-          <textarea className="texerea ">
+        <h2 className="m-2 ms-4">Leave us a review: </h2>
+      <div className="d-flex justify-content-center review-section">
+          <textarea className="review-text ">
 
           </textarea>
           {/* rating emoji */}
-          <div className=" d-flex">
+          <div className=" d-flex justify-content-between flex-column">
             <div className="feedback">
               <div className="rating">
                 <input type="radio" name="rating" id="rating-5" />
@@ -484,13 +484,16 @@ const[tag, setTag] = useState();
                 </div>
               </div>
             </div>
+            <button className="button-addtocart " role="submit">
+              submit
+            </button>
           </div>
       </div>
 
 
       {/* Related Product section */}
       
-      <h2 className="black">Related Product</h2>
+      <h2 className="black mt-4 ms-4">Related Product</h2>
       <hr />
       <div className="row m-2">
       {data.products.filter(product=>product.tag === "watch").map((p) => (<>

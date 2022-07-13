@@ -23,6 +23,8 @@ import ProductPage from './pages/Product/ProductPage';
 import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ServicesPage from './pages/ServicesPage/Services';
+import ContactUsPage from './pages/ContactUsPage/ContactusPage';
+import AboutUsPage from './pages/AboutusPage/AboutPage';
 
 
 function App() {
@@ -44,6 +46,8 @@ function App() {
           <Route path='/product' element={<ProductPage />} />
           <Route path='/productdetail' element={<DetailProductPage />} />
           <Route path='/services' element={<ServicesPage/>}/>
+          <Route path='/contactus' element={<ContactUsPage/>}/>
+          <Route path='/aboutus' element={<AboutUsPage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
        

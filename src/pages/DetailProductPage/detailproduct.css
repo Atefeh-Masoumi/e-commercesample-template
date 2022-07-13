@@ -180,9 +180,10 @@ width: 150px;
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 2rem;
 }
 .review-text{
-  
+  flex-grow: 2;
 }
 
 .rating {

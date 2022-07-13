@@ -280,7 +280,7 @@ const Navbar = () => {
 
                       <MDBDropdown>
                         <MDBDropdownToggle tag="a" className="mt-3">
-                          Camera
+                          Product
                         </MDBDropdownToggle>
                         <MDBDropdownMenu>
                           <MDBDropdownItem>
@@ -308,7 +308,7 @@ const Navbar = () => {
                               <div className="d-flex justify-content-between flex-row fs-6 ">
                                 <div className="d-flex flex-column p-4">
                                   <a href="/product">
-                                    {" "}
+                                    
                                     Photography Bags & Cases
                                   </a>
                                   <a href="/product">
@@ -343,13 +343,13 @@ const Navbar = () => {
                       </MDBDropdown>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="/product" className="">
-                        Watch
+                      <MDBNavbarLink href="/services" className="">
+                        Services
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="/product" className="">
-                        Computers
+                      <MDBNavbarLink href="/contactus" className="">
+                        Contact Us
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
