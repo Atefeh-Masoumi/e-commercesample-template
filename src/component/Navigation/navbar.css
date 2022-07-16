@@ -135,6 +135,11 @@ input[type="text"]::placeholder {
 
 /* dropdown hover submenu navbar */
 
+ .submenu{
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: black;
+}
 
 
 /* stroke animation for navbar menu */

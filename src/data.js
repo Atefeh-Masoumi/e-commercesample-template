@@ -38,7 +38,7 @@ export const products = [
     {
       id: 3,
       name: "Modern Watch",
-      tag:"watch",
+      tag:"smartwatch",
       shippingInfo: "Free shipping",
       combo:"new",
       price: 120,

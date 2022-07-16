@@ -1,6 +1,8 @@
 import Footer from "../../component/Footer/FooterPage";
 import "./contactus.css";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
 const ContactUsPage = () => {
   return (
     <>
@@ -68,23 +70,42 @@ const ContactUsPage = () => {
         </div>
       </form>
 
-      {/* google map */}
-      <div className="d-flex justify-content-center m-4">
-        <div class="borderanimation">
+      
+      <div className="d-flex justify-content-center m-4 contactinfo-section">
+        <div className="borderanimation">
           <h3>We are at your Service</h3>
           <div class="d-flex flex-column">
-            <div><BsFillTelephoneFill /> call us at 0000000</div>
-            <div>Email us at lorem@gmail.com</div>
+            <div>
+              <AiOutlinePhone className="icon-contactus" color="#3f9a59"/>
+              <span>lorem ipsum</span>
+            </div>
+            <div>
+              <AiOutlineMail className="icon-contactus" color= ""/>
+              <span>lorem ipsum</span>
+            </div>
+            <div>
+              <GoLocation className="icon-contactus" color="#ed1d24"/>
+              <span>lorem ipsum</span>
+            </div>
+            <div>
+              <FaFacebookF className="icon-contactus" color= "rgb(34, 89, 238)"/>
+              <span>lorem ipsum</span>
+            </div>
+            <div>
+              <FaTwitter className="icon-contactus" color="#1da1f2"/>
+              <span>lorem ipsum</span>
+            </div>
           </div>
         </div>
+        {/* google map */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15624092.116566982!2d-88.93636968409682!3d36.4918863647972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1657778117750!5m2!1sen!2ssg"
-          width="600"
-          height="450"
+          
+          className="googlemap"
           style={{ border: "0" }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <Footer />

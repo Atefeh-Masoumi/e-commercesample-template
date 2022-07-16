@@ -1,6 +1,5 @@
 import submenu1 from "../../asset/submenu lenz.jpg";
-import submenu2 from "../../asset/saubmenue-mobile.jpg";
-import submenu3 from "../../asset/submenu-camera.jpg";
+import submenu2 from "../../asset/watchspecialoffer.jpg";
 import React, { useState } from "react";
 import logo from "../../asset/footer-logo.png";
 import { NavLink } from "react-router-dom";
@@ -42,16 +41,22 @@ import {
   MDBModalTitle,
   MDBModalBody,
   MDBModalFooter,
+  MDBBadge,
+  MDBTooltip,
 } from "mdb-react-ui-kit";
 
 const Navbar = () => {
+  // cart contex
   const { cart } = useCart();
+  // user contex
   const userData = useAuth();
-  //mobile menu
+
+  //mobile menu state
   const [showNavNoToggler, setShowNavNoToggler] = useState(false);
+
+
   //search modal
   const [basicModal, setBasicModal] = useState(false);
-
   const toggleShow = () => setBasicModal(!basicModal);
   // search function
   const [filter, setFilter] = useState([]);
@@ -248,7 +253,7 @@ const Navbar = () => {
             </MDBModal>
           </div>
         )}
-        {/* product menu */}
+        {/* Main menu */}
         <div className="top-navbar align-center mt-4">
           <div className="left">
             <MDBNavbar expand="lg" className="p-1">
@@ -270,16 +275,21 @@ const Navbar = () => {
                     right
                     className="mr-auto mb-2 mb-lg-0 stroke bg-sm-white"
                   >
+                    <MDBNavbarItem>
+                      <MDBNavbarLink
+                        active
+                        aria-current="page"
+                        cursor="pointer"
+                        className="menu1"
+                        href="/"
+                      >
+                        Home
+                      </MDBNavbarLink>
+                    </MDBNavbarItem>
                     <MDBNavbarItem className="">
-                      {/* <MDBNavbarLink active aria-current='page' cursor='pointer' className='menu1'  href='/product'
-                                >
-                                    
-                                  </MDBNavbarLink> */}
-
-                      {/* submenu show on hover */}
-
+                      {/* drop down menu */}
                       <MDBDropdown>
-                        <MDBDropdownToggle tag="a" className="mt-3">
+                        <MDBDropdownToggle tag="a" className="mt-3 submenu">
                           Product
                         </MDBDropdownToggle>
                         <MDBDropdownMenu>
@@ -289,13 +299,41 @@ const Navbar = () => {
                               className="bg-white border-bottom"
                             >
                               <div className="d-flex justify-content-between m-2 bg-white">
-                                <img
-                                  src={submenu1}
-                                  alt="submenu"
-                                  className="m-2"
-                                />
-                                <img src={submenu2} alt="submenu-img" />
-                                <img src={submenu3} alt="submenu-img" />
+                                <div>
+                                  <MDBTooltip
+                                    tag="a"
+                                    wrapperProps={{ href: "/product" }}
+                                    title="Special Offer"
+                                    className="d-absolute "
+                                  >
+                                    
+                                  <img
+                                    src={submenu1}
+                                    alt="submenu"
+                                    className="m-2"
+                                    />
+                                    </MDBTooltip>
+                                  <MDBBadge
+                                    color="danger"
+                                    notification
+                                    pill
+                                    className="fs-5"
+                                  >
+                                    50%
+                                  </MDBBadge>
+                                </div>
+                                <div>
+                                  <img src={submenu2} alt="submenu-img" />
+                                  <MDBBadge
+                                    color="danger"
+                                    notification
+                                    pill
+                                    className="fs-5 "
+                                  >
+                                    15%
+                                  </MDBBadge>
+                                </div>
+                                
                               </div>
                             </MDBDropdownLink>
                           </MDBDropdownItem>
@@ -304,37 +342,27 @@ const Navbar = () => {
                               href="/product"
                               className="bg-white"
                             >
-                              <h3 className="text-center"> Also see </h3>
+                              <h3 className="text-center d-flex justify-content-center">
+                                Visit our Product
+                              </h3>
                               <div className="d-flex justify-content-between flex-row fs-6 ">
                                 <div className="d-flex flex-column p-4">
-                                  <a href="/product">
-                                    
-                                    Photography Bags & Cases
-                                  </a>
-                                  <a href="/product">
-                                    Memory Cards & Accessories
-                                  </a>
-                                  <a href="/product">
-                                    Batteries & Power Accessories
-                                  </a>
-                                  <a href="/product">
-                                    Flashes & On Camera Lighting
-                                  </a>
-                                  <a href="/product">Lens Filters</a>
-                                  <a href="/product">Lens Accessories</a>
-                                  <a href="/product">Photo Accessories</a>
+                                  <h2>Computer </h2>
+                                  <a href="/product">Personal Computer</a>
+                                  <a href="/product">Laptops</a>
+                                  <a href="/product">Tablets</a>
                                 </div>
                                 <div className="d-flex flex-column p-4">
-                                  <a href="/product">
-                                    Medium & Large Format Accessories
-                                  </a>
-                                  <a href="/product">Film Cameras</a>
-                                  <a href="/product">Film</a>
-                                  <a href="/product">
-                                    See All Creator Accessories
-                                  </a>
-                                  <a href="/product">Lighting & Studio</a>
-                                  <a href="/product">Underwater Photography </a>
+                                  <h2>Mobile</h2>
+                                  <a href="/product">IPhone</a>
+                                  <a href="/product">Other Brands</a>
+                                  <a href="/product">See All Creator</a>
+                                </div>
+                                <div className="d-flex flex-column p-4">
+                                  <h2>Accessories </h2>
+                                  <a href="/product">AirPod</a>
+                                  <a href="/product">Digital Watch</a>
+                                  <a href="/product">Camera</a>
                                 </div>
                               </div>
                             </MDBDropdownLink>
@@ -350,16 +378,6 @@ const Navbar = () => {
                     <MDBNavbarItem>
                       <MDBNavbarLink href="/contactus" className="">
                         Contact Us
-                      </MDBNavbarLink>
-                    </MDBNavbarItem>
-                    <MDBNavbarItem>
-                      <MDBNavbarLink href="/product" className="">
-                        Mobiles
-                      </MDBNavbarLink>
-                    </MDBNavbarItem>
-                    <MDBNavbarItem>
-                      <MDBNavbarLink href="/product" className="">
-                        Accesories
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                   </MDBNavbarNav>

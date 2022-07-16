@@ -214,41 +214,20 @@ textarea {
 
 
 
-/* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (min-width: 600px) {
-  .my-form .grid {
-    display: grid;
-    grid-gap: 1.5rem;
-  }
+/* icon styling */
+.icon-contactus{
+ font-size: 30px;
+ margin-right: 1rem;
+ margin-bottom: 1rem;
+ transform: perspective(300px) rotateY(0deg);
+  transition: transform 0.4s linear;
 
-  .my-form .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .my-form .grid-3 {
-    grid-template-columns: auto auto auto;
-    align-items: center;
-  }
-
-  .my-form .grid > *:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .my-form .required-msg {
-    display: block;
-  }
 }
+/* icon animation */
+.icon-contactus:hover {
 
-@media screen and (min-width: 541px) {
-  .my-form input[type="checkbox"] + label::before {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .my-form input[type="checkbox"]:checked + label::after {
-    top: 3px;
-  }
+  transform: perspective(300px) rotateY(180deg);
+  transition: transform 0.2s linear;
 }
 
 
@@ -307,4 +286,63 @@ textarea {
 }
 .borderanimation:hover {
     animation-play-state: running;
+}
+
+
+.googlemap{
+  width:600px;
+height:450px;
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 600px) {
+  .my-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .my-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-form .grid-3 {
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+
+  .my-form .grid > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .my-form .required-msg {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 541px) {
+  .my-form input[type="checkbox"] + label::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .my-form input[type="checkbox"]:checked + label::after {
+    top: 3px;
+  }
+  
+}
+@media screen and (max-width: 541px) {
+.contactinfo-section{
+  display: flex;
+  flex-direction: column;
+}
+.googlemap{
+  width:320px;
+  height: 250px;
+}
+
+.borderanimation {
+  width: 100%;
+}
 }

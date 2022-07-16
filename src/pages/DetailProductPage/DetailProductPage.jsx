@@ -10,16 +10,13 @@ import "swiper/components/thumbs/thumbs.min.css";
 import Footer from "../../component/Footer/FooterPage";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import * as data from "../../data";
-import { useCart, useCartAction } from "../../Providers/CartProvider";
-import { checkIncart } from "../../utils/checkinCart";
-import { toast } from "react-toastify";
+
 
 SwiperCore.use([Navigation, Thumbs]);
 
 const DetailProductPage = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-// tag 
-const[tag, setTag] = useState();
+
 
   return (
     <>
@@ -175,13 +172,13 @@ const[tag, setTag] = useState();
         </div>
       </div>
       {/* rating section */}
-        <h2 className="m-2 ms-4">Leave us a review: </h2>
-      <div className="d-flex justify-content-center review-section">
+        <h2 className="d-flex justify-content-center m-2 ms-4">Leave us a review: </h2>
+      <div className="review-section">
           <textarea className="review-text ">
 
           </textarea>
           {/* rating emoji */}
-          <div className=" d-flex justify-content-between flex-column">
+          <div className="">
             <div className="feedback">
               <div className="rating">
                 <input type="radio" name="rating" id="rating-5" />
@@ -493,11 +490,11 @@ const[tag, setTag] = useState();
 
       {/* Related Product section */}
       
-      <h2 className="black mt-4 ms-4">Related Product</h2>
+      <h2 className="black mt-4 ms-4 ">Related Product</h2>
       <hr />
-      <div className="row m-2">
+      <div className="row m-2 mb-4">
       {data.products.filter(product=>product.tag === "watch").map((p) => (<>
-      <div className="col-md-3 col-sm-6">
+      <div className="col-md-3 col-sm-6" key={p.id}>
           <div className="product-grid">
             <div className="product-image">
               <a href="#" className="image">
