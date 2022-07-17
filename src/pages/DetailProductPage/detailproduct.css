@@ -162,6 +162,7 @@ width: 150px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 
 .button-addtocart:hover {
@@ -172,6 +173,7 @@ width: 150px;
 }
 .button-addtocart:active {
   transform: scale(0.95);
+  
 }
 
 
@@ -186,6 +188,7 @@ width: 150px;
 .review-text{
   width: 30rem;
   height: 15rem;
+  border-radius: 5px;
 }
 
 .rating {
@@ -292,8 +295,9 @@ width: 150px;
     box-shadow: 0 4px 30px rgba(0,0,0,.05);
   }
 
-
-
+  .btnsubmit{
+    transform: translateY(300%);
+  }
 
 /* related product styling */
 .product-grid{
