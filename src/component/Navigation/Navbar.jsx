@@ -54,7 +54,6 @@ const Navbar = () => {
   //mobile menu state
   const [showNavNoToggler, setShowNavNoToggler] = useState(false);
 
-
   //search modal
   const [basicModal, setBasicModal] = useState(false);
   const toggleShow = () => setBasicModal(!basicModal);
@@ -68,6 +67,10 @@ const Navbar = () => {
     setFilter(newFilter);
   };
 
+  const [show, setShow] = useState(false);
+  const displaySubmenu = (e) => {
+    setShow(true);
+  };
   // logout function
   const logoutHandler = () => {
     localStorage.removeItem("auth token");
@@ -287,8 +290,74 @@ const Navbar = () => {
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                     <MDBNavbarItem className="">
+                      <MDBNavbarLink
+                        active
+                        aria-current="page"
+                        cursor="pointer"
+                        className="menu1"
+                        onClick={() => setShow(!show)}
+                      >
+                        Product
+                      </MDBNavbarLink>
+
+                      {/* submenu */}
+                      <div
+                        className="submenu bg-white flex-column"
+                        style={{ display: show ? "flex" : "none" }}
+                      >
+                        <div className="d-flex justify-content-between  bg-white">
+                          <div>
+                            <img src={submenu1} alt="submenu" className="m-2" />
+
+                            <MDBBadge
+                              color="danger"
+                              notification
+                              pill
+                              className="badge fs-5"
+                            >
+                              50%
+                            </MDBBadge>
+                          </div>
+                          <div>
+                            <img src={submenu2} alt="submenu-img" />
+                            <MDBBadge
+                              color="danger"
+                              notification
+                              pill
+                              className="badge fs-5 "
+                            >
+                              15%
+                            </MDBBadge>
+                          </div>
+                        </div>
+                        <div className="bg-white ">
+                          <h3 className="text-center d-flex justify-content-center">
+                            Visit our Product
+                          </h3>
+                          <div className="d-flex justify-content-between  fs-6 submenue-info">
+                            <div className="d-flex flex-column p-4">
+                              <h2>Computer </h2>
+                              <a href="/products">Personal Computer</a>
+                              <a href="/products">Laptops</a>
+                              <a href="/products">Tablets</a>
+                            </div>
+                            <div className="d-flex flex-column p-4">
+                              <h2>Mobile</h2>
+                              <a href="/products">IPhone</a>
+                              <a href="/products">Other Brands</a>
+                              <a href="/products">See All Creator</a>
+                            </div>
+                            <div className="d-flex flex-column p-4">
+                              <h2>Accessories </h2>
+                              <a href="/products">AirPod</a>
+                              <a href="/products">Digital Watch</a>
+                              <a href="/products">Camera</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       {/* drop down menu */}
-                      <MDBDropdown>
+                      {/* <MDBDropdown>
                         <MDBDropdownToggle tag="a" className="mt-3 submenu">
                           Product
                         </MDBDropdownToggle>
@@ -306,13 +375,12 @@ const Navbar = () => {
                                     title="Special Offer"
                                     className="d-absolute "
                                   >
-                                    
-                                  <img
-                                    src={submenu1}
-                                    alt="submenu"
-                                    className="m-2"
+                                    <img
+                                      src={submenu1}
+                                      alt="submenu"
+                                      className="m-2"
                                     />
-                                    </MDBTooltip>
+                                  </MDBTooltip>
                                   <MDBBadge
                                     color="danger"
                                     notification
@@ -333,7 +401,6 @@ const Navbar = () => {
                                     15%
                                   </MDBBadge>
                                 </div>
-                                
                               </div>
                             </MDBDropdownLink>
                           </MDBDropdownItem>
@@ -368,7 +435,7 @@ const Navbar = () => {
                             </MDBDropdownLink>
                           </MDBDropdownItem>
                         </MDBDropdownMenu>
-                      </MDBDropdown>
+                      </MDBDropdown> */}
                     </MDBNavbarItem>
                     <MDBNavbarItem>
                       <MDBNavbarLink href="/services" className="">

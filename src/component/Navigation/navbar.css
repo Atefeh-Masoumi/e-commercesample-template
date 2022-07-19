@@ -9,6 +9,16 @@
  .cart-profile{
   margin-top: 1rem;
 }
+.submenu img{
+  display: none;
+}
+.badge{
+  display: none;
+}
+.submenue-info{
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media(max-width:992px){
@@ -139,6 +149,14 @@ input[type="text"]::placeholder {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   color: black;
+  inset: 20% 50% 0px 0;
+  position:absolute;
+  z-index: 999;
+  transform: translateY(50%);
+}
+.submenue-info{
+  display: flex;
+  
 }
 
 

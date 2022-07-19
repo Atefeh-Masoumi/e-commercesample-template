@@ -70,7 +70,7 @@ const ContactUsPage = () => {
         </div>
       </form>
 
-      
+      {/* contact info */}
       <div className="d-flex justify-content-center m-4 contactinfo-section">
         <div className="borderanimation">
           <h3>We are at your Service</h3>

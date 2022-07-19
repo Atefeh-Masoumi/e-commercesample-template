@@ -1,21 +1,49 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import "./detailproduct.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { HiOutlineShoppingCart, HiSearch } from "react-icons/hi";
 import { AiOutlineHeart } from "react-icons/ai";
-
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import Footer from "../../component/Footer/FooterPage";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
+import ReactImageMagnify from 'react-image-magnify';
 import * as data from "../../data";
-
+import image1 from '../../asset/img1.jpg';
+import image2 from '../../asset/img2.jpg';
+import image3 from '../../asset/img3.jpg';
+import image4 from '../../asset/img4.jpg';
+import image5 from  '../../asset/img5.jpg';
 SwiperCore.use([Navigation, Thumbs]);
+const images = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+];
 
 const DetailProductPage = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const [img, setImg] = useState(images[0]);
+  const hoverHandler = (image, i) => {
+      setImg(image);
+      refs.current[i].classList.add('active');
+      for (var j = 0; j < images.length; j++) {
+          if (i !== j) {
+              refs.current[j].classList.remove('active');
+          }
+      }
+  };
+  const refs = useRef([]);
+  refs.current = [];
+  const addRefs = (el) => {
+      if (el && !refs.current.includes(el)) {
+          refs.current.push(el);
+      }
+  };
   return (
     <>
       <div className=" mt-100 product-detail-container ">
@@ -33,6 +61,7 @@ const DetailProductPage = () => {
             className="mySwiper2 "
           >
             <SwiperSlide>
+              
               <img
                 src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                 alt="slider product"
@@ -105,6 +134,7 @@ const DetailProductPage = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+
 
         {/* right section product info */}
         <div className="product-content col-lg-5 col-md-12 col-sm-12 col-xs-12">
@@ -540,6 +570,46 @@ const DetailProductPage = () => {
       </div>
 
       <Footer />
+
+
+      {/* left new section */}
+      <div className="container-detailpage">
+            <div className="left-section-detailpage">
+                <div className="left_1">
+                    {images.map((image, i) => (
+                        <div
+                            className={i == 0 ? 'img_wrap border-detailpage' : 'img_wrap'}
+                            key={i}
+                            onMouseOver={() => hoverHandler(image, i)}
+                            ref={addRefs}
+                        >
+                            <img src={image} alt="" />
+                        </div>
+                    ))}
+                </div>
+                <div className="left_2">
+                    <ReactImageMagnify
+                        {...{
+                            smallImage: {
+                                alt: 'Wristwatch by Ted Baker London',
+                                isFluidWidth: true,
+                                src: img,
+                            },
+                            largeImage: {
+                                src: img,
+                                width: 1200,
+                                height: 1800,
+                            },
+                            enlargedImageContainerDimensions: {
+                                width: '150%',
+                                height: '150%',
+                            },
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="right"></div>
+        </div>
     </>
   );
 };

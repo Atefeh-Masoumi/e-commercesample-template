@@ -29,7 +29,7 @@ label {
   cursor: pointer;
 }
 
-select {
+.my-form select {
   appearance: none;
 }
 
@@ -71,8 +71,8 @@ textarea {
   width: 100%;
   line-height: 1.5;
   padding: 15px 10px;
-  border: 1px solid var(--borderFormEls);
- 
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   background: #ededed;
   transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
     transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
@@ -99,6 +99,7 @@ textarea {
 .my-form button:enabled:hover,
 .my-form button:focus
 {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   background:#e0dddd ;
   color: #4b4a4a;
 }

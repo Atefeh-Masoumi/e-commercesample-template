@@ -13,7 +13,7 @@ import CartProvider from './Providers/CartProvider';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CheckoutPage from './pages/CheckoutPage';
-import Login from './pages/LoginPage';
+import Login from './pages/LoginPage/LoginPage';
 import SignUp from './pages/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/Profilepage/ProfilePage';
@@ -40,7 +40,7 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/checkout' element={<CheckoutPage />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/products' element={<ProductPage />} />
