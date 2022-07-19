@@ -17,11 +17,11 @@ import image4 from '../../asset/img4.jpg';
 import image5 from  '../../asset/img5.jpg';
 SwiperCore.use([Navigation, Thumbs]);
 const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
+"https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+"https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
+"https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+"https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+"https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
 ];
 
 const DetailProductPage = () => {
@@ -575,19 +575,7 @@ const DetailProductPage = () => {
       {/* left new section */}
       <div className="container-detailpage">
             <div className="left-section-detailpage">
-                <div className="left_1">
-                    {images.map((image, i) => (
-                        <div
-                            className={i == 0 ? 'img_wrap border-detailpage' : 'img_wrap'}
-                            key={i}
-                            onMouseOver={() => hoverHandler(image, i)}
-                            ref={addRefs}
-                        >
-                            <img src={image} alt="" />
-                        </div>
-                    ))}
-                </div>
-                <div className="left_2">
+            <div className="left_2">
                     <ReactImageMagnify
                         {...{
                             smallImage: {
@@ -607,6 +595,19 @@ const DetailProductPage = () => {
                         }}
                     />
                 </div>
+                <div className="left_1">
+                    {images.map((image, i) => (
+                        <div
+                            className={i == 0 ? 'img_wrap border-detailpage' : 'img_wrap'}
+                            key={i}
+                            onMouseOver={() => hoverHandler(image, i)}
+                            ref={addRefs}
+                        >
+                            <img src={image} alt="" />
+                        </div>
+                    ))}
+                </div>
+               
             </div>
             <div className="right"></div>
         </div>

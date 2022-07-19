@@ -449,10 +449,11 @@ width: 150px;
 .left-section-detailpage{
   display: flex;
   height: 50vh;
+  flex-direction: column;
 }
 .left_1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 .img_wrap {
