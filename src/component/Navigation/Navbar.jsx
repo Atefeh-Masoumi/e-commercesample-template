@@ -339,7 +339,7 @@ const Navbar = () => {
                           </MDBDropdownItem>
                           <MDBDropdownItem>
                             <MDBDropdownLink
-                              href="/product"
+                              href="/products"
                               className="bg-white"
                             >
                               <h3 className="text-center d-flex justify-content-center">
@@ -348,21 +348,21 @@ const Navbar = () => {
                               <div className="d-flex justify-content-between flex-row fs-6 ">
                                 <div className="d-flex flex-column p-4">
                                   <h2>Computer </h2>
-                                  <a href="/product">Personal Computer</a>
-                                  <a href="/product">Laptops</a>
-                                  <a href="/product">Tablets</a>
+                                  <a href="/products">Personal Computer</a>
+                                  <a href="/products">Laptops</a>
+                                  <a href="/products">Tablets</a>
                                 </div>
                                 <div className="d-flex flex-column p-4">
                                   <h2>Mobile</h2>
-                                  <a href="/product">IPhone</a>
-                                  <a href="/product">Other Brands</a>
-                                  <a href="/product">See All Creator</a>
+                                  <a href="/products">IPhone</a>
+                                  <a href="/products">Other Brands</a>
+                                  <a href="/products">See All Creator</a>
                                 </div>
                                 <div className="d-flex flex-column p-4">
                                   <h2>Accessories </h2>
-                                  <a href="/product">AirPod</a>
-                                  <a href="/product">Digital Watch</a>
-                                  <a href="/product">Camera</a>
+                                  <a href="/products">AirPod</a>
+                                  <a href="/products">Digital Watch</a>
+                                  <a href="/products">Camera</a>
                                 </div>
                               </div>
                             </MDBDropdownLink>

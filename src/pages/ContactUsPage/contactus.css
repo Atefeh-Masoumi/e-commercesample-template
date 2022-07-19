@@ -99,8 +99,8 @@ textarea {
 .my-form button:enabled:hover,
 .my-form button:focus
 {
-  background:#8d8b8b ;
-  color: #ededed;
+  background:#e0dddd ;
+  color: #4b4a4a;
 }
 
 .my-form select:focus,

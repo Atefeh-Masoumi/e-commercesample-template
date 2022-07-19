@@ -39,7 +39,7 @@ const Homepage = () => {
                 <div className="row">
                   <div className="col-md-4 col-sm-6">
                     <div className="card mb-30">
-                        <a className="card-img-tiles" href="/product" data-abc="true">
+                        <a className="card-img-tiles" href="/products" data-abc="true">
                         <div className="inner">
                           <div className="main-img"><img src={catpc1} alt="Category"/></div>
                           <div className="thumblist"><img src={catpc2} alt="Category"/>
@@ -47,12 +47,12 @@ const Homepage = () => {
                         </div></a>
                       <div className="card-body text-center">
                         <h4 className="card-title">Laptops</h4>
-                        <p className="text-muted">Starting from $499</p><a className="btn btn-outline-primary btn-sm" href="/product" data-abc="true">View Products</a>
+                        <p className="text-muted">Starting from $499</p><a className="btn btn-outline-primary btn-sm" href="/products" data-abc="true">View Products</a>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
-                    <div className="card mb-30"><a className="card-img-tiles" href="/product" data-abc="true">
+                    <div className="card mb-30"><a className="card-img-tiles" href="/products" data-abc="true">
                         <div className="inner">
                           <div className="main-img"><img src={catmob1} alt="Category"/></div>
                           <div className="thumblist"><img src={catmob2} alt="Category"/>

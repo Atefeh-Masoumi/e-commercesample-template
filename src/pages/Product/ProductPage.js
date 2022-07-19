@@ -21,6 +21,7 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from "mdb-react-ui-kit";
+import Footer from "../../component/Footer/FooterPage";
 
 const ProductPage = () => {
   // cart contex
@@ -45,6 +46,7 @@ const ProductPage = () => {
   };
 
   return (
+    <>
     <div className="container">
       <div className="row">
         <div className="d-flex ">
@@ -271,6 +273,9 @@ const ProductPage = () => {
         </section>
       </div>
     </div>
+
+    <Footer/>
+    </>
   );
 };
 export default ProductPage;

@@ -39,7 +39,7 @@ const Slider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <a href='/product'>
+          <a href='/products'>
             <div className="d-flex justify-content-between">
             <p className='bg-white hover-zoom'> Apple Watch</p>
             <p>$340</p>
@@ -48,7 +48,7 @@ const Slider = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-        <a href='/product'>
+        <a href='/products'>
           <div className="d-flex justify-content-between">
               <p className='bg-white hover-zoom'> Smart Watch</p>
               <p>$300</p>
@@ -57,7 +57,7 @@ const Slider = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href='/product'>
+          <a href='/products'>
           <div className="d-flex justify-content-between">
               <p className='bg-white hover-zoom'> Camera Lens</p>
               <p>$120</p>
@@ -66,7 +66,7 @@ const Slider = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-        <a href='/product'>
+        <a href='/products'>
           <div className="d-flex justify-content-between">
               <p className='bg-white hover-zoom'> Nikon Lens</p>
               <p>$100</p>
@@ -75,7 +75,7 @@ const Slider = () => {
         </a>
         </SwiperSlide>
         <SwiperSlide>
-        <a href='/product'>
+        <a href='/products'>
           <div className="d-flex justify-content-between">
               <p className='bg-white hover-zoom'>Silver Microphone</p>
               <p>$20</p>

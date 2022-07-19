@@ -24,7 +24,7 @@ import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ServicesPage from './pages/ServicesPage/Services';
 import ContactUsPage from './pages/ContactUsPage/ContactusPage';
-import AboutUsPage from './pages/AboutusPage/AboutPage';
+
 
 
 function App() {
@@ -43,11 +43,10 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/profile' element={<ProfilePage />} />
-          <Route path='/product' element={<ProductPage />} />
+          <Route path='/products' element={<ProductPage />} />
           <Route path='/productdetail' element={<DetailProductPage />} />
           <Route path='/services' element={<ServicesPage/>}/>
           <Route path='/contactus' element={<ContactUsPage/>}/>
-          <Route path='/aboutus' element={<AboutUsPage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
        
