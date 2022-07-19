@@ -10,11 +10,7 @@ import Footer from "../../component/Footer/FooterPage";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import ReactImageMagnify from 'react-image-magnify';
 import * as data from "../../data";
-import image1 from '../../asset/img1.jpg';
-import image2 from '../../asset/img2.jpg';
-import image3 from '../../asset/img3.jpg';
-import image4 from '../../asset/img4.jpg';
-import image5 from  '../../asset/img5.jpg';
+
 SwiperCore.use([Navigation, Thumbs]);
 const images = [
 "https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
