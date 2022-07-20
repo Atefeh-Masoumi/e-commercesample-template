@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./detailproduct.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -8,44 +8,81 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import Footer from "../../component/Footer/FooterPage";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
-import ReactImageMagnify from 'react-image-magnify';
+import ReactImageMagnify from "react-image-magnify";
 import * as data from "../../data";
 
-SwiperCore.use([Navigation, Thumbs]);
+// SwiperCore.use([Navigation, Thumbs]);
 const images = [
-"https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-"https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
-"https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-"https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-"https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+  "https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+  "https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
+  "https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+  "https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+  "https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
 ];
 
 const DetailProductPage = () => {
+  // swiper slider state
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const [img, setImg] = useState(images[0]);
   const hoverHandler = (image, i) => {
-      setImg(image);
-      refs.current[i].classList.add('active');
-      for (var j = 0; j < images.length; j++) {
-          if (i !== j) {
-              refs.current[j].classList.remove('active');
-          }
+    setImg(image);
+    refs.current[i].classList.add("border-detailpage");
+    console.log(refs.current[i]);
+    for (var j = 0; j < images.length; j++) {
+      if (i !== j) {
+        refs.current[j].classList.remove("border-detailpage");
       }
+    }
   };
   const refs = useRef([]);
   refs.current = [];
   const addRefs = (el) => {
-      if (el && !refs.current.includes(el)) {
-          refs.current.push(el);
-      }
+    if (el && !refs.current.includes(el)) {
+      refs.current.push(el);
+    }
   };
   return (
     <>
       <div className=" mt-100 product-detail-container ">
         {/* left section product slider */}
-        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <Swiper
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 " >
+          <div className="container-detailpage ">
+            <div className="left-section-detailpage">
+              <div className="left_2">
+                <ReactImageMagnify
+                  {...{
+                    smallImage: {
+                      alt: "Smart Watch",
+                      isFluidWidth: true,
+                      src: img,
+                    },
+                    largeImage: {
+                      src: img,
+                      width: 1000,
+                      height: 1400,
+                    },
+                  }}
+                />
+              </div>
+              <div className="left_1">
+                {images.map((image, i) => (
+                  <div
+                    className={
+                      i == 0 ? "img_wrap border-detailpage" : "img_wrap "
+                    }
+                    key={i}
+                    onMouseOver={() => hoverHandler(image, i)}
+                    ref={addRefs}
+                  >
+                    <img src={image} alt=""  />
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+          </div>
+          {/* <Swiper
             style={{
               "--swiper-navigation-color": "#000",
             }}
@@ -57,7 +94,6 @@ const DetailProductPage = () => {
             className="mySwiper2 "
           >
             <SwiperSlide>
-              
               <img
                 src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                 alt="slider product"
@@ -128,9 +164,8 @@ const DetailProductPage = () => {
                 alt="slider productdetail"
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
         </div>
-
 
         {/* right section product info */}
         <div className="product-content col-lg-5 col-md-12 col-sm-12 col-xs-12">
@@ -194,13 +229,35 @@ const DetailProductPage = () => {
         </div>
       </div>
       {/* rating section */}
-      <h2 className="m-2 ms-4">
-        Leave us a review:
-      </h2>
+      <h2 className="m-2 ms-4 text-black">Leave us a review:</h2>
       <div className="review-section">
-        <textarea className="review-text "></textarea>
+        {/* review form */}
+        <form className="review-form">
+          <input
+            type="text"
+            name="name"
+            className="question inputreview"
+            id="nme"
+            required
+            autoComplete="off"
+          />
+          <label htmlFor="nme">
+            <span>What's your name?</span>
+          </label>
+          <textarea
+            name="message"
+            rows="2"
+            className="question  textarea"
+            id="msg"
+            required
+            autoComplete="off"
+          ></textarea>
+          <label htmlFor="msg">
+            <span>What's your opinion?</span>
+          </label>
+        </form>
         {/* rating emoji */}
-        <div className="">
+        <div className=" d-flex flex-column">
           <div className="feedback">
             <div className="rating">
               <input type="radio" name="rating" id="rating-5" />
@@ -503,25 +560,25 @@ const DetailProductPage = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="">
-
-          <button className="button-addtocart btnsubmit" role="submit">
-            submit
-          </button>
+          {/* submit button */}
+          <div className="d-flex justify-content-center">
+            <button className="button-addtocart " role="submit">
+              submit
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Related Product section */}
 
-      <h2 className="black mt-4 ms-4 ">Related Product</h2>
+      <h2 className="black mt-4 ms-4 text-black">Related Product</h2>
       <hr />
       <div className="row m-2 mb-4">
         {data.products
           .filter((product) => product.tag === "watch")
           .map((p) => (
             <>
-              <div className="col-md-3 col-sm-6" >
+              <div className="col-md-3 col-sm-6">
                 <div className="product-grid" key={p.id}>
                   <div className="product-image">
                     <a href="#" className="image">
@@ -567,46 +624,8 @@ const DetailProductPage = () => {
 
       <Footer />
 
-
       {/* left new section */}
-      <div className="container-detailpage">
-            <div className="left-section-detailpage">
-            <div className="left_2">
-                    <ReactImageMagnify
-                        {...{
-                            smallImage: {
-                                alt: 'Wristwatch by Ted Baker London',
-                                isFluidWidth: true,
-                                src: img,
-                            },
-                            largeImage: {
-                                src: img,
-                                width: 1200,
-                                height: 1800,
-                            },
-                            enlargedImageContainerDimensions: {
-                                width: '150%',
-                                height: '150%',
-                            },
-                        }}
-                    />
-                </div>
-                <div className="left_1">
-                    {images.map((image, i) => (
-                        <div
-                            className={i == 0 ? 'img_wrap border-detailpage' : 'img_wrap'}
-                            key={i}
-                            onMouseOver={() => hoverHandler(image, i)}
-                            ref={addRefs}
-                        >
-                            <img src={image} alt="" />
-                        </div>
-                    ))}
-                </div>
-               
-            </div>
-            <div className="right"></div>
-        </div>
+      
     </>
   );
 };

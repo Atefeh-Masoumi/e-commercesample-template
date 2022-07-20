@@ -72,7 +72,7 @@ const LoginForm = () => {
                 <Input formik={formik} name="email" label="Email" type="email" />
                 <Input formik={formik} name="password" label="Password" type='password' autocomplete="on" />
                 
-                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg" >   
+                <button type="submit" disabled={!formik.isValid} className="btn primary btnlg button-addtocart" >   
                     Login 
                 </button>   
 
