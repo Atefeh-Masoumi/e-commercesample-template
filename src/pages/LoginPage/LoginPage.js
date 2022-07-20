@@ -7,8 +7,10 @@ import'./loginpage.css';
 const Login = () => {
     return ( 
         <>
-        
+        <div className="loginform-container">
         <LoginForm/>
+        </div>
+        
         
         <div className="footer-loginpage">
         <Footer/>

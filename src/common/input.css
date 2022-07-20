@@ -7,16 +7,16 @@ label {
   display: flex;
   margin-bottom: 5px;
   font-weight: 800;
-}
+} 
 
 input + label {
   font-weight: bold;
   display: inline-flex;
   margin-right: 20px;
   margin-left: 5px;
-}
+} 
 
-input[type="text"],
+ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"],
@@ -28,10 +28,11 @@ select {
   color: #444;
   border: 1px solid #ccc;
   border-radius: 8px;
-}
+} 
 
 .formControl {
   margin-bottom: 20px;
+  
 }
 
 button {
@@ -42,14 +43,30 @@ button {
   color: red;
    width: auto;
    display: flex;
-   flex-wrap: wrap;
-    
+   flex-wrap: wrap;    
 }
-
 
 .inputstyle{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  outline: none;
+  border: 0;
 }
 .inputstyle:focus{
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  border-image:linear-gradient(to right, #11998e,#38ef7d) ;
+ 
+  border-radius: 10px; 
+  border-image-slice: 1;
+}
+
+@media screen and (max-width:990px){
+
+  .inputcontainer{
+   
+  }
+  .formControl{
+    display: flex;
+    
+  }
+  
 }
