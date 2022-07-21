@@ -162,9 +162,7 @@ input[type="text"]::placeholder {
   width: 12rem;
   object-fit: cover;
 }
-.productmenu:after {
-  content: "";
-}
+
 /* stroke animation for navbar menu */
 ul.stroke  li a {
   position:relative; 
