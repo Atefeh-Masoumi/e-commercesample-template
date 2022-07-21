@@ -155,11 +155,16 @@ input[type="text"]::placeholder {
   transform: translateY(50%);
 }
 .submenue-info{
-  display: flex;
-  
+  display: flex;  
 }
-
-
+.submenu-img{
+  height: 14rem;
+  width: 12rem;
+  object-fit: cover;
+}
+.productmenu:after {
+  content: "";
+}
 /* stroke animation for navbar menu */
 ul.stroke  li a {
   position:relative; 

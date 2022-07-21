@@ -1,3 +1,4 @@
+import Footer from "../component/Footer/FooterPage";
 import SignupForm from "../component/SignUp/SignUp";
 
 
@@ -6,6 +7,7 @@ const SignUp = () => {
        <>
       
        <SignupForm/>
+       <Footer/>
        </>
      );
 }

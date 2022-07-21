@@ -170,7 +170,7 @@ const DetailProductPage = () => {
         {/* right section product info */}
         <div className="product-content col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <h2 className="product-title-page">Modern Watch</h2>
-          <a href="/product" className="product-link hover-zoom">
+          <a href="/products" className="product-link hover-zoom">
             visit store
           </a>
 
@@ -580,7 +580,7 @@ const DetailProductPage = () => {
             <>
               <div className="col-md-3 col-sm-6">
                 <div className="product-grid" key={p.id}>
-                  <div className="product-image">
+                  <div className="product-image"key={p.id}>
                     <a href="#" className="image">
                       <img className="pic-1" src={p.image} />
                       <img className="pic-2" src={p.imageback} />
