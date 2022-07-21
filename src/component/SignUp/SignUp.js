@@ -112,7 +112,7 @@ const SignupForm = () => {
         <button
           type="submit"
           disabled={!formik.isValid}
-          className=" border-0 outline-none rounded borderbtn-animation ms-4"
+          className=" border-0 outline-none rounded borderbtn-animation ms-4 text-align-center"
         >
           
             <span>
