@@ -125,9 +125,13 @@ const SignupForm = () => {
         {error && <p className="error"> {error}</p>}
 
         <Link to={`/login?redirect=${redirect}`}>
-          <p className="alreadylogin">
-            Already have an account? Login from here
-          </p>
+        <button className="border-0 outline-none rounded borderbtn-animation ms-4">
+          <span>
+            <span>
+              <span>login</span>
+            </span>
+          </span>
+          </button>
         </Link>
       </form>
     </div>

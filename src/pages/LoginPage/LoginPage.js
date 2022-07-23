@@ -9,14 +9,12 @@ const Login = () => {
         <>
         <div className="loginform-container">
         <LoginForm/>
-        </div>
-        
-        
+        </div> 
         <div className="footer-loginpage">
         <Footer/>
         </div>        
         </>
-     );
+    );
 }
  
 export default Login;

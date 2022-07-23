@@ -6,7 +6,6 @@ import "./profilePage.css";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useAuth } from "../../Providers/AuthProvider";
 import {
-  AiOutlineShopping,
   AiOutlineLogout,
   AiOutlineUser,
   AiOutlineEdit,

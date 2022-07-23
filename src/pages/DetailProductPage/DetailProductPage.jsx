@@ -1,17 +1,15 @@
 import React, { useState, useRef } from "react";
 import "./detailproduct.css";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { HiOutlineShoppingCart, HiSearch } from "react-icons/hi";
 import { AiOutlineHeart } from "react-icons/ai";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
 import Footer from "../../component/Footer/FooterPage";
-import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import ReactImageMagnify from "react-image-magnify";
 import * as data from "../../data";
 
-// SwiperCore.use([Navigation, Thumbs]);
+
 const images = [
   "https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
   "https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
@@ -21,10 +19,9 @@ const images = [
 ];
 
 const DetailProductPage = () => {
-  // swiper slider state
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+  // image slides left section
   const [img, setImg] = useState(images[0]);
+  // hover function for images slides and border change when hovering between images
   const hoverHandler = (image, i) => {
     setImg(image);
     refs.current[i].classList.add("border-detailpage");
@@ -82,89 +79,7 @@ const DetailProductPage = () => {
             </div>
             
           </div>
-          {/* <Swiper
-            style={{
-              "--swiper-navigation-color": "#000",
-            }}
-            loop={true}
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[Navigation, Thumbs]}
-            className="mySwiper2 "
-          >
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider product"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
-                alt="slider product"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider product"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider product"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-                alt="slider product"
-              />
-            </SwiperSlide>
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={5}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[Navigation, Thumbs]}
-            className="Swiperdetailpage"
-          >
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1549482199-bc1ca6f58502?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider productdetail"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1550935268-e9e4bdc7c972?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
-                alt="slider productdetail"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1554116154-e733de92fe4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider productdetail"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1548960254-456846b00986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt="slider productdetail"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1543493251-bc3e68468d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-                alt="slider productdetail"
-              />
-            </SwiperSlide>
-          </Swiper> */}
+      
         </div>
 
         {/* right section product info */}
@@ -624,7 +539,7 @@ const DetailProductPage = () => {
 
       <Footer />
 
-      {/* left new section */}
+      
       
     </>
   );

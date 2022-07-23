@@ -14,7 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CheckoutPage from './pages/CheckoutPage';
 import Login from './pages/LoginPage/LoginPage';
-import SignUp from './pages/SignupPage';
+import SignUp from './pages/SignupPage/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/Profilepage/ProfilePage';
 import Navbar from './component/Navigation/Navbar';
@@ -41,7 +41,7 @@ function App() {
           <Route path='/cart' element={<CartPage />} />
           <Route path='/checkout' element={<CheckoutPage />} />
           <Route path='/login' element={<Login/>} />
-          <Route path='/signup' element={<SignUp />} />
+          <Route path='/signup' element={<SignUp/>} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/products' element={<ProductPage />} />
           <Route path='/productdetail' element={<DetailProductPage />} />

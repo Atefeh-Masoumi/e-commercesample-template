@@ -1,9 +1,5 @@
-.footer-loginpage{
-    position: absolute;
-    bottom: 0;
-  width: 100%;
-}
 
-.loginform-container{
-  height: 100vh;
+.footer-loginpage{
+ bottom: 0;
+width: 100%;
 }

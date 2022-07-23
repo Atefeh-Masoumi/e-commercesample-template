@@ -50,6 +50,7 @@ button {
   outline: none;
   border: 0;
 }
+
 .inputstyle:focus{
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   border-image:linear-gradient(to right, #11998e,#38ef7d) ;
@@ -60,12 +61,10 @@ button {
 
 @media screen and (max-width:990px){
 
-  .inputcontainer{
-   
-  }
+  
   .formControl{
     display: flex;
-    
+    flex-direction: column;
   }
   
 }

@@ -20,6 +20,7 @@ SwiperCore.use([ Pagination, Navigation,Autoplay,EffectFade]);
 
 const Header = () => {
     return ( 
+    //home page header Slider
         <div className="slider ">
             <Swiper 
             spaceBetween={50}

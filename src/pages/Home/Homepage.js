@@ -17,6 +17,7 @@ import Slider from "../../component/Slider/Slider.jsx";
 import Footer from "../../component/Footer/FooterPage";
 import "./homepage.css";
 const Homepage = () => {
+  //cart contex
   const { cart } = useCart();
 
   const dispatch = useCartAction();
