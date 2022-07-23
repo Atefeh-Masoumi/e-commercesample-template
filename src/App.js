@@ -18,7 +18,6 @@ import SignUp from './pages/SignupPage/SignupPage';
 import AuthProvider from './Providers/AuthProvider';
 import ProfilePage from './pages/Profilepage/ProfilePage';
 import Navbar from './component/Navigation/Navbar';
-
 import ProductPage from './pages/Product/ProductPage';
 import DetailProductPage from './pages/DetailProductPage/DetailProductPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
@@ -33,7 +32,6 @@ function App() {
       
       <AuthProvider>
       <CartProvider>
-        
         <ToastContainer />
         <Navbar/>
         <Routes>
