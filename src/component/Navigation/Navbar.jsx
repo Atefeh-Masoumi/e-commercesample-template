@@ -1,7 +1,7 @@
 import submenu1 from "../../asset/submenu lenz.jpg";
 import submenu2 from "../../asset/watchspecialoffer.jpg";
 import React, { useState } from "react";
-import logo from "../../asset/footer-logo.png";
+import logo from "../../asset/dana team logo1-03.png";
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../Providers/CartProvider";
 import { useAuth } from "../../Providers/AuthProvider";

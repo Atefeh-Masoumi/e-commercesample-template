@@ -1,5 +1,5 @@
 import './footer.css';
-import foterlogo from '../../asset/footer-logo.png';
+import foterlogo from '../../asset/dana team logo1-03.png';
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineSend } from "react-icons/ai";
 import { FaFacebookF,FaTwitter } from "react-icons/fa";
