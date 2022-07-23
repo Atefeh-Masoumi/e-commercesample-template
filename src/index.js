@@ -7,9 +7,8 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render( // 👈️ deprecated starting React 18
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  
+    <App />,
   document.getElementById('root'),
 );
 
