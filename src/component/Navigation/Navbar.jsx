@@ -303,7 +303,7 @@ const Navbar = () => {
                         className="submenu bg-white flex-column"
                         style={{ display: show ? "flex" : "none" }}
                       >
-                        <div className="d-flex justify-content-evenly mt-4  bg-white">
+                        <div className="d-flex justify-content-evenly mt-4  bg-white img-submenu">
                           <div>
                             <img src={submenu1} alt="submenu" className="m-2 submenu-img" />
 
@@ -328,7 +328,7 @@ const Navbar = () => {
                             </MDBBadge>
                           </div>
                         </div>
-                        <div className="bg-white ">
+                        <div className="bg-white categories-submenu">
                           <h3 className="text-center d-flex justify-content-center">
                             Visit our Product
                           </h3>

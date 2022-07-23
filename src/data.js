@@ -21,7 +21,7 @@ export const products = [
     {
       id: 2,
       tag:"game",
-      name: "Play Station",
+      name: "PLAY STATION",
       shippingInfo:  "Free shipping" ,
       combo:"Special offer",
       price: 110,
@@ -37,7 +37,7 @@ export const products = [
     },
     {
       id: 3,
-      name: "Modern Watch",
+      name: "MODERN WATCH",
       tag:"smartwatch",
       shippingInfo: "Free shipping",
       combo:"new",
@@ -54,7 +54,7 @@ export const products = [
     },
     {
       id: 4,
-      name: "iphone",
+      name: "IPHONE",
       tag:"mobile",
       shippingInfo:"Free shipping" ,
       price: 260,
@@ -70,7 +70,7 @@ export const products = [
     },
     {
       id: 5,
-      name: "Camera Lenz",
+      name: "CAMERA LENZ",
       tag:"watch",
       shippingInfo: "Free shipping" ,
       combo:"Free shipping",
@@ -88,7 +88,7 @@ export const products = [
     },
     {
       id: 6,
-      name: "Smart watch",
+      name: "SMART WATCH",
       tag:"watch",
       shippingInfo: "Free shipping",
       price: 220,
@@ -152,7 +152,7 @@ export const products = [
     },
     {
       id: 10,
-      name: "Personal Computer",
+      name: "COMPUTER",
       tag:"computer",
       shippingInfo: "Free shipping",
       combo:"new",
