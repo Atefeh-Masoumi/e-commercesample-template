@@ -1,6 +1,6 @@
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
 import SignupForm from "../../component/SignUp/SignUp";
-
+import React from "react";
 
 const SignUp = () => {
     return ( 

@@ -1,5 +1,6 @@
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
 import LoginForm from "../../component/Login/login";
+import React from "react";
 import'./loginpage.css';
 
 

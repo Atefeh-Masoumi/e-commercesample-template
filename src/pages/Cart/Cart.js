@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import cartempty from '../../asset/empty cart.png'
+import cartempty from '../../asset/empty cart.png';
+import React from "react";
 import { useCart,useCartAction } from "../../Providers/CartProvider";
 import'./cart.css';
 
@@ -15,7 +16,7 @@ const CartPage = () => {
       <>
       
         <div  className="d-flex justify-content-center"> 
-        <Link to='/product' className="d-flex justify-content-center align-items-center flex-column">
+        <Link to='/products' className="d-flex justify-content-center align-items-center flex-column">
             <img src={cartempty} alt="cart is empty" className="d-flex justify-content-center align-content-center" />
             <div className="flex flex-wrap  text-visitproduct">
             <h2 className="text-center hover-zoom" >Do you like Shopping?</h2>

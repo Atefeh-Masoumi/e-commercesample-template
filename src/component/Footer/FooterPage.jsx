@@ -3,6 +3,8 @@ import foterlogo from '../../asset/dana team logo1-03.png';
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineSend } from "react-icons/ai";
 import { FaFacebookF,FaTwitter } from "react-icons/fa";
+import footerbg from "../../asset/logo-bg.png";
+import React from 'react';
 const Footer = () => {
     return ( 
        <footer className="page-footer bg">
@@ -10,7 +12,8 @@ const Footer = () => {
            <div className="container">
            <div className="footer-head-content">
              <div className="footer-logo">
-               <img src={foterlogo} alt='footer logo' />
+               <img src={foterlogo} alt='footer logo' className='img-footer-logo' />
+               <img src={footerbg} className="footer-background"/>
              </div>
              <div className="footer-head-content-block">
                <div className='row no-gutters align-items-center'>

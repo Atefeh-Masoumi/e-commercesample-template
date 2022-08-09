@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
 import "./Services.css";
 import { MdPriceCheck, MdLocalShipping, MdSupportAgent } from "react-icons/md";
 import { BsCurrencyDollar } from "react-icons/bs";

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React from "react";
 import { useAuth } from "../../Providers/AuthProvider";
 import { useCart } from "../../Providers/CartProvider";
 import './checkout.css';

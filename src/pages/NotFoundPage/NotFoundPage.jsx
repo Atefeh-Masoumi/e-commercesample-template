@@ -1,5 +1,6 @@
 import './NotFoundPage.css';
-import Footer from '../../component/Footer/FooterPage';
+import Footer from '../../component/Footer/FooterPage.jsx';
+import React from 'react';
 const NotFoundPage = () => {
     return ( 
         <div className=''>

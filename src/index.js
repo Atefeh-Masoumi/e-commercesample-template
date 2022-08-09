@@ -6,7 +6,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import './index.css';
 import App from './App';
 
-ReactDOM.render( // 👈️ deprecated starting React 18
+ReactDOM.render( 
   
     <App />,
   document.getElementById('root'),

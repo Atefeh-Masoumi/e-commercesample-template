@@ -7,7 +7,7 @@ import { signupUser } from "../../Services/SignUpService";
 import { useState, useEffect } from "react";
 import { useAuthAction, useAuth } from "../../Providers/AuthProvider";
 import { useQuery } from "./../../hooks/useQuery";
-
+import React from "react";
 // inital values for the form
 const initialValues = {
   name: "",

@@ -5,7 +5,7 @@ import { HiOutlineShoppingCart, HiSearch } from "react-icons/hi";
 import { AiOutlineHeart } from "react-icons/ai";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
 import ReactImageMagnify from "react-image-magnify";
 import * as data from "../../data";
 

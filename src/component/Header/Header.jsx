@@ -2,7 +2,7 @@ import './header.scss';
 import slider1 from '../../asset/header camera.jpg';
 import slider2 from '../../asset/header phone.jpg';
 import slider3 from '../../asset/headercomputer.jpg';
-
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css";

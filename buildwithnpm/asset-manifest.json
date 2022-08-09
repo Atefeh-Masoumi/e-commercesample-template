@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e8d004a0.css",
+    "main.js": "/static/js/main.d68b2710.js",
+    "static/media/headercomputer.jpg": "/static/media/headercomputer.67c00924d30173b5cf38.jpg",
+    "static/media/header camera.jpg": "/static/media/header camera.7b5845b8a6a6dd86cfc1.jpg",
+    "static/media/header phone.jpg": "/static/media/header phone.fa39704a804763589242.jpg",
+    "static/media/cat-mob-2.jpg": "/static/media/cat-mob-2.50c835c1e1425bc81aef.jpg",
+    "static/media/Accessories-cat-3.jpg": "/static/media/Accessories-cat-3.2a2fa5484da0e6a8372f.jpg",
+    "static/media/slider5.png": "/static/media/slider5.ac57e9c2286ab0556992.png",
+    "static/media/slider4.png": "/static/media/slider4.85cb751d42c540b4663f.png",
+    "static/media/pc-cat-3.jpg": "/static/media/pc-cat-3.227df54882f2690e0f8a.jpg",
+    "static/media/pc-cat-2.jpg": "/static/media/pc-cat-2.ad3e27e3c8bcad568236.jpg",
+    "static/media/watchspecialoffer.jpg": "/static/media/watchspecialoffer.e90e6bdc8391850608e6.jpg",
+    "static/media/cancelshop.png": "/static/media/cancelshop.c7665b73f9d9ed17c69a.png",
+    "static/media/deliverycompleted.png": "/static/media/deliverycompleted.de50d4a546f42c48510c.png",
+    "static/media/lenz-specialoffer.jpg": "/static/media/lenz-specialoffer.527af76d831eea9d23fb.jpg",
+    "static/media/Accessories-cat-2.jpg": "/static/media/Accessories-cat-2.7af0f84f3e72969eb3f6.jpg",
+    "static/media/cat-mob-3.jpg": "/static/media/cat-mob-3.695e92b0d10b5e3811b7.jpg",
+    "static/media/inprocess delivery icon.png": "/static/media/inprocess delivery icon.3d57ada12654ce5382fe.png",
+    "static/media/cat-mob-1.jpg": "/static/media/cat-mob-1.45196bd91d04e914378d.jpg",
+    "static/media/empty cart.png": "/static/media/empty cart.af79978ac5bb96740358.png",
+    "static/media/dana team logo1-03.png": "/static/media/dana team logo1-03.b82b917c7c7781bdff19.png",
+    "static/media/digital watch special offer.jpg": "/static/media/digital watch special offer.0eeed8455f64a3d02abf.jpg",
+    "static/media/searchproductpage.png": "/static/media/searchproductpage.9985b01003f0480d52d6.png",
+    "static/media/logo-bg-2.svg": "/static/media/logo-bg-2.52b3b2d22d2c6b1787c1.svg",
+    "index.html": "/index.html",
+    "main.e8d004a0.css.map": "/static/css/main.e8d004a0.css.map",
+    "main.d68b2710.js.map": "/static/js/main.d68b2710.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8d004a0.css",
+    "static/js/main.d68b2710.js"
+  ]
+}

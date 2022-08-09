@@ -24,7 +24,6 @@
 }
 .footer-logo {
     display: inline-block;
-    background: url(../../asset/logo-bg.svg) no-repeat center top;
     text-align: center;
     width: 230px;
     height: 72px;
@@ -41,7 +40,12 @@
     top: 6px;
     left: 0;
 }
-.footer-logo img {
+.footer-background{
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 1px
+}
+.img-footer-logo {
     display: inline-block;
     position: relative;
     z-index: 2;

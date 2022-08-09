@@ -1,7 +1,7 @@
 import delivery from "../../asset/deliverycompleted.png";
 import cancelshop from "../../asset/cancelshop.png";
 import activeorder from "../../asset/inprocess delivery icon.png";
-import whishlist from "../../asset/favorites-list-empty.svg";
+import whishlist from "../../asset/favorites-list-empty.png";
 import "./profilePage.css";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useAuth } from "../../Providers/AuthProvider";
@@ -12,7 +12,9 @@ import {
   AiOutlineHistory,
 } from "react-icons/ai";
 import { useState } from "react";
+import React from "react";
 import { IoIosArrowDropright } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const ProfilePage = ({ history }) => {
   // toggling between tab
@@ -31,11 +33,11 @@ const ProfilePage = ({ history }) => {
     return (
       <div className="d-flex justify-content-center align-items-center flex-column">
         <h5 className="text-center animate-charcter">Come Back Soon!</h5>
-        <a href="/">
+        <Link to={"/"}>
           <button className="border-0 d-flex justify-content-center align-items-center mt-3 btngoshop animate-charcter fs-1">
             Visit Home Page
           </button>
-        </a>
+        </Link>
       </div>
     );
 

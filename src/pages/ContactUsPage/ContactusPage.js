@@ -1,4 +1,5 @@
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
+import React from "react";
 import "./contactus.css";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";

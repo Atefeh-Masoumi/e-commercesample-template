@@ -1,8 +1,10 @@
 import submenu1 from "../../asset/submenu lenz.jpg";
 import submenu2 from "../../asset/watchspecialoffer.jpg";
-import React, { useState } from "react";
+import { useState } from "react";
+import React from "react";
+import search from "../../asset/search.png";
 import logo from "../../asset/dana team logo1-03.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useCart } from "../../Providers/CartProvider";
 import { useAuth } from "../../Providers/AuthProvider";
 import {
@@ -67,6 +69,7 @@ const Navbar = () => {
     setFilter(newFilter);
   };
 
+//productsubmenu state
   const [show, setShow] = useState(false);
   
   // logout function
@@ -82,9 +85,9 @@ const Navbar = () => {
           <div className="content-inner">
             <div className="row align-items-center no-gutters">
               <div className="col-8 branding-col">
-                <a href="/">
+                <Link to={"/"}>
                   <img src={logo} alt="logo" width={"57px"} height={"57px"} />
-                </a>
+                </Link>
                 {/* search bar */}
                 <div className="search">
                   <div className="d-flex justify-content-start">
@@ -92,7 +95,10 @@ const Navbar = () => {
                       type="submit"
                       className="sub-search"
                       onClick={toggleShow}
-                    />
+                      
+                    >
+                    <img src={search} style={{marginTop:"10px"}}/>
+                    </div>
                     <input
                       name="searchbar"
                       type="text"
@@ -277,15 +283,12 @@ const Navbar = () => {
                     className="mr-auto mb-2 mb-lg-0 stroke bg-sm-white"
                   >
                     <MDBNavbarItem>
-                      <MDBNavbarLink
-                        active
-                        aria-current="page"
-                        cursor="pointer"
-                        className="menu1"
-                        href="/"
-                      >
+                      
+                        <Link to={"/"} className="text-dark">
                         Home
-                      </MDBNavbarLink>
+                        </Link>
+                        
+                      
                     </MDBNavbarItem>
                     <MDBNavbarItem className="">
                       <MDBNavbarLink
@@ -335,35 +338,36 @@ const Navbar = () => {
                           <div className="d-flex justify-content-between  fs-6 submenue-info">
                             <div className="d-flex flex-column p-4">
                               <h2>Computer </h2>
-                              <a href="/products">Personal Computer</a>
-                              <a href="/products">Laptops</a>
-                              <a href="/products">Tablets</a>
+                              <Link to={"/products"}>Personal Computer</Link>
+                              <Link to={"/products"}>Laptops</Link>
+                              <Link to={"/products"}>Tablets</Link>
                             </div>
                             <div className="d-flex flex-column p-4">
                               <h2>Mobile</h2>
-                              <a href="/products">IPhone</a>
-                              <a href="/products">Other Brands</a>
-                              <a href="/products">See All Creator</a>
+                              <Link to={"/products"}>IPhone</Link>
+                              <Link to={"/products"}>Other Brands</Link>
+                              <Link to={"/products"}>See All Creator</Link>
                             </div>
                             <div className="d-flex flex-column p-4">
                               <h2>Accessories </h2>
-                              <a href="/products">AirPod</a>
-                              <a href="/products">Digital Watch</a>
-                              <a href="/products">Camera</a>
+                              <Link to={"/products"}>AirPod</Link>
+                              <Link to={"/products"}>Digital Watch</Link>
+                              <Link to={"/products"}>Camera</Link>
                             </div>
                           </div>
                         </div>
                       </div>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="/services" className="">
+                    <Link to={"/services"} className="text-dark pl-1">
                         Services
-                      </MDBNavbarLink>
+                      </Link>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="/contactus" className="">
+                      
+                      <Link to={"/contactus"} className="text-dark mr-1 pr-1">
                         Contact Us
-                      </MDBNavbarLink>
+                      </Link>
                     </MDBNavbarItem>
                   </MDBNavbarNav>
                 </MDBCollapse>

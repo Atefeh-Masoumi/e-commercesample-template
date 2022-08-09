@@ -8,14 +8,15 @@ import Accessories1 from "../../asset/Accessories-cat-1.jpg";
 import Accessories2 from "../../asset/Accessories-cat-2.jpg";
 import Accessories3 from "../../asset/Accessories-cat-3.jpg";
 import * as data from "../../data";
+import React from "react";
 import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { checkIncart } from "../../utils/checkinCart";
 import { toast } from "react-toastify";
 import Header from "../../component/Header/Header.jsx";
 import Slider from "../../component/Slider/Slider.jsx";
-
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
 import "./homepage.css";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   //cart contex
   const { cart } = useCart();
@@ -37,7 +38,7 @@ const Homepage = () => {
           <div className="row">
             <div className="col-md-4 col-sm-6">
               <div className="card mb-30">
-                <a className="card-img-tiles" href="/products" data-abc="true">
+                <Link className="card-img-tiles" to={"/products"} >
                   <div className="inner">
                     <div className="main-img">
                       <img src={catpc1} alt="Category" />
@@ -47,23 +48,23 @@ const Homepage = () => {
                       <img src={catpc3} alt="Category" />
                     </div>
                   </div>
-                </a>
+                </Link>
                 <div className="card-body text-center">
                   <h4 className="card-title">Laptops</h4>
                   <p className="text-muted">Starting from $499</p>
-                  <a
+                  <Link
                     className="btn btn-outline-primary btn-sm"
-                    href="/products"
+                    to={"/products"}
                     data-abc="true"
                   >
                     View Products
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="card mb-30">
-                <a className="card-img-tiles" href="/products" data-abc="true">
+                <Link className="card-img-tiles" to={"/products"} data-abc="true">
                   <div className="inner">
                     <div className="main-img">
                       <img src={catmob1} alt="Category" />
@@ -73,23 +74,23 @@ const Homepage = () => {
                       <img src={catmob3} alt="Category" />
                     </div>
                   </div>
-                </a>
+                </Link>
                 <div className="card-body text-center">
                   <h4 className="card-title">Mobiles</h4>
                   <p className="text-muted">Starting from $50</p>
-                  <a
+                  <Link
                     className="btn btn-outline-primary btn-sm"
-                    href="/products"
+                    to={"/products"}
                     data-abc="true"
                   >
                     View Products
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="card mb-30">
-                <a className="card-img-tiles" href="/products" data-abc="true">
+                <Link className="card-img-tiles" to={"/products"} data-abc="true">
                   <div className="inner">
                     <div className="main-img">
                       <img src={Accessories1} alt="Category" />
@@ -99,17 +100,17 @@ const Homepage = () => {
                       <img src={Accessories3} alt="Category" />
                     </div>
                   </div>
-                </a>
+                </Link>
                 <div className="card-body text-center">
                   <h4 className="card-title">Accessories</h4>
                   <p className="text-muted">Starting from $9</p>
-                  <a
+                  <Link
                     className="btn btn-outline-primary btn-sm"
-                    href="/products"
+                    to={"/products"}
                     data-abc="true"
                   >
                     View Products
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -143,7 +144,7 @@ const Homepage = () => {
                       {checkIncart(cart, product) ? "In Cart" : "Add to Cart"}
                     </button>
                     <button className="m-2 rounded border-2 border-primary hover-shadow-soft">
-                      <a href="/productdetail">View Detail</a>
+                      <Link to={"/productdetail"}>View Detail</Link>
                     </button>
                   </div>
                 </div>

@@ -1,7 +1,8 @@
 import "./productpage.css";
+import React from "react";
 import { useState } from "react";
 import * as data from "../../data";
-import searchicon from "../../asset/searchproductpage.svg";
+import searchicon from "../../asset/searchproductpage.png";
 import { useCart, useCartAction } from "../../Providers/CartProvider";
 import { toast } from "react-toastify";
 import { checkIncart } from "../../utils/checkinCart";
@@ -21,7 +22,8 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from "mdb-react-ui-kit";
-import Footer from "../../component/Footer/FooterPage";
+import Footer from "../../component/Footer/FooterPage.jsx";
+import { Link } from "react-router-dom";
 
 const ProductPage = () => {
   // cart contex
@@ -250,7 +252,7 @@ const ProductPage = () => {
                               className="btn btn-primary btn-sm"
                               type="button"
                             >
-                              <a href="/productdetail">Details</a>
+                              <Link to={"/productdetail"}>Details</Link>
                             </button>
                             <button
                               className="btn btn-outline-primary btn-sm mt-2"

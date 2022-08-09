@@ -1,3 +1,4 @@
+import React from "react";
 import "./input.css";
 const Input = ({ formik, name, label, type = "text" }) => {
   return (
