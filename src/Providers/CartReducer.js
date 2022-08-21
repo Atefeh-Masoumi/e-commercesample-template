@@ -17,7 +17,7 @@ function addProudct(state,payload){
 const removeProductfromCart=(state, payload)=>{
     const updatedCart = [...state.cart];
     const index = updatedCart.findIndex((item)=>item.id=== payload.id);
-    const updatedItem=  {...updatedCart[index]};
+    const updatedItem =  {...updatedCart[index]};
 
     if(updatedItem.quantity === 1){
       const filteredproduct =  updatedCart.filter(item=>item.id !== payload.id);

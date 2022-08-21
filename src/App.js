@@ -21,7 +21,7 @@ import ContactUsPage from "./pages/ContactUsPage/ContactusPage";
 
 function App() {
   return (
-    <BrowserRouter basename='/react'>
+    <BrowserRouter >
 
       <AuthProvider>
         <CartProvider>
